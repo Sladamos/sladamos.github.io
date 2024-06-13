@@ -65,6 +65,26 @@
     padding: 20px;
 }
 
+/* Section padding */
+.section-padding {
+    padding: 20px 20px 40px;    
+}
+
+.section-padding__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.section-padding__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 /* Columns */
 
 .flex-columns__row {

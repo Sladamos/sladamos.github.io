@@ -134,6 +134,11 @@ img {
     margin-bottom: 15px;
 }
 
+/* Team */
+.team__member-image {
+    border-radius: 50%;
+}
+
 /* Contact */
 
 .callback-form {
