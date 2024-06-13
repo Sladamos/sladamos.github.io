@@ -91,11 +91,51 @@
                 </div>
                 <div class="flex-columns__column">
                     <div class="flex-columns__column-item">
-                        <img class="flex-columns__image" src="img/home/blog.jpg" alt="EdgeLedger people">
+                        <img class="flex-columns__image" src="img/home/blog.jpg" alt="Blog">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact flex-columns">
+            <div class="flex-columns__row">
+                <div class="flex-columns__column">
+                    <div class="flex-columns__column-item">
+                        <img class="flex-columns__image" src="img/home/contact.jpg" alt="Support">
+                    </div>
+                </div>
+                <div class="flex-columns__column">
+                    <div class="flex-columns__column-item text-column background--light">
+                        <h2 class="text-column__header--large">Request Callback</h2>
+                        <form action="" class="callback-form">
+                            <div class="callback-form__group">
+                                <label class="callback-form__label" for="callback-form__name"></label>
+                                <input class="callback-form__input" type="text" name="name" id="callback-form__name" placeholder="Enter name">
+                            </div>
+                            <div class="callback-form__group">
+                                <label class="callback-form__label" for="callback-form__email"></label>
+                                <input class="callback-form__input" type="email" name="email" id="callback-form__email" placeholder="Enter email">
+                            </div>
+                            <div class="callback-form__group">
+                                <label class="callback-form__label" for="callback-form__phone"></label>
+                                <input class="callback-form__input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="callback-form__phone" placeholder="Enter phone">
+                            </div>
+                            <input type="submit" class="button button--primary callback-form__input callback-form__button" value="Send">
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer background--dark">
+        <div class="footer__socials">
+            <a class="footer__social-link" href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a class="footer__social-link" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a class="footer__social-link" href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a class="footer__social-link" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2024 - Sladamos </p>
+    </footer>
 </body>
 </html>
