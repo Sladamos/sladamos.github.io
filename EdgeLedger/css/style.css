@@ -106,7 +106,7 @@ img {
 }
 
 .nav-bar__link:hover {
-    border-bottom: #28a745 2px solid;
+    border-bottom: #f21d1d 2px solid;
 }
 
 .nav-bar__logo {
@@ -127,7 +127,7 @@ img {
 }
 
 .icons .icon__img {
-    background-color: #28a745;
+    background-color: #f21d1d;
     color: #fff;
     padding: 1rem;
     border-radius: 50%;
@@ -135,6 +135,7 @@ img {
 }
 
 /* Team */
+
 .team__member-image {
     border-radius: 50%;
 }
