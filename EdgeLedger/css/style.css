@@ -183,6 +183,24 @@ img {
     margin-top: 20px;
 }
 
+/* Post */
+
+.post {
+    padding: 20px;
+}
+
+.post__header {
+    padding-bottom: 10px;
+    border-bottom: #ccc solid 1px;
+}
+
+.post__image {
+    border-radius: 50%;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Footer */
 
 .footer {
@@ -207,11 +225,13 @@ img {
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .nav-bar {
         flex-direction: column;
+        height: 90px;
         padding: 0px;
     }
 
     .nav-bar__links {
         flex-wrap: wrap;
+        padding-bottom: 15px;
         justify-content: center;
     }
 
@@ -229,15 +249,22 @@ img {
 }
  
 @media screen and (max-width: 480px) {
+
+    .header-wrapper.blog {
+        height: 75vh;
+    }
+    
     .nav-bar {
         flex-direction: column;
-        height: 100px;
+        height: 130px;
         padding: 0 15px;
     }
 
     .nav-bar__links {
         flex-wrap: wrap;
+        height: 100px;
         justify-content: center;
+        padding: 10px 0;
     }
 
     .flex-container {
