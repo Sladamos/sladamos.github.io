@@ -120,6 +120,10 @@
     height: 30vh;
 }
 
+.flex-columns__miniature-image:hover {
+    opacity: 0.7;
+}
+
 .flex-columns .text-column {
     display: flex;
     flex-direction: column;
