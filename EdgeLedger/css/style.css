@@ -48,6 +48,11 @@ img {
     position: relative;
 }
 
+.header-wrapper.blog {
+    background: url('../img/home/blog.jpg') no-repeat center center/cover;
+    height: 30vh;
+}
+
 .header-wrapper::before {
     content: '';
     position: absolute;
