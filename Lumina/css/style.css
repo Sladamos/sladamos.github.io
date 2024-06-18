@@ -112,6 +112,19 @@ img {
     padding: 10px;
 }
 
+/* Hero */
+
+.hero__container {
+    text-align: center;
+    padding: 10rem 0;
+}
+
+.hero__header {
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
 /* Portfolio */
 
 .portfolio {
