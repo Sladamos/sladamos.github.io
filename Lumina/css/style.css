@@ -11,9 +11,9 @@
     --semi-light-color: #ddd;
 
 
-    --container-narrow: 900px;
-    --container-normal: 1100px;
-    --container-wide: 1400px;
+    --container-narrow: 70vw;
+    --container-normal: 80vw;
+    --container-wide: 85vw;
 
     --portfolio-hover-time: 0.2s;
     --icon-hover-time: 0.2s;
@@ -126,6 +126,7 @@ img {
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    margin: 0 0.5rem;
 }
 
 .darktheme__icon {
@@ -290,3 +291,46 @@ img {
 .service__title {
     margin-bottom: 1rem;
 }
+@media screen and (max-width: 768px) {
+
+    .header__container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 3rem;
+    }
+
+    .nav-bar__link {
+        padding: 0.2rem;
+    }
+
+    .services {
+        padding: 2rem 0.5rem;
+    }
+
+    .portfolio,
+    .team__members,
+    .services__container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero__container {
+        padding: 3rem 0;
+    }
+
+    .hero__header {
+        font-size: 1.8rem;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    
+    .portfolio {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
