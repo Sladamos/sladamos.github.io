@@ -26,6 +26,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+h2, h4, p, a, i, .services, .bg--dark, .bg--light, .bg--secondary, .bg--primary, input, textarea, li {
+    
     transition: background-color var(--dark-mode-change-time) ease, color var(--dark-mode-change-time) ease;
 }
 
@@ -362,7 +366,7 @@ img {
     border: none;
     font-family: inherit;
     font-size: inherit;
-    padding-bottom: 1rem;
+    padding: 1rem 0.5rem;
     border-bottom: 1px solid #aaa;
 }
 
