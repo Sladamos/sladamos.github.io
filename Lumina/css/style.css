@@ -12,12 +12,15 @@
     --portfolio-hover-time: 0.2s;
     --icon-hover-time: 0.2s;
     --link-hover-time: 0.2s;
+    --dark-mode-change-time: 0.5s;
+    --dark-mode-hover-time: 0.2s;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: background-color var(--dark-mode-change-time) ease, color var(--dark-mode-change-time) ease;
 }
 
 html {
@@ -90,6 +93,10 @@ img {
     align-items: center;
 }
 
+.nav-bar {
+    display: flex;
+}
+
 .nav-bar__link--current {
     background-color: var(--primary-color);
 }
@@ -106,6 +113,19 @@ img {
 
 .nav-bar__link:hover {
     background-color: var(--primary-color);
+}
+
+.darktheme__button {
+    background: none;
+    border: none;
+}
+
+.darktheme__icon {
+    transition: transform var(--dark-mode-hover-time) ease;
+}
+
+.darktheme__icon:hover {
+    transform: scale(1.2);
 }
 
 /* Logo */
