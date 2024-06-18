@@ -1,3 +1,19 @@
+/* Variables */
+
+:root {
+
+    --primary-color: #d3c393;
+    --secondary-color: #5e3e2a;
+
+    --container-narrow: 900px;
+    --container-normal: 1100px;
+    --container-wide: 1400px;
+
+    --portfolio-hover-time: 0.2s;
+    --icon-hover-time: 0.2s;
+    --link-hover-time: 0.2s;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,30 +35,18 @@ ul {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: inherit;
 }
 
 img {
     max-width: 100%;
 }
 
-/* Variables */
-
-:root {
-
-    --primary-color: #d3c393;
-    --secondary-color: #5e3e2a;
-
-    --container-narrow: 900px;
-    --container-normal: 1100px;
-    --container-wide: 1400px;
-
-    --portfolio-hover-time: 0.2s;
-    --icon-hover-time: 0.2s;
-    --link-hover-time: 0.2s;
-}
-
 /* Utils */
+
+.dark {
+    color-scheme: dark;
+}
 
 .container {
     width: var(--container-normal);
