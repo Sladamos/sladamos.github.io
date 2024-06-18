@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+FR+Moderne:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Minimalistic website for design and photographic agency">
+    <title>About Lumina</title>
+    <script src="js/script.js" defer></script>
+</head>
+<body id="#">
+    <header class="header">
+        <div class="container container--small header__container">
+            <div class="logo logo--bouncing">
+                <span class="logo__text text--primary bg--secondary"><span class="text--secondary bg--primary">LU</span>mina</span>
+            </div>
+            <nav class="nav-bar">
+                <ul class="nav-bar__links">
+                    <li> <a class="nav-bar__link" href="index.html">Home</a></li>
+                    <li> <a class="nav-bar__link" href="about.html">About</a></li>
+                    <li> <a class="nav-bar__link nav-bar__link--current" href="#">Contact</a></li>
+                </ul>
+                <button class="darktheme__button" onclick="toggleDarkMode()">
+                    <svg id="darktheme__sun" class="darktheme__icon" width="30" height="30">
+                        <circle cx="15" cy="15" r="6" fill="currentColor" />
+                    
+                        <line
+                        id="ray"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        x1="15"
+                        y1="1"
+                        x2="15"
+                        y2="4"
+                        ></line>
+                    
+                        <use href="#ray" transform="rotate(45 15 15)" />
+                        <use href="#ray" transform="rotate(90 15 15)" />
+                        <use href="#ray" transform="rotate(135 15 15)" />
+                        <use href="#ray" transform="rotate(180 15 15)" />
+                        <use href="#ray" transform="rotate(225 15 15)" />
+                        <use href="#ray" transform="rotate(270 15 15)" />
+                        <use href="#ray" transform="rotate(315 15 15)" />
+                    </svg>
+                    <svg id="darktheme__moon" class="darktheme__icon" width="30" height="30">
+                        <path
+                        fill="currentColor"
+                        d="
+                            M 23, 5
+                            A 12 12 0 1 0 23, 25
+                            A 12 12 0 0 1 23, 5"
+                        />
+                    </svg>
+                </button>
+            </nav>    
+        </div>
+    </header>
+
+    <section id="hero" class="bg--dark">
+        <div class="container container--small hero__container">
+            <h2 class="hero__header text--light"><span class="bg--primary text--secondary">Enthusiastic</span> thinkers, creating unique endeavors powered by <span class="bg--primary text--secondary">creativity</span></h2>
+        </div>
+    </section>
+
+    <section id="contact" class="container container--small">
+        <div class="contact__container">
+            <h2 class="contact__title">Contact Us</h2>
+            <h4 class="contact__desc">Have a question? Leave your information below and we will get back to you as soon as possible.</h4>
+            <div class="contact__form-wrapper">
+                <form action="">
+                    <div class="contact__group">
+                        <label class="visually-hidden" for="First Name">First Name</label>
+                        <input class="contact__input" type="text" name="First Name" id="First Name" placeholder="First Name">
+                    </div>
+                    <div class="contact__group">
+                        <label class="visually-hidden" for="Last Name">Last Name</label>
+                        <input class="contact__input" type="text" name="Last Name" id="Last Name" placeholder="Last Name">
+                    </div>
+                    <div class="contact__group">
+                        <label class="visually-hidden" for="Email">Email</label>
+                        <input class="contact__input" type="email" name="Email" id="Email" placeholder="Email">
+                    </div>
+                    <div class="contact__group">
+                        <label class="visually-hidden" for="Message">Message</label>
+                        <textarea class="contact__input contact__message" name="Message" id="Message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="contact__group">
+                        <button class="btn btn--light">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="logo">
+                <span class="logo__text text--primary bg--secondary"><span class="text--secondary bg--primary">LU</span>mina</span>
+            </div>
+
+            <div>
+                <h4 class="footer__header">Contact Us</h4>
+                <ul>
+                    <li>(xxx) yyy-zzzz</li>
+                    <li>contact@xxxx.xxx</li>
+                    <li>xx Main st Boston MA</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer__header">Follow Us</h4>
+                    <a class="icon__link" href="https://www.linkedin.com/in/s%C5%82awomir-adamowicz-369593275/"><i class="icon__img fab fa-linkedin fa-2x"></i></a>
+                    <a class="icon__link" href="https://github.com/Sladamos"><i class="icon__img fab fa-github fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

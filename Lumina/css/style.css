@@ -11,7 +11,7 @@
     --semi-light-color: #ddd;
 
 
-    --container-narrow: 70vw;
+    --container-narrow: 65vw;
     --container-normal: 80vw;
     --container-wide: 85vw;
 
@@ -53,6 +53,10 @@ img {
 
 /* Utils */
 
+.visually-hidden {
+    display: none;
+}
+
 .dark {
     color-scheme: dark;
 }
@@ -79,12 +83,47 @@ img {
     color: var(--secondary-color);
 }
 
+.text--light {
+    color: var(--light-color);
+}
+
+.text--dark {
+    color: var(--dark-color);
+}
+
 .bg--primary {
     background-color: var(--primary-color);
 }
 
 .bg--secondary {
     background-color: var(--secondary-color);
+}
+
+.bg--dark {
+    background-color: var(--dark-color);
+}
+
+.bg--light {
+    background-color: var(--light-color);
+}
+
+.btn {
+    background: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 1rem;
+    width: 100%;
+}
+
+.btn--light {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.btn--light:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
 }
 
 /* Header */
@@ -291,6 +330,46 @@ img {
 .service__title {
     margin-bottom: 1rem;
 }
+
+/* Contact */
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__title {
+    margin: 3rem 0;
+}
+
+.contact__desc {
+    font-weight: normal;
+}
+
+.contact__form-wrapper {
+    width: 100%;
+}
+
+.contact__group {
+    margin: 2rem 0;
+}
+
+.contact__input {
+    outline: none;
+    display: block;
+    width: 100%;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #aaa;
+}
+
+.contact__message {
+    height: 12rem;
+}
+
 @media screen and (max-width: 768px) {
 
     .header__container {
