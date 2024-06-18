@@ -29,8 +29,8 @@ img {
 
 :root {
 
-    --primary-color: #c3c393;
-    --secondary-color: #4e4e3a;
+    --primary-color: #d3c393;
+    --secondary-color: #5e3e2a;
 
     --container-normal: 1100px;
     --container-wide: 1400px;
@@ -94,8 +94,13 @@ img {
 /* Footer */
 
 .footer {
+    margin-top: 2rem;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid #aaa;
+}
+
+.footer__container {
     display: flex;
-    height: 140px;
     justify-content: space-between;
     align-items: center;
 }
