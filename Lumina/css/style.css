@@ -28,6 +28,10 @@ img {
 /* Variables */
 
 :root {
+
+    --primary-color: #c3c393;
+    --secondary-color: #4e4e3a;
+
     --container-normal: 1100px;
     --container-wide: 1400px;
     --portfolio-hover-time: 0.2s;
@@ -43,6 +47,30 @@ img {
 
 .container--large {
     width: var(--container-wide);
+}
+
+.text--primary {
+    color: var(--primary-color);
+}
+
+.text--secondary {
+    color: var(--secondary-color);
+}
+
+.bg--primary {
+    background-color: var(--primary-color);
+}
+
+.bg--secondary {
+    background-color: var(--secondary-color);
+}
+
+/* Logo */
+
+.logo {
+    font-family: "Playwrite FR Moderne", cursive;
+    font-size: 1.5rem;
+    padding: 10px;
 }
 
 /* Portfolio */
@@ -61,4 +89,13 @@ img {
 
 .portfolio__image:hover {
     filter: sepia(50%) contrast(130%) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    height: 140px;
+    justify-content: space-between;
+    align-items: center;
 }
