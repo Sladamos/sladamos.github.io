@@ -118,14 +118,17 @@ img {
 .darktheme__button {
     background: none;
     border: none;
+    border-radius: 50%;
 }
 
 .darktheme__icon {
     transition: transform var(--dark-mode-hover-time) ease;
+    border-radius: 50%;
 }
 
 .darktheme__icon:hover {
     transform: scale(1.2);
+    background-color: var(--primary-color);
 }
 
 /* Logo */
