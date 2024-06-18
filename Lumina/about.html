@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+FR+Moderne:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Minimalistic website for design and photographic agency">
+    <title>About Lumina</title>
+    <script src="js/script.js" defer></script>
+</head>
+<body id="#">
+    <header class="header">
+        <div class="container container--small header__container">
+            <div class="logo">
+                <span class="logo__text text--primary bg--secondary"><span class="text--secondary bg--primary">LU</span>mina</span>
+            </div>
+            <nav class="nav-bar">
+                <ul class="nav-bar__links">
+                    <li> <a class="nav-bar__link" href="index.html">Home</a></li>
+                    <li> <a class="nav-bar__link nav-bar__link--current" href="#">About</a></li>
+                    <li> <a class="nav-bar__link" href="contact.html">Contact</a></li>
+                </ul>
+                <button class="darktheme__button" onclick="toggleDarkMode()">
+                    <svg id="darktheme__sun" class="darktheme__icon" width="30" height="30">
+                        <circle cx="15" cy="15" r="6" fill="currentColor" />
+                    
+                        <line
+                        id="ray"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        x1="15"
+                        y1="1"
+                        x2="15"
+                        y2="4"
+                        ></line>
+                    
+                        <use href="#ray" transform="rotate(45 15 15)" />
+                        <use href="#ray" transform="rotate(90 15 15)" />
+                        <use href="#ray" transform="rotate(135 15 15)" />
+                        <use href="#ray" transform="rotate(180 15 15)" />
+                        <use href="#ray" transform="rotate(225 15 15)" />
+                        <use href="#ray" transform="rotate(270 15 15)" />
+                        <use href="#ray" transform="rotate(315 15 15)" />
+                    </svg>
+                    <svg id="darktheme__moon" class="darktheme__icon" width="30" height="30">
+                        <path
+                        fill="currentColor"
+                        d="
+                            M 23, 5
+                            A 12 12 0 1 0 23, 25
+                            A 12 12 0 0 1 23, 5"
+                        />
+                    </svg>
+                </button>
+            </nav>    
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container container--small hero__container">
+            <h2 class="hero__header"><span class="bg--primary">Inspired</span> minds, shaping exceptional projects fueled by <span class="bg--primary">ingenuity</span></h2>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container container--large">
+            <h2 class="team__header">Our Team</h2>
+            <div class="team__members">
+                <div class="team__member">
+                    <img class="team__member-image" src="img/team1.jpg" alt="Team Member 1">
+                    <h4>Kevin Samson</h4>
+                    <p>Founder</p>
+                </div>
+                <div class="team__member">
+                    <img class="team__member-image" src="img/team2.jpg" alt="Team Member 2">
+                    <h4>Rebecca Williams</h4>
+                    <p>Designer</p>
+                </div>
+                <div class="team__member">
+                    <img class="team__member-image" src="img/team3.jpg" alt="Team Member 3">
+                    <h4>Ben Markson</h4>
+                    <p>Designer/Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="logo">
+                <span class="logo__text text--primary bg--secondary"><span class="text--secondary bg--primary">LU</span>mina</span>
+            </div>
+
+            <div>
+                <h4 class="footer__header">Contact Us</h4>
+                <ul>
+                    <li>(xxx) yyy-zzzz</li>
+                    <li>contact@xxxx.xxx</li>
+                    <li>xx Main st Boston MA</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer__header">Follow Us</h4>
+                    <a class="icon__link" href="https://www.linkedin.com/in/s%C5%82awomir-adamowicz-369593275/"><i class="icon__img fab fa-linkedin fa-2x"></i></a>
+                    <a class="icon__link" href="https://github.com/Sladamos"><i class="icon__img fab fa-github fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

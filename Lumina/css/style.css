@@ -206,3 +206,23 @@ img {
     max-height: 100%;
     filter: grayscale(100%);
 }
+
+/* Team */
+
+.team__header {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.team__members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 15px;
+    text-align: center;
+}
+
+.team__member-image {
+    border-radius: 10%;
+}
