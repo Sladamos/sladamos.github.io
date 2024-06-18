@@ -125,6 +125,7 @@ img {
     background: none;
     border: none;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .darktheme__icon {
@@ -143,6 +144,37 @@ img {
     font-family: "Playwrite FR Moderne", cursive;
     font-size: 1.5rem;
     padding: 10px;
+    cursor: default;
+}
+
+.logo--bouncing {
+    animation: bounce 1.5s ease infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0%);
+    }
+    
+    40% {
+        transform: translateY(0%);
+    }
+
+    55% {
+        transform: translateY(-15%);
+    }
+    
+    70% {
+        transform: translateY(0%);
+    }
+
+    85% {
+        transform: translateY(-15%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 /* Hero */
