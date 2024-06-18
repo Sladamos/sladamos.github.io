@@ -24,3 +24,44 @@ a {
 img {
     max-width: 100%;
 }
+
+/* Variables */
+
+:root {
+    --container-normal: 1100px;
+    --container-wide: 1400px;
+    --portfolio-hover-time: 0.2s;
+}
+
+/* Utils */
+
+.container {
+    width: var(--container-normal);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.container--large {
+    width: var(--container-wide);
+}
+
+/* Portfolio */
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.portfolio__image {
+    border-radius: 10%;
+    transition: opacity var(--portfolio-hover-time) ease,
+     box-shadow var(--portfolio-hover-time) ease;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio__image:hover {
+    filter: sepia(50%) contrast(130%);
+    opacity: 0.8;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
