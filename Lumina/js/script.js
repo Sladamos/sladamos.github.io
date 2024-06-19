@@ -58,8 +58,7 @@ function toggleDarkMode() {
 }
 
 const darkMode = JSON.parse(localStorage.getItem("isDarkModeEnabled"))
-const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)").matches
-if(darkMode || darkMode === null && darkModeMediaQuery) {
+if(darkMode || darkMode === null) {
     switchDarkMode()
     updateDarkThemeButtons(true)
     saveToLocalStorage(true);
