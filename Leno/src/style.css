@@ -5,3 +5,31 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --primary-color: #08c0dd;
+    --secondary-color: #262431;
+    --tertiary-color: #2f2c3d;
+}
+
+html, 
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--secondary-color);
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
