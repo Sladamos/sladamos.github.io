@@ -1,36 +1,10 @@
 <nav class="navbar">
     <div class="navbar__container">
+
         <div class="navbar__logo">
-            <img src="/assets/logo.svg" alt="Leno">
+            <img class="navbar__logo-img" src="/assets/logo.svg" alt="Leno">
         </div>
-        <div class="navbar__menu">
-            <ul class="navbar__menu-list">
-                <li class="navbar__menu-item">
-                    <a routerLink="/" class="navbar__menu-link">Home</a>
-                </li>
-                <li class="navbar__menu-item">
-                    <a routerLink="/" fragment="features"  class="navbar__menu-link">Features</a>
-                </li>
-                <li class="navbar__menu-item">
-                    <a routerLink="/" fragment="preview"  class="navbar__menu-link">Preview</a>
-                </li>
-                <li class="navbar__menu-item">
-                    <a routerLink="/" fragment="details"  class="navbar__menu-link">Details</a>
-                </li>
-                <li class="navbar__menu-item">
-                    <a routerLink="/" fragment="download"  class="navbar__menu-link">Download</a>
-                </li>
-                <li class="navbar__menu-item">
-                    <a routerLink="/" fragment=""  class="navbar__menu-link--primary">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </li>
-                <li class="navbar__menu-item">
-                    <a routerLink="/" fragment=""  class="navbar__menu-link--primary">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <!-- <navbar-desktop-menu></navbar-desktop-menu> -->
+        <navbar-mobile-menu></navbar-mobile-menu>
     </div>
 </nav>
