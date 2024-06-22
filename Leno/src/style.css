@@ -362,6 +362,29 @@ img {
         width: auto;
     }
     
+
+    .features__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .features__grid-column {
+        order: unset;
+    }
+
+    .features__grid-item {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+
+    .features__grid-column-left .features__grid-item {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    .features__grid-column-center-image {
+        max-width: 500px;
+    }
 }
 
 @media screen and (min-width: 768px) {
