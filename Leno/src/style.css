@@ -9,6 +9,7 @@
 :root {
     --primary-color: #08c0dd;
     --secondary-color: #262431;
+    --third-color: #e0769b;
     --tertiary-color: #2f2c3d;
 
     --container-width: 1100px;
@@ -173,6 +174,24 @@ img {
 
 .hero__title--primary {
     color: var(--primary-color);
+}
+
+.hero__title--animated {
+    animation: color-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes color-pulse {
+    0% {
+        color: var(--primary-color);
+    }
+
+    50% {
+        color: var(--third-color)
+    }
+
+    100% {
+        color: var(--primary-color);
+    }
 }
 
 .hero__description {
