@@ -171,9 +171,9 @@ img {
 }
 
 .hero__description {
-    margin-top: 1.6rem;
     font-size: 1.2rem;
     line-height: 1.6;
+    margin-top: 1.5rem;
 }
 
 .hero__buttons {
@@ -186,8 +186,8 @@ img {
 }
 
 .hero__button {
-    padding: 1rem 2rem;
-    width: 100%;
+        padding: 1rem 2rem;
+        width: 100%;
 }
 
 .hero__icon {
@@ -196,4 +196,40 @@ img {
 
 .hero__image {
     max-width: 320px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+    .hero {
+        padding: 11.5rem 2rem 8rem;
+        text-align: left;
+    }
+
+    .hero__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero__buttons {
+        flex-direction: row;    
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+    }
+
+    .hero__image {
+        max-width: 500px;
+    }  
+
+    .hero__buttons {
+        gap: 1.5rem;
+    }
+
+    .hero__button {
+        width: auto;
+    }
+    
 }
