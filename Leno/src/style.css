@@ -270,3 +270,10 @@ img {
     }
     
 }
+
+@media screen and (min-width: 768px) {
+    
+    .testimonials__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
