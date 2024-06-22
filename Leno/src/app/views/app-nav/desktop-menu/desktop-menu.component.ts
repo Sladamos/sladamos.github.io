@@ -9,5 +9,4 @@ import { RouterModule } from '@angular/router';
   styleUrl: './desktop-menu.component.css'
 })
 export class DesktopMenuComponent {
-
 }

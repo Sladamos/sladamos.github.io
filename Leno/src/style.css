@@ -72,6 +72,11 @@ img {
     transition: background-color 0.3s ease-in-out;
 }
 
+.navbar.navbar--scroll {
+    background-color: rgba(38, 36, 49, 0.8);
+    backdrop-filter: blur(10px);
+}
+
 .navbar__container {
     display: flex;
     justify-content: space-between;
@@ -198,6 +203,38 @@ img {
     max-width: 320px;
 }
 
+/* Testimonials */
+
+.testimonials {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.testimonials__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.testimonials__card {
+    padding: 0 3rem;
+}
+
+.testimonials__card-image {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1.5rem;
+}
+
+.testimonials__card-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
 
 @media screen and (min-width: 768px) {
 
