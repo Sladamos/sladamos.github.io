@@ -231,7 +231,7 @@ img {
 
 .testimonials__container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
@@ -253,6 +253,80 @@ img {
 .testimonials__card-text {
     font-style: italic;
     margin-bottom: 1.5rem;
+}
+
+/* Features */
+
+.features {
+    background-color: var(--tertiary-color);
+    padding: 6rem 2rem;
+}
+
+.features__container {
+    text-align: center;
+}
+
+.features__title {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.features__description {
+    max-width: 600px;
+    margin: 1rem auto 4rem;
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.features__grid-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.features__grid-column-left, .features__grid-column-right {
+    order: 2;
+    margin-bottom: 2rem;
+}
+
+.features__grid-column-center {
+    order: 1;
+    margin-bottom: 3rem;
+}
+
+.features__grid-item {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 1.5rem;
+    text-align: center;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.features__grid-item-icon-wrapper {
+    margin: 0 auto;
+}
+
+.features__grid-item-icon {
+    color: var(--primary-color);
+}
+
+.features__grid-item-text-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.features__grid-column-center-image {
+    max-width: 300px;
 }
 
 @media screen and (min-width: 993px) {
