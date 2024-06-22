@@ -59,6 +59,10 @@ img {
     height: 36px;
 }
 
+.navbar__mobile-menu-toggle {
+    cursor: pointer;
+}
+
 .navbar__mobile-menu-items {
     position: absolute;
     top: 100%;
@@ -91,14 +95,23 @@ img {
     flex-wrap: wrap;
 }
 
+.navbar__menu-link:hover,
 .navbar__mobile-menu-link:hover {
     color: var(--primary-color);
 }
-
+.navbar__menu-link--primary,
 .navbar__mobile-menu-link--primary {
     color: var(--primary-color);
 }
 
+.navbar__menu-link--primary:hover,
 .navbar__mobile-menu-link--primary:hover {
     color: #fff ;
+}
+
+.navbar__menu-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 600;
 }
