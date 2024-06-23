@@ -334,6 +334,7 @@ img {
 /* Footer */
 
 .footer {
+    background-color: var(--tertiary-color);
     color: var(--light-gray-color);
     padding: 4rem 2rem;
     font-size: 1rem;
@@ -372,7 +373,6 @@ img {
 }
 
 @media screen and (min-width: 993px) {
-
 
     .hero {
         padding: 11.5rem 2rem 8rem;
@@ -434,4 +434,16 @@ img {
     .testimonials__container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+
+    .footer__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6rem;
+        text-align: left;
+        max-width: var(--container-width);
+    }
+    
 }
