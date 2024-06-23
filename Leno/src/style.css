@@ -331,6 +331,39 @@ img {
     max-width: 300px;
 }
 
+/* Screenshots */
+
+.screenshots {
+    padding: 6rem 2rem;
+    background-color: var(--tertiary-color);
+    text-align: center;
+}
+
+.screenshots__container {
+    max-width: 1200px;
+}
+
+.screenshots__title {
+    font-size: 2.3rem;
+    width: 300px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--primary-color);
+    margin: 0 auto 2.5rem;
+}
+
+.screenshots__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.screenshots__images-item {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
 /* Footer */
 
 .footer {
