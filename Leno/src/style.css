@@ -11,6 +11,7 @@
     --secondary-color: #262431;
     --third-color: #e0769b;
     --tertiary-color: #2f2c3d;
+    --light-gray-color: #9f9caf;
 
     --container-width: 1100px;
 }
@@ -328,6 +329,46 @@ img {
 
 .features__grid-column-center-image {
     max-width: 300px;
+}
+
+/* Footer */
+
+.footer {
+    color: var(--light-gray-color);
+    padding: 4rem 2rem;
+    font-size: 1rem;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    max-width: 600px;
+}
+
+.footer__title {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.footer__links-link,
+.footer__social-link {
+    color: var(--light-gray-color);
+}
+
+.footer__links-link:hover,
+.footer__social-link:hover {
+    color: #fff;
+}
+
+.footer__social {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
 @media screen and (min-width: 993px) {

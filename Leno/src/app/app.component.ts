@@ -3,11 +3,12 @@ import { AppMainComponent } from './views/app-main/app-main.component';
 import { AppNavComponent } from './views/app-nav/app-nav.component';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { AppFooterComponent } from './views/app-footer/app-footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, AppNavComponent, AppMainComponent],
+  imports: [CommonModule, AppNavComponent, AppMainComponent, AppFooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
