@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
-import { Testimonial } from '../../model/testimonial';
 import { NgFor } from '@angular/common';
+
+export interface Testimonial {
+  title: string;
+  text: string;
+  imagePath: string;
+}
 
 @Component({
   selector: 'testimonials',

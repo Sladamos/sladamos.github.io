@@ -1,0 +1,37 @@
+<section id="features" class="features">
+    <div class="features__container container">
+        <div class="features__content">
+            <h2 class="features__title">Key Takeaways</h2>
+            <p class="features__description">Discover the powerful features that make Leno the ultimate productivity and health companion: </p>
+            <div class="features__grid">
+                <div class="features__grid-column features__grid-column-left">
+                    <div *ngFor="let item of leftFeatures" class="features__grid-item">
+                        <div class="features__grid-item-icon-wrapper">
+                            <i class="fas {{item.icon}} fa-4x features__grid-item-icon"></i>
+                        </div>
+                        <div class="features__grid-item-text">
+                            <h4 class="features__grid-item-text-title">{{item.title}}</h4>
+                            <p class="features__grid-item-text-description">{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="features__grid-column features__grid-column-center">
+                    <img class="features__grid-column-center-image" src="/assets/features-smartphone-1.png" alt="Smartphone">
+                </div>
+    
+                <div class="features__grid-column features__grid-column-right">
+                    <div *ngFor="let item of rightFeatures" class="features__grid-item">
+                        <div class="features__grid-item-icon-wrapper">
+                            <i class="fas {{item.icon}} fa-4x features__grid-item-icon"></i>
+                        </div>
+                        <div class="features__grid-item-text">
+                            <h4 class="features__grid-item-text-title">{{item.title}}</h4>
+                            <p class="features__grid-item-text-description">{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
