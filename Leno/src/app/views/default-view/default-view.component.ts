@@ -4,11 +4,12 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { FeaturesComponent } from './features/features.component';
 import { HeroComponent } from './hero/hero.component';
 import { ScreenshotsComponent } from './screenshots/screenshots.component';
+import { DownloadComponent } from './download/download.component';
 
 @Component({
   selector: 'app-default-view',
   standalone: true,
-  imports: [RouterModule, TestimonialsComponent, FeaturesComponent, HeroComponent, ScreenshotsComponent],
+  imports: [RouterModule, TestimonialsComponent, FeaturesComponent, HeroComponent, ScreenshotsComponent, DownloadComponent],
   templateUrl: './default-view.component.html',
   styleUrl: './default-view.component.css'
 })
