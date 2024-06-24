@@ -6,10 +6,11 @@ import { provideClientHydration } from '@angular/platform-browser';
 
 const scrollConfig: InMemoryScrollingOptions = {
   scrollPositionRestoration: 'top',
-  anchorScrolling: 'enabled',
+  anchorScrolling: 'enabled', 
 };
 const inMemoryScrollingFeature: InMemoryScrollingFeature = withInMemoryScrolling(scrollConfig);
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes, inMemoryScrollingFeature), provideClientHydration()]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }),
+     provideRouter(routes, inMemoryScrollingFeature), provideClientHydration()]
 };

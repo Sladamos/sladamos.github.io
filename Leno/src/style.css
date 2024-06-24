@@ -479,6 +479,11 @@ img {
 
 /* Details-pricing */
 
+.pricing {
+    background-color: var(--tertiary-color);
+    padding: 4rem 2rem 6rem;
+}
+
 .pricing-notes {
     padding: 3rem 2rem;
     color: var(--light-gray-color);
