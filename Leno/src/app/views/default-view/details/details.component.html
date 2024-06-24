@@ -1,4 +1,4 @@
-<section class="details">
+<section id="details" class="details">
     <div class="details__container container">
         <div class="details__grid">
             <div class="details__grid-image-wrapper">
@@ -20,8 +20,8 @@
 
         </div>
         <div class="details__icons">
-            <div class="details__icon-item" *ngFor="let icon of icons;">
-                <i class="fas fa-4x {{icon.icon}}"></i>
+            <div class="details__icons-item" *ngFor="let icon of icons;">
+                <i class="fas fa-4x {{icon.icon}} details__icons-icon"></i>
                 <h2 class="details__icons-amount">{{icon.amount | decimalNumberFormatter}}</h2>
                 <h4 class="details__icons-title">{{icon.title}}</h4>
             </div>
