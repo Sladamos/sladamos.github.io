@@ -34,6 +34,26 @@ export class DetailsPricingComponent {
         "1GB Storage",
         "Cancel Anytime"
       ]
+    },
+    {
+      title: "Advanced",
+      price: 19,
+      items: [
+        "Unlimited access to all features",
+        "24/7 Customer Support",
+        "5GB Storage",
+        "Cancel Anytime"
+      ]
+    },
+    {
+      title: "Complete",
+      price: 29,
+      items: [
+        "Unlimited access to all features",
+        "24/7 Customer Support",
+        "10GB Storage",
+        "Cancel Anytime"
+      ]
     }
   ];
 
