@@ -476,8 +476,14 @@ img {
     width: 100%;
     padding: 0.7rem;
 }
-/* Footer */
 
+/* Details-pricing */
+
+.pricing-notes {
+    padding: 3rem 2rem;
+    color: var(--light-gray-color);
+    text-align: center;
+}
 
 /* Details-features */
 
@@ -514,6 +520,8 @@ img {
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
+
+/* Footer */
 
 .footer {
     background-color: var(--tertiary-color);
@@ -662,6 +670,11 @@ img {
         gap: 6rem;
         text-align: left;
         max-width: var(--container-width);
+    }
+
+    .details-features__list-item {
+        flex-direction: row;
+        text-align: inherit;
     }
     
 }
