@@ -1,7 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
-export interface FeaturesItem {
+interface FeaturesItem {
   title: string,
   description: string,
   icon: string

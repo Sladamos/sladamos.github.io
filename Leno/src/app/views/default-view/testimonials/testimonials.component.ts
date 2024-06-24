@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 
-export interface Testimonial {
+interface Testimonial {
   title: string;
   text: string;
   imagePath: string;

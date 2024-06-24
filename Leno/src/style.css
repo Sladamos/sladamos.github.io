@@ -62,6 +62,11 @@ img {
     border-color: var(--primary-color);
 }
 
+.inner-header {
+    background: #000 url('assets/images/header-background.jpg') center center/cover no-repeat;
+    padding: 10rem 2rem 6rem;
+}
+
 /* Navbar */
 
 .navbar {
