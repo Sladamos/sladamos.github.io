@@ -8,7 +8,7 @@ export class DecimalNumberFormatterPipe implements PipeTransform {
 
   transform(value: number, ...args: unknown[]): unknown {
     if (value == null) return '';
-    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ', ');
   }
 
 }

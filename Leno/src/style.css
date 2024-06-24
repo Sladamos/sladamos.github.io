@@ -568,6 +568,25 @@ img {
         max-width: 500px;
     }
 
+    .details__grid {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: inherit;
+    }
+
+    .details__grid-image {
+        max-width: 100%;
+        width: auto;
+    }
+
+    .details__grid-content {
+        max-width: 500px;
+    }
+
+    .details__icons {
+        flex-direction: row;
+        margin-top: 8rem;
+    }
+
     .download {
         padding-top: 11.5rem;
     }
