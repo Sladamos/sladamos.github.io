@@ -6,11 +6,11 @@ import { SafePipe } from '../../utils/pipe/safe.pipe';
   selector: 'app-modal',
   standalone: true,
   imports: [SafePipe],
-  templateUrl: './modal.component.html',
-  styleUrl: './modal.component.css',
+  templateUrl: './app-modal.component.html',
+  styleUrl: './app-modal.component.css',
   providers: [VideoService]
 })
-export class ModalComponent implements OnInit {
+export class AppModalComponent implements OnInit {
   @ViewChild('video') video!: ElementRef;
   videoUrl: string = "";
 
