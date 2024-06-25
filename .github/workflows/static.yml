@@ -39,6 +39,7 @@ jobs:
       - name: Upload EdgeLedger artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          name: 'Lumina'
           path: './Lumina'
           
       - name: Deploy Lumina to GitHub Pages
@@ -61,6 +62,7 @@ jobs:
       - name: Upload EdgeLedger artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          name: 'EdgeLedger'
           path: './EdgeLedger'
           
       - name: Deploy EdgeLedger to GitHub Pages
