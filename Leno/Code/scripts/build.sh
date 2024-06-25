@@ -1,0 +1,1 @@
+ng b --configuration production --base-href https://sladamos.github.io/Leno/ --deploy-url=https://sladamos.github.io/Leno/
