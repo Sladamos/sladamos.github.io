@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Subject } from 'rxjs';
 
 export interface VideoMessage {
   url: string
@@ -7,12 +7,13 @@ export interface VideoMessage {
 
 @Injectable()
 export class VideoService {
+  private videoMessageSubject = new Subject<VideoMessage>();
+  videoMessage$ = this.videoMessageSubject.asObservable();
 
   constructor() { }
 
-  enterToVideo(url: string) : Observable<VideoMessage> {
+  enterToVideo(url: string) {
     const message: VideoMessage = { url: url}
-    console.log(message)
-    return of(message)
+    this.videoMessageSubject.next(message);
   }
 }
