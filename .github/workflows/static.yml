@@ -27,7 +27,7 @@ jobs:
   deploy-lumina:
     environment:
       name: github-pages
-      url: "sladamos.github.io/Lumina"
+      url: "https://sladamos.github.io/Lumina"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -50,7 +50,7 @@ jobs:
   deploy-edgeledger:
     environment:
       name: github-pages
-      url: "sladamos.github.io/EdgeLedger"
+      url: "https://sladamos.github.io/EdgeLedger"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
