@@ -26,7 +26,7 @@ jobs:
       - name: Deploy Lumina to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAGES_TOKEN }}
           publish_dir: ./Lumina
           publish_branch: gh-pages
           user_name: GitHub Actions
@@ -42,7 +42,7 @@ jobs:
       - name: Deploy EdgeLedger to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAGES_TOKEN }}
           publish_dir: ./EdgeLedger
           publish_branch: gh-pages
           user_name: GitHub Actions
