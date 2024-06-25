@@ -1,4 +1,4 @@
-<div id="videoModal" #video class="modal">
+<div *ngIf="videoVisible" id="videoModal" class="modal">
     <div class="modal__content">
         <span class="modal__close-button" (click)="exitFromVideo()">&times;</span>
         <iframe id="videoPlayer" [src]="videoUrl | safe: 'resourceUrl'" frameborder="0" width="560" height="315" allowfullscreen></iframe>

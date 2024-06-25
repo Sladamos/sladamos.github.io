@@ -5,10 +5,11 @@ export interface VideoMessage {
   url: string
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class VideoService {
-  private videoMessageSubject = new Subject<VideoMessage>();
-  videoMessage$ = this.videoMessageSubject.asObservable();
+  videoMessageSubject = new Subject<VideoMessage>();
 
   constructor() { }
 

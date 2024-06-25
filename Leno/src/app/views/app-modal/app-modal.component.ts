@@ -1,31 +1,33 @@
-import { Component, ElementRef, OnInit, Renderer2, SecurityContext, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { VideoMessage, VideoService } from '../../utils/service/video.service';
 import { SafePipe } from '../../utils/pipe/safe.pipe';
+import { CommonModule, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [SafePipe],
+  imports: [SafePipe, CommonModule],
   templateUrl: './app-modal.component.html',
-  styleUrl: './app-modal.component.css',
-  providers: [VideoService]
+  styleUrl: './app-modal.component.css'
 })
 export class AppModalComponent implements OnInit {
   @ViewChild('video') video!: ElementRef;
   videoUrl: string = "";
+  videoVisible: boolean = false;
 
-  constructor(private renderer: Renderer2, private service: VideoService) {
+  constructor(private service: VideoService) {
   }
+
   ngOnInit(): void {
-    this.service.videoMessage$.subscribe(this.enterToVideo);
+    this.service.videoMessageSubject.subscribe(this.enterToVideo);
   }
 
   exitFromVideo() {
-    const element = this.video.nativeElement;
-    this.renderer.setStyle(element, 'display', 'none');
+    this.videoVisible = false;
   }
 
-  enterToVideo(message: VideoMessage) {
+  enterToVideo = (message: VideoMessage) => {
     this.videoUrl = message.url;
+    this.videoVisible = true;
   }
 }

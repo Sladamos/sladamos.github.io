@@ -70,7 +70,7 @@ img {
 /* Modal */
 
 .modal {
-    display: none;
+    display: block;
     position: fixed;
     z-index: 999;
     left: 0;
