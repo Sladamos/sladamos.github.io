@@ -1,0 +1,1 @@
+docker-compose run --rm ng_util

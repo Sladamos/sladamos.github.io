@@ -1,0 +1,10 @@
+<section id="screenshots" class="screenshots">
+    <div class="screenshots__container container">
+        <div class="screenshots__content">
+            <h2 class="screenshots__title">Screenshots</h2>
+            <div class="screenshots__images">
+                <img class="screenshots__images-item" *ngFor="let idx of imagesArray" src="/assets/screenshot-{{idx}}.png" alt="Screenshot {{idx}}">
+            </div>
+        </div>
+    </div>
+</section>

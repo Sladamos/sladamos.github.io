@@ -1,0 +1,17 @@
+<section id="testimonials" class="testimonials">
+    <div class="testimonials__container container">
+        <div class="testimonials__card" *ngFor="let testimonial of testimonials; let i = index">
+            <div class="testimonials__card-image-wrapper">
+                <img class="testimonials__card-image" [src]="testimonial.imagePath" [alt]="'Testimonial ' + (i + 1)">
+            </div>
+            <div class="testimonials__card-content">
+                <p class="testimonials__card-text">
+                    {{testimonial.text}}
+                </p>
+                <h3 class="testimonials__card-title">
+                    {{testimonial.title}}
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>

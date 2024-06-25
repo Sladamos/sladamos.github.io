@@ -1,0 +1,34 @@
+<div class="navbar__mobile-menu">
+    <div (click)="onMenuClicked()" class="navbar__mobile-menu-toggle">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+    <div #menuItems class="navbar__mobile-menu-items">
+        <ul class="navbar__mobile-menu-list">
+            <li class="navbar__mobile-menu-item">
+                <a routerLink="/" fragment="top" class="navbar__mobile-menu-link">Home</a>
+            </li>
+            <li class="navbar__mobile-menu-item">
+                <a routerLink="/" fragment="features" class="navbar__mobile-menu-link">Features</a>
+            </li>
+            <li class="navbar__mobile-menu-item">
+                <a routerLink="/" fragment="preview" class="navbar__mobile-menu-link">Preview</a>
+            </li>
+            <li class="navbar__mobile-menu-item">
+                <a routerLink="/" fragment="details" class="navbar__mobile-menu-link">Details</a>
+            </li>
+            <li class="navbar__mobile-menu-item">
+                <a routerLink="/" fragment="download" class="navbar__mobile-menu-link">Download</a>
+            </li>
+            <li class="navbar__mobile-menu-item">
+                <div class="navbar__mobile-menu-social-medias">
+                    <a href="https://github.com/Sladamos"  class="navbar__mobile-menu-link--primary">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/s%C5%82awomir-adamowicz-369593275/"  class="navbar__mobile-menu-link--primary">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+services:
+  angular:
+    build:
+      context: .
+      dockerfile: dockerfiles/Angular.dockerfile
+    volumes:
+      - ".:/app"
+    ports:
+      - "3000:4200"
+
+  ng_util:
+    build: 
+      context: .
+      dockerfile: dockerfiles/Ng.dockerfile
+    volumes:
+      - ".:/app"
+    command: sh

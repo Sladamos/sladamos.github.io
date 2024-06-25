@@ -1,0 +1,27 @@
+<section id="pricing" class="pricing">
+    <div class="pricing__container container">
+        <h2 class="pricing__title">Pricing Options</h2>
+        <div class="pricing__cards">
+            <div class="pricing__card" *ngFor="let card of cards">
+                <div class="pricing__card-box">
+                    <h4 class="pricing__card-title">{{card.title}}</h4>
+                    <h3 class="pricing__card-price">{{card.price | dolarPriceFormatter}} </h3>
+                    <div class="pricing__card-body">
+                        <ul class="pricing__card-list">
+                            <li class="pricing__card-item" *ngFor="let item of card.items">
+                                <i class="fas fa-check pricing__card-item-icon"></i> {{item}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a routerLink="/details" fragment="top" class="pricing__card-button btn btn--primary">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing-notes">
+    <div class="pricing-notes__container container">
+        <p class="pricing-notes__text" *ngFor="let note of notes">{{note}}</p>
+    </div>
+</section>

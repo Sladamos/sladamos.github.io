@@ -1,0 +1,14 @@
+<section class="details-features">
+    <div class="details-features__container container">
+        <h2 class="details-features__title">Features</h2>
+        <div class="details-features__list">
+            <div class="details-features__list-item" *ngFor="let feature of features">
+                <i class="fas fa-4x {{feature.icon}} details-features__list-icon"></i>
+                <div class="details-features__list-text">
+                    <h3 class="details-features__list-title">{{feature.title}}</h3>
+                    <p class="details-features__list-description">{{feature.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
