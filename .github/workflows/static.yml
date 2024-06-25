@@ -35,13 +35,6 @@ jobs:
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          basepath: "Lumina"
-        
-      - name: Upload Lumina artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './Lumina'
           
       - name: Deploy Lumina to GitHub Pages
         id: deployment-lumina
@@ -59,8 +52,6 @@ jobs:
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          basepath: "EdgeLedger"
         
       - name: Upload EdgeLedger artifact
         uses: actions/upload-pages-artifact@v3
