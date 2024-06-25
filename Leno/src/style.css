@@ -84,11 +84,16 @@ img {
 .modal__content {
     position: relative;
     background-color: rgba(0, 0, 0, 0.5);
-    margin: 10% auto;
-    padding: 20px;
+    margin: 25vh auto;
+    padding: 10px;
+    width: 90%;
     border: 1px solid #888;
     border-radius: 10px;
     max-width: 600px;
+}
+
+.modal__video-player {
+    width: 100%;
 }
 
 .modal__close-button {
@@ -877,4 +882,7 @@ img {
         margin-bottom: auto;
     }
     
+    .modal__content {
+        padding: 20px;
+    }
 }
