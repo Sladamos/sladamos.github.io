@@ -19,17 +19,17 @@ export class TestimonialsComponent {
     {
       title: "Samantha Samson",
       text: "Leno has truly transformed how I manage my time and health. Highly recommended!",
-      imagePath: "/assets/testimonial-1.jpg"
+      imagePath: "assets/testimonial-1.jpg"
     },
     {
       title: "Mike Johnson",
       text: "As a developer, I rely on Leno every day to keep me focused and energized. It's a game-changer!",
-      imagePath: "/assets/testimonial-2.jpg"
+      imagePath: "assets/testimonial-2.jpg"
     },
     {
       title: "Laney Smith",
       text: "With Leno, I've been able to achieve my goals faster and healthier than ever before. It's a must-have app!",
-      imagePath: "/assets/testimonial-3.jpg"
+      imagePath: "assets/testimonial-3.jpg"
     }
   ];
 }
