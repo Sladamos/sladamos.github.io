@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-preview',
+  selector: 'preview',
   standalone: true,
   imports: [],
   templateUrl: './preview.component.html',
