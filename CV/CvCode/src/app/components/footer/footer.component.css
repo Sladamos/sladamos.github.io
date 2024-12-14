@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  background-color: var(--color-very-dark-second);
+}
+
+.footer__wrapper {
+  display: flex;
+  color: var(--color-white-gray);
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.footer__text {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 968px) {
+  .header__wrapper {
+    flex-direction: column;
+  }
+
+  .header__image-wrapper {
+    display: none;
+  }
+}
