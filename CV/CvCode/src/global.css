@@ -1,3 +1,22 @@
+
+:root {
+  --container-normal: 80vw;
+
+  --color-light-first: rgb(204, 235, 255);
+  --color-light-second: rgb(128, 204, 255);
+  --color-normal-first: rgb(77, 184, 255);
+  --color-normal-second: rgb(0, 138, 230);
+  --color-dark-first: rgb(0, 107, 179);
+  --color-dark-second: rgb(0, 74, 128);
+  --color-very-dark-first: rgb(0, 45, 77);
+  --color-very-dark-second: rgb(0, 30, 51);
+
+  --color-black: #000000;
+  --color-dark-gray: #333333;
+  --color-white-gray: #aaaaaa;
+  --color-white: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +31,9 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
+  background: linear-gradient(to bottom, var(--color-normal-second), var(--color-light-second), var(--color-very-dark-first));
+
+  background-blend-mode: screen;
 }
 
 ul {
@@ -25,4 +47,9 @@ a {
 
 img {
   max-width: 100%;
+}
+
+.container__normal {
+  width: var(--container-normal);
+  margin: 0 auto;
 }

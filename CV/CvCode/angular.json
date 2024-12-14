@@ -40,7 +40,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "assets"
+                "input": "assets",
+                "output": "/assets"
               }
             ],
             "styles": [
