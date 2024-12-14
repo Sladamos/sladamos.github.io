@@ -1,20 +1,7 @@
 
 :root {
   --container-normal: 80vw;
-
-  --color-light-first: rgb(204, 235, 255);
-  --color-light-second: rgb(128, 204, 255);
-  --color-normal-first: rgb(77, 184, 255);
-  --color-normal-second: rgb(0, 138, 230);
-  --color-dark-first: rgb(0, 107, 179);
-  --color-dark-second: rgb(0, 74, 128);
-  --color-very-dark-first: rgb(0, 45, 77);
-  --color-very-dark-second: rgb(0, 30, 51);
-
-  --color-black: #000000;
-  --color-dark-gray: #333333;
-  --color-white-gray: #aaaaaa;
-  --color-white: #ffffff;
+  --container-large: 90vw;
 }
 
 * {
@@ -49,7 +36,21 @@ img {
   max-width: 100%;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  line-height: inherit;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
 .container__normal {
   width: var(--container-normal);
   margin: 0 auto;
 }
+
+.container__large {
+  width: var(--container-large);
+  margin: 0 auto;
+}
+

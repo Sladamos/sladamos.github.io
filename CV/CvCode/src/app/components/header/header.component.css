@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  background-color: var(--color-very-dark-second);
+}
+
+.header__wrapper {
+  display: flex;
+  color: var(--color-white-gray);
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 968px) {
+  .header__wrapper {
+    flex-direction: column;
+  }
+
+  .header__image-wrapper {
+    display: none;
+  }
+}

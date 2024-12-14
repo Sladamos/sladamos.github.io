@@ -1,0 +1,13 @@
+@if (isMobile()) {
+  <button class="navbar__menu-toggle" (click)="toggleMenu()">Menu</button>
+}
+
+@if (!isMobile() || isMenuOpen()) {
+  <nav class="navbar__menu">
+    <a class="navbar__link" href="">Home</a>
+    <a class="navbar__link" href="">About me</a>
+    <a class="navbar__link" href="">Experience</a>
+    <a class="navbar__link" href="">Technologies</a>
+    <a class="navbar__link" href="">Contact</a>
+  </nav>
+}
