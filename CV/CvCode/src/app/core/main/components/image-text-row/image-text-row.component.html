@@ -1,0 +1,16 @@
+@if (reverse()) {
+  <div class="image-text-row__image">
+    <img [src]="imageSrc()" [alt]="imageAlt()" />
+  </div>
+}
+
+<div class="image-text-row__content">
+  <h2>{{ title() }}</h2>
+  <ng-content />
+</div>
+
+@if (!reverse()) {
+  <div class="image-text-row__image">
+    <img [src]="imageSrc()" [alt]="imageAlt()" />
+  </div>
+}

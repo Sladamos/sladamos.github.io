@@ -1,6 +1,7 @@
 :host {
   display: block;
   background-color: var(--color-very-dark-second);
+  margin-top: 2rem;
 }
 
 .footer__wrapper {

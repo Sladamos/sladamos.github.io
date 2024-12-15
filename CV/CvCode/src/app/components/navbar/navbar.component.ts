@@ -1,5 +1,5 @@
-import {Component, computed, HostListener, Signal, signal} from '@angular/core';
-import {window} from "rxjs";
+import {Component, computed, signal} from '@angular/core';
+import {ScreenTypeService} from '../../shared/services/screen-type.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,17 +8,12 @@ import {window} from "rxjs";
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
   isMenuOpen = signal(false);
-  isMobile = signal(globalThis.window.innerWidth <= 968);
+  isMobile = computed(() => this.screenTypeService.isMobile());
+
+  constructor(private screenTypeService: ScreenTypeService) {}
 
   toggleMenu() {
     this.isMenuOpen.update((state: boolean) => !state);
   }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: UIEvent) {
-    this.isMobile.set(globalThis.window.innerWidth <= 968);
-  }
-
 }
