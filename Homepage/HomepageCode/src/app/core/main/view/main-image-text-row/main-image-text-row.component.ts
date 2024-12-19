@@ -1,12 +1,13 @@
 import {Component, input, InputSignal} from '@angular/core';
 
 @Component({
-  selector: 'app-image-text-row',
+  selector: 'app-main-image-text-row',
   imports: [],
-  templateUrl: './image-text-row.component.html',
-  styleUrl: './image-text-row.component.css'
+  standalone: true,
+  templateUrl: './main-image-text-row.component.html',
+  styleUrl: './main-image-text-row.component.css'
 })
-export class ImageTextRowComponent {
+export class MainImageTextRowComponent {
   imageSrc: InputSignal<string> = input.required<string>();
   imageAlt: InputSignal<string> = input.required<string>();
   title: InputSignal<string> = input<string>("");

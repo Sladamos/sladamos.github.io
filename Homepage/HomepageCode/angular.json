@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CvCode": {
+    "Homepage": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "CvCode:build:production"
+              "buildTarget": "Homepage:build:production"
             },
             "development": {
-              "buildTarget": "CvCode:build:development"
+              "buildTarget": "Homepage:build:development"
             }
           },
           "defaultConfiguration": "development"

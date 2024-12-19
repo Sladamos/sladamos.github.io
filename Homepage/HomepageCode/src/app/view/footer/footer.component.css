@@ -2,6 +2,7 @@
   display: block;
   background-color: var(--color-very-dark-second);
   margin-top: 2rem;
+  padding: 1rem;
 }
 
 .footer__wrapper {

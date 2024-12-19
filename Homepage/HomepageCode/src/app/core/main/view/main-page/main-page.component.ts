@@ -1,14 +1,15 @@
 import {Component, computed} from '@angular/core';
-import {MainSpinnerComponent} from '../../components/main-spinner/main-spinner.component';
-import {ImageTextRowComponent} from '../../components/image-text-row/image-text-row.component';
-import {ScreenTypeService} from '../../../../shared/services/screen-type.service';
+import {ScreenTypeService} from '../../../../shared/service/screen-type.service';
+import {MainSpinnerComponent} from '../main-spinner/main-spinner.component';
+import {MainImageTextRowComponent} from '../main-image-text-row/main-image-text-row.component';
 
 @Component({
   selector: 'app-main-page',
   imports: [
     MainSpinnerComponent,
-    ImageTextRowComponent
+    MainImageTextRowComponent
   ],
+  standalone: true,
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css',
   host: {

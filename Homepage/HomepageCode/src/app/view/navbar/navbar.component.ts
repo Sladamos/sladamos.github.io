@@ -1,5 +1,5 @@
 import {Component, computed, signal} from '@angular/core';
-import {ScreenTypeService} from '../../shared/services/screen-type.service';
+import {ScreenTypeService} from '../../shared/service/screen-type.service';
 
 @Component({
   selector: 'app-navbar',
