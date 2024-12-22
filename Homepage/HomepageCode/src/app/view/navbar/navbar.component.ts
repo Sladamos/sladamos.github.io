@@ -1,9 +1,12 @@
 import {Component, computed, signal} from '@angular/core';
 import {ScreenTypeService} from '../../shared/service/screen-type.service';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [
+    NgClass
+  ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })

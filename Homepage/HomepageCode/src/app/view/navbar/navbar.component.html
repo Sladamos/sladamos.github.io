@@ -1,8 +1,20 @@
 @if (isMobile()) {
-  <button class="navbar__menu-toggle" (click)="toggleMenu()">Menu</button>
+  <button class="navbar__menu-toggle" (click)="toggleMenu()">
+    <i class="fas fa-bars fa-2x"></i>
+  </button>
 }
 
-@if (!isMobile() || isMenuOpen()) {
+@if (isMobile()) {
+  <nav [ngClass]="{
+    'navbar__mobile-menu-active': isMenuOpen()}"
+  class="navbar__menu navbar__mobile-menu">
+    <a class="navbar__link" href="">Home</a>
+    <a class="navbar__link" href="">About me</a>
+    <a class="navbar__link" href="">Experience</a>
+    <a class="navbar__link" href="">Technologies</a>
+    <a class="navbar__link" href="">Contact</a>
+  </nav>
+} @else {
   <nav class="navbar__menu">
     <a class="navbar__link" href="">Home</a>
     <a class="navbar__link" href="">About me</a>
