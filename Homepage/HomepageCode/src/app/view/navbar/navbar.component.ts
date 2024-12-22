@@ -11,12 +11,12 @@ import {NgClass} from '@angular/common';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  isMenuOpen = signal(false);
+  isMobileMenuOpen = signal(false);
   isMobile = computed(() => this.screenTypeService.isMobile());
 
   constructor(private screenTypeService: ScreenTypeService) {}
 
   toggleMenu() {
-    this.isMenuOpen.update((state: boolean) => !state);
+    this.isMobileMenuOpen.update((state: boolean) => !state && this.isMobile());
   }
 }

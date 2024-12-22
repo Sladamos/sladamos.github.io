@@ -1,4 +1,4 @@
-import {Component, HostListener, OnDestroy, signal} from '@angular/core';
+import {Component, HostListener, OnDestroy, signal, WritableSignal} from '@angular/core';
 import {NavbarComponent} from '../navbar/navbar.component';
 
 @Component({
@@ -13,14 +13,16 @@ import {NavbarComponent} from '../navbar/navbar.component';
   }
 })
 export class HeaderComponent implements OnDestroy {
-  isScrolled = signal(false);
+  private scrollEventListener: (event: Event) => void;
+  isScrolled: WritableSignal<boolean> = signal(false);
 
   constructor() {
-    window.addEventListener('scroll', this.onWindowScroll);
+    this.scrollEventListener = this.onWindowScroll.bind(this);
+    window.addEventListener('scroll', this.scrollEventListener);
   }
 
   ngOnDestroy() {
-    window.removeEventListener('scroll', this.onWindowScroll);
+    window.removeEventListener('scroll', this.scrollEventListener);
   }
 
   @HostListener('window:scroll', ['$event'])
