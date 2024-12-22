@@ -1,0 +1,16 @@
+@if (isMobile()) {
+  <button class="navbar__menu-toggle" (click)="toggleMenu()">
+    <i class="fas fa-bars fa-2x"></i>
+  </button>
+}
+<nav [ngClass]="{
+      'navbar__mobile-menu-active': isMobileMenuOpen(),
+      'navbar__mobile-menu': isMobile()
+     }"
+     class="navbar__menu">
+  <a class="navbar__link" href="">Home</a>
+  <a class="navbar__link" href="">About me</a>
+  <a class="navbar__link" href="">Experience</a>
+  <a class="navbar__link" href="">Technologies</a>
+  <a class="navbar__link" href="">Contact</a>
+</nav>
