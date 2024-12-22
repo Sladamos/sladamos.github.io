@@ -1,0 +1,16 @@
+:root {
+  --color-light-first: rgb(204, 153, 51);
+  --color-light-second: rgb(204, 175, 47);
+  --color-normal-first: rgb(204, 102, 0);
+  --color-normal-second: rgb(153, 75, 0);
+  --color-dark-first: rgb(139, 105, 45);
+  --color-dark-second: rgb(160, 82, 45);
+  --color-very-dark-first: rgb(92, 51, 23);
+  --color-very-dark-second: rgb(74, 41, 23);
+  --color-very-dark-second-rgb: 74, 41, 23;
+
+  --color-black: #000000;
+  --color-dark-gray: #333333;
+  --color-white-gray: #dddddd;
+  --color-white: #ffffff;
+}
