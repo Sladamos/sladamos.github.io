@@ -3,10 +3,6 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  /*background: linear-gradient(var(--color-dark-first), transparent),
-  linear-gradient(to top left, var(--color-light-first), transparent),
-  linear-gradient(to top right, var(--color-very-dark-first), transparent);
-  background-blend-mode: screen;*/
   height: 500px;
 }
 

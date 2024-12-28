@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
-import {SpinnerComponent} from '../../../../shared/view/spinner/spinner.component';
+import {SpinnerComponent} from '../../../../features/shared/view/spinner/spinner.component';
 
 @Component({
   selector: 'app-main-spinner',

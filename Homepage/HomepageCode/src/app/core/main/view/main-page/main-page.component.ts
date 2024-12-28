@@ -1,5 +1,5 @@
 import {Component, computed} from '@angular/core';
-import {ScreenTypeService} from '../../../../shared/service/screen-type.service';
+import {ScreenTypeService} from '../../../../features/shared/service/screen-type.service';
 import {MainSpinnerComponent} from '../main-spinner/main-spinner.component';
 import {MainImageTextRowComponent} from '../main-image-text-row/main-image-text-row.component';
 
