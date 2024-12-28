@@ -1,1 +1,9 @@
-<app-experience-sections [sections]="this.sections"></app-experience-sections>
+<app-experience-sections
+  [sections]="this.experienceService.sections()"
+  (onSectionSelected)="onSectionSelected($event)"></app-experience-sections>
+
+@if (selectedSection) {
+  @for (item of selectedSection.items; track item) {
+    <app-experience-item [item]="item"></app-experience-item>
+  }
+}

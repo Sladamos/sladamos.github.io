@@ -1,4 +1,4 @@
-import {Component, HostListener, OnDestroy, signal, WritableSignal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostListener, OnDestroy, signal, WritableSignal} from '@angular/core';
 import {NavbarComponent} from '../navbar/navbar.component';
 
 @Component({
@@ -8,12 +8,13 @@ import {NavbarComponent} from '../navbar/navbar.component';
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[class.header__scrolled]': 'isScrolled()'
   }
 })
 export class HeaderComponent implements OnDestroy {
-  private scrollEventListener: (event: Event) => void;
+  private readonly scrollEventListener: (event: Event) => void;
   isScrolled: WritableSignal<boolean> = signal(false);
 
   constructor() {

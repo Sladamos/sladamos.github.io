@@ -1,11 +1,12 @@
-import {Component, input, InputSignal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/core';
 
 @Component({
   selector: 'app-main-image-text-row',
   imports: [],
   standalone: true,
   templateUrl: './main-image-text-row.component.html',
-  styleUrl: './main-image-text-row.component.css'
+  styleUrl: './main-image-text-row.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainImageTextRowComponent {
   imageSrc: InputSignal<string> = input.required<string>();

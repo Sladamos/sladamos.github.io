@@ -1,6 +1,6 @@
 import {
-  AfterContentInit,
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ContentChildren,
   ElementRef,
@@ -12,7 +12,8 @@ import {
   selector: 'app-spinner',
   imports: [],
   templateUrl: './spinner.component.html',
-  styleUrl: './spinner.component.css'
+  styleUrl: './spinner.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SpinnerComponent implements AfterViewInit {
   @ContentChildren('spinnerChild', { descendants: true }) children!: QueryList<ElementRef>;
