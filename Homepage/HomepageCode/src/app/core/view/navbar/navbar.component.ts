@@ -21,4 +21,8 @@ export class NavbarComponent {
   toggleMenu() {
     this.isMobileMenuOpen.update((state: boolean) => !state && this.isMobile());
   }
+
+  closeMenu() {
+    this.isMobileMenuOpen.set(false);
+  }
 }

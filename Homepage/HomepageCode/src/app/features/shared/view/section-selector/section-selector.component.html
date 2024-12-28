@@ -1,0 +1,16 @@
+<button (click)="onPreviousSectionClicked()"
+        class="sections__button"
+        [ngClass]="{'disappear': animationState === 'disappear'}">
+  {{sections()[previousSectionIndex()].title}}
+</button>
+
+<button class="sections__button sections__button--current"
+        [ngClass]="{'disappear': animationState === 'disappear'}">
+  {{sections()[currentSectionIndex()].title}}
+</button>
+
+<button (click)="onNextSectionClicked()"
+        class="sections__button"
+        [ngClass]="{'disappear': animationState === 'disappear'}">
+  {{sections()[nextSectionIndex()].title}}
+</button>
