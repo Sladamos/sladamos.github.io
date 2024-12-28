@@ -1,5 +1,6 @@
 
 :root {
+  --container-tiny: 50vw;
   --container-normal: 80vw;
   --container-large: 90vw;
 }
@@ -40,6 +41,11 @@ button {
   line-height: inherit;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+}
+
+.container__tiny {
+  width: var(--container-tiny);
+  margin: 0 auto;
 }
 
 .container__normal {

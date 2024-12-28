@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
-import {SpinnerComponent} from '../../../../shared/view/spinner/spinner.component';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {SpinnerComponent} from '../../../../features/shared/view/spinner/spinner.component';
 
 @Component({
   selector: 'app-main-spinner',
@@ -8,8 +7,8 @@ import {SpinnerComponent} from '../../../../shared/view/spinner/spinner.componen
     SpinnerComponent
   ],
   templateUrl: './main-spinner.component.html',
-  styleUrl: './main-spinner.component.css'
+  styleUrl: './main-spinner.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainSpinnerComponent {
-
 }
