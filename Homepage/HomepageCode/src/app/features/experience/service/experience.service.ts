@@ -5,7 +5,8 @@ import {Injectable, signal} from '@angular/core';
 })
 export class ExperienceService {
   sections = signal([
-    {title: 'Job', items: [
+    {
+      title: 'Job', items: [
         {
           company: 'Consdata',
           title: 'Junior fullstack developer',
@@ -28,13 +29,26 @@ export class ExperienceService {
             '<li>Taking parts in SCRUM meetings</li>' +
             '<li>Managing simple environment tasks using Jenkins, Docker and Kubernetes</li></ul>'
         }
-      ]},
-    {title: 'Education', items: [
+      ]
+    },
+    {
+      title: 'Education', items: [
+        {
+          company: 'Gdańsk University of Technology',
+          title: 'Master of Computer science',
+          from: '2025',
+          assetSrc: 'experience_pg.jpg',
+          description: '<ul class="experience__description-list"><li>Specialization: Geoinformatic and Mobile Technologies</li>' +
+            '<li>Focused on expand knowledge in Machine Learning</li>'
+        },
         {
           company: 'Gdańsk University of Technology',
           title: 'Bachelor of Computer science',
           from: '2021',
-          assetSrc: 'experience_pg.jpg'
+          to: '2025',
+          assetSrc: 'experience_pg.jpg',
+          description: '<ul class="experience__description-list"><li>First specialization: Applications</li>' +
+            '<li>Second specialization: Algorithms and Systems Modeling</li>'
         },
         {
           company: 'II High School in Elbląg',
@@ -46,8 +60,10 @@ export class ExperienceService {
             '<li>Taking part in physics olympiad and chemistry olympiad</li>' +
             '<li>Self studying chemistry</li></ul>'
         }
-      ]},
-    {title: 'Other', items: [
+      ]
+    },
+    {
+      title: 'Other', items: [
         {
           company: 'Ping science club',
           title: 'Member',
@@ -58,6 +74,7 @@ export class ExperienceService {
             '<li>Interesting lectures every week</li></ul>' +
             '<img class="experience__image" src="assets/images/experience_lecture.jpg" />'
         }
-      ]}
+      ]
+    }
   ]);
 }
