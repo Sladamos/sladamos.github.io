@@ -1,5 +1,7 @@
-<app-search-bar placeholder="Find projects by name or technology.." />
+<app-search-bar placeholder="Find projects by name or technology.."  (onValueSearched)="onValueSearched($event)" />
 
 <div class="projects__wrapper">
-  <p>for item in items display project item</p>
+  @for (project of this.displayedProjects(); track project; let o = $odd) {
+   <app-project-item [project]="project" [isReversed]="o" />
+  }
 </div>

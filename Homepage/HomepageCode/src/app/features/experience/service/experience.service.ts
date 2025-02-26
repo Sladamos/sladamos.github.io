@@ -72,7 +72,7 @@ export class ExperienceService {
           description: '<ul class="experience__description-list"><li>Contains Capture The Flag section</li>' +
             '<li>Mainly focused on cybersecurity and networks</li>' +
             '<li>Interesting lectures every week</li></ul>' +
-            '<img class="experience__image" src="assets/images/experience_lecture.jpg" />'
+            '<img class="experience__image" src="assets/images/experience/experience_lecture.jpg" />'
         }
       ]
     }

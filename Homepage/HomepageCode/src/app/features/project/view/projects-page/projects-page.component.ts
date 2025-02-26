@@ -1,15 +1,43 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, computed, inject, signal} from '@angular/core';
 import {SearchBarComponent} from '../../../shared/view/search-bar/search-bar.component';
+import {ProjectService} from '../../service/project.service';
+import {ProjectItemComponent} from '../project-item/project-item.component';
+import {Subject} from 'rxjs';
+import {ProjectModel} from '../../model/project-model';
 
 @Component({
   selector: 'app-projects-page',
   imports: [
-    SearchBarComponent
+    SearchBarComponent,
+    ProjectItemComponent
   ],
   templateUrl: './projects-page.component.html',
   styleUrl: './projects-page.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    'class': 'container__normal'
+  }
 })
 export class ProjectsPageComponent {
+  projectService: ProjectService = inject(ProjectService);
+  projects = this.projectService.projects;
+  searchQuery = signal("")
+  displayedProjects = computed(() => !!this.searchQuery() ? this.projects().filter(project => this.doesProjectMatchQuery(project)) : this.projects())
 
+  onValueSearched($value: string) {
+    this.searchQuery.set($value);
+  }
+
+  doesProjectMatchQuery(project: ProjectModel): boolean {
+    const query = this.searchQuery().toUpperCase();
+    return project.name.toUpperCase().includes(query) || this.anyTechnologyMatchesQuery(project, query)
+  }
+
+  private anyTechnologyMatchesQuery(project: ProjectModel, query: string) {
+    return project.technologies.map(technology => technology.name.toUpperCase())
+        .some(name => name.includes(query)) ||
+      project.technologies.map(technology => technology.aliases)
+        .flatMap(aliases => aliases?.map(alias => alias.toUpperCase()) ?? [])
+        .some(alias => alias.includes(query));
+  }
 }

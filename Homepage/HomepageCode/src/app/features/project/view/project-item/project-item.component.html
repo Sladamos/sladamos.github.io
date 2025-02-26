@@ -1,1 +1,22 @@
-<p>project-item works!</p>
+<div class="project-item__text-wrapper item">
+  <div class="project-item__text">
+    <h3 class="project-item__name"> {{project().name}} </h3>
+    <p class="project-item__description"> {{project().description}}</p>
+  </div>
+</div>
+
+<div class="project-item__image-wrapper item">
+  <img class="project-item__image" src="assets/images/projects/{{project().imgUrl}}" alt="Application screenshot" />
+</div>
+
+<div class="project-item__source-code item">
+  <a class="project-item__source-code-link" [href]="project().sourceCodeUrl" target="_blank">
+    Check source code <fa-icon class="fa-xl" [icon]="faGithub" />
+  </a>
+</div>
+
+<div class="project-item__chips item">
+  @for (technology of project().technologies; track technology) {
+    <app-project-technology-chip [technology]="technology" />
+  }
+</div>

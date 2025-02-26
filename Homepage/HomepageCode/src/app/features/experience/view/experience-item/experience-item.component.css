@@ -4,7 +4,8 @@
   color: var(--color-white-gray);
   padding: 2rem 4rem;
   gap: 3rem;
-  box-shadow: 4px 4px 16px var(--color-normal-second)
+  box-shadow: 4px 4px 16px var(--color-normal-second);
+  border-radius: 50px;
 }
 
 .item__company {
