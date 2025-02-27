@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, input, Input, InputSignal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/core';
 import { ProjectModel } from '../../model/project-model';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';

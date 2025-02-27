@@ -17,13 +17,3 @@
   font-size: 1rem;
   font-weight: bold;
 }
-
-@media screen and (max-width: 968px) {
-  .header__wrapper {
-    flex-direction: column;
-  }
-
-  .header__image-wrapper {
-    display: none;
-  }
-}

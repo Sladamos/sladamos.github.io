@@ -2,7 +2,6 @@ import {ChangeDetectionStrategy, Component, computed, inject, signal} from '@ang
 import {SearchBarComponent} from '../../../shared/view/search-bar/search-bar.component';
 import {ProjectService} from '../../service/project.service';
 import {ProjectItemComponent} from '../project-item/project-item.component';
-import {Subject} from 'rxjs';
 import {ProjectModel} from '../../model/project-model';
 
 @Component({
