@@ -79,3 +79,17 @@
 .project-item__source-code-link:hover {
   scale: 1.1;
 }
+
+@media screen and (max-width: 968px) {
+  :host {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  :host .item:nth-child(1) { order: 1; }
+  :host .item:nth-child(2) { order: 2; }
+  :host .item:nth-child(3) { order: 4; }
+  :host .item:nth-child(4) { order: 3; }
+}
+
