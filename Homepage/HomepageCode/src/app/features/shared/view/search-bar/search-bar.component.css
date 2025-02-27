@@ -23,3 +23,14 @@
 .search-bar__icon {
   color: var(--color-light-first);
 }
+
+@media screen and (max-width: 600px) {
+  .search-bar__input {
+    font-size: 2rem;
+  }
+
+  .search-bar__input::placeholder {
+    font-size: 0.75rem;
+  }
+}
+
