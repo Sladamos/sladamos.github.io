@@ -36,7 +36,7 @@
   max-height: 60px;
 
   img {
-    filter: hue-rotate(var(--logo-hue-rotate));
+    filter: hue-rotate(var(--logo-hue-rotate)) brightness(var(--logo-brightness));
   }
 }
 

@@ -3,6 +3,8 @@
   --container-tiny: 50vw;
   --container-normal: 80vw;
   --container-large: 90vw;
+  --logo-hue-rotate: 0;
+  --logo-brightness: 1;
 }
 
 * {
