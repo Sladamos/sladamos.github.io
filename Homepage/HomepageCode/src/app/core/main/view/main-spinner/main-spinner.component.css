@@ -37,12 +37,14 @@
 
 @media screen and (max-width: 600px) {
   :host {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: end;
+    gap: 4rem;
   }
 
   .main-spinner__item {
     width: 320px;
-    height: 300px;
+    height: 150px;
   }
 
   .main-spinner__text {
@@ -52,7 +54,7 @@
 
 @media screen and (min-width: 600px) and (max-width: 768px) {
   :host {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .main-spinner__item {

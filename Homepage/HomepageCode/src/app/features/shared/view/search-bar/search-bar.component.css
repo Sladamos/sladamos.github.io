@@ -5,6 +5,8 @@
   background: linear-gradient(135deg,var(--color-very-dark-first),var(--color-dark-first));
   border-radius: 10px;
   padding: 1rem;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .search-bar__input {
@@ -25,12 +27,21 @@
 }
 
 @media screen and (max-width: 600px) {
+  :host {
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+  }
+
+  .search-bar__icon {
+    font-size: 1rem;
+  }
+
   .search-bar__input {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 
   .search-bar__input::placeholder {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }
 

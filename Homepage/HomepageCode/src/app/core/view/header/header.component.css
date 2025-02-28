@@ -25,9 +25,11 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-size: 24px;
 }
 
+.header__text {
+  font-size: 24px;
+}
 
 .header__image-wrapper {
   max-width: 60px;
@@ -40,10 +42,15 @@
 
 @media screen and (max-width: 968px) {
   .header__wrapper {
-    flex-direction: column;
+    padding-top: 1rem;
   }
 
-  .header__info {
-    display: none;
+  .header__text {
+    font-size: 16px;
+  }
+
+  .header__image-wrapper {
+    max-width: 45px;
+    max-height: 45px;
   }
 }

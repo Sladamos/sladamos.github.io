@@ -1,6 +1,9 @@
 <app-search-bar placeholder="Find projects by name or technology.."  (onValueSearched)="onValueSearched($event)" />
 
 <div class="projects__wrapper">
+  @if (this.displayedProjects().length === 0) {
+    <p class="projects__wrong-query-message">No projects found for query: {{searchQuery()}}</p>
+  }
   @for (project of this.displayedProjects(); track project; let o = $odd) {
    <app-project-item [project]="project" [isReversed]="o" />
   }

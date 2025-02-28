@@ -23,7 +23,6 @@ export class RuntimeService {
     elementRef
       .querySelectorAll(`:not([${ngContentAttribute}])`)
       .forEach((elem) => {
-        console.log(elem)
         elem.setAttribute(ngContentAttribute, '')
       });
   }

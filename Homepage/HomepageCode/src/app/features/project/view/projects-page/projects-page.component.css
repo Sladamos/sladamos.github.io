@@ -4,6 +4,7 @@
   gap: 4rem;
   padding-top: 11.5rem;
   align-items: center;
+  flex: 1
 }
 
 .projects__wrapper {
@@ -11,4 +12,25 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+}
+
+.projects__wrong-query-message {
+  color: var(--color-white-gray);
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 968px) {
+  :host {
+    padding-top: 6rem;
+    gap: 1.5rem;
+  }
+
+  .projects__wrong-query-message {
+    font-size: 1.5rem;
+    padding: 3rem 0;
+  }
 }
