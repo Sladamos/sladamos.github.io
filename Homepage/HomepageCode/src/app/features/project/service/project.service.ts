@@ -107,6 +107,15 @@ export class ProjectService {
         technologies: [
           this.getTechnology('Java'), this.getTechnology('JUnit'), this.getTechnology('Mockito'), this.getTechnology('AssertJ')
         ]
+      }
+      {
+        name: 'QualifiedElectronicSignature',
+        description: '',
+        imgUrl: 'projects_kingdomSimulation.png',
+        sourceCodeUrl: 'https://github.com/Sladamos/KingdomSimulation',
+        technologies: [
+          this.getTechnology('Java'), this.getTechnology('JUnit'), this.getTechnology('Mockito'), this.getTechnology('AssertJ')
+        ]
       },*/
       {
         name: 'Homepage',
