@@ -1,1 +1,5 @@
+@if (!!technology().icon) {
+  <div class="chip__icon-wrapper" [innerHTML]="technology().icon! | safeHtml "></div>
+}
 <p [style.color]="technology().textColor">{{technology().name}}</p>
+

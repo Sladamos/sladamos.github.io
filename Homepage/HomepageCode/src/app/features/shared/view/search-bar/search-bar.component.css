@@ -2,7 +2,7 @@
   display: flex;
   margin: 0 auto;
   max-width: 500px;
-  background: linear-gradient(135deg,var(--color-very-dark-first),var(--color-dark-first));
+  background: linear-gradient(135deg,var(--color-very-dark-second),var(--color-dark-second));
   border-radius: 10px;
   padding: 1rem;
   align-items: center;

@@ -1,6 +1,14 @@
 :host {
+  display: flex;
+  gap: 0.25rem;
   padding: 0.5rem 1rem;
   background-color: #111127;
   border-radius: 30px;
   height: auto;
+  align-items: center;
+}
+
+.chip__icon-wrapper {
+  height: 30px;
+  width: 30px;
 }

@@ -48,7 +48,7 @@
             ],
             "styles": [
               "src/global.css",
-              "src/themes/spring-theme.css",
+              "src/themes/winter-theme.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []

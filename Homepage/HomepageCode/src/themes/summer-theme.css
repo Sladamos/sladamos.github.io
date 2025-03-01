@@ -1,13 +1,13 @@
 :root {
-  --color-light-first: rgb(242, 255, 204);
-  --color-light-second: rgb(229, 255, 153);
-  --color-normal-first: rgb(217, 255, 102);
-  --color-normal-second: rgb(204, 255, 50);
-  --color-dark-first: rgb(72, 114, 127);
-  --color-dark-second: rgb(58, 91, 102);
-  --color-very-dark-first: rgb(45, 68, 76);
-  --color-very-dark-second: rgb(30, 45, 51);
-  --color-very-dark-second-rgb: 30, 45, 51;
+  --color-light-first: rgb(255, 242, 150);
+  --color-light-second: rgb(255, 242, 125);
+  --color-normal-first: rgb(193, 186, 0);
+  --color-normal-second: rgb(224, 214, 25);
+  --color-dark-first: rgb(62, 104, 117);
+  --color-dark-second: rgb(48, 81, 92);
+  --color-very-dark-first: rgb(35, 58, 66);
+  --color-very-dark-second: rgb(20, 35, 41);
+  --color-very-dark-second-rgb: 20, 35, 41;
   --logo-hue-rotate: 90deg;
   --logo-brightness: 5;
 
