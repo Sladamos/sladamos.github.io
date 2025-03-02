@@ -118,25 +118,25 @@ export class ProjectService {
         imgUrl: 'projects_kingdomSimulation.png',
         sourceCodeUrl: 'https://github.com/Sladamos/KingdomSimulation',
         technologies: [
-          this.getTechnology('Java'), this.getTechnology('JUnit'), this.getTechnology('Mockito'), this.getTechnology('AssertJ')
-        ]
-      },
-      {
-        name: 'Library API',
-        description: '',
-        imgUrl: 'projects_kingdomSimulation.png',
-        sourceCodeUrl: 'https://github.com/Sladamos/KingdomSimulation',
-        technologies: [
-          this.getTechnology('Java'), this.getTechnology('JUnit'), this.getTechnology('Mockito'), this.getTechnology('AssertJ')
+          this.getTechnology('C#'), this.getTechnology('Docker'), this.getTechnology('MassTransit'), this.getTechnology('RabbitMQ')
         ]
       },*/
+      {
+        name: 'Library API',
+        description: 'Library API is an application divided into microservices which are deployed on Heroku. It consists of books and publishing houses. It allows simple CRUD operations on both of them. The goal of the project was to create monolith and then divide it into separate microservices with their own persistence. It was required to use synchronous communication via RestTemplates.',
+        imgUrl: 'projects_libraryApi.png',
+        sourceCodeUrl: 'https://github.com/Sladamos/LibraryAPI/',
+        technologies: [
+          this.getTechnology('Java'), this.getTechnology('Spring'), this.getTechnology('Angular'), this.getTechnology('CSS'), this.getTechnology('Docker')
+        ]
+      },
       {
         name: 'CoronaryApp',
         description: 'This application reconstructs three-dimensional bifurcation points in coronary vessels using only a series of planar angiography images. It analyzes the shape, size, and direction of shadows to approximate the original 3D locations, offering a fully automated Voxel Hull algorithm and a semi-automatic method that incorporates additional user input. Both techniques were validated with synthetic data to ensure accuracy. The system utilizes three.js for 3D visualization, React on the front-end, and Django for the back-end.',
         imgUrl: 'projects_coronaryApp.png',
         sourceCodeUrl: 'https://github.com/Sladamos/CoronaryApp',
         technologies: [
-          this.getTechnology('Python'), this.getTechnology('Django'), this.getTechnology('React'), this.getTechnology('Docker'), this.getTechnology('CSS'), this.getTechnology('Three.js')
+          this.getTechnology('Python'), this.getTechnology('Django'), this.getTechnology('React'),  this.getTechnology('CSS'), this.getTechnology('Three.js'), this.getTechnology('Docker')
         ]
       },
      /* {
@@ -145,7 +145,7 @@ export class ProjectService {
         imgUrl: 'projects_kingdomSimulation.png',
         sourceCodeUrl: 'https://github.com/Sladamos/KingdomSimulation',
         technologies: [
-          this.getTechnology('Java'), this.getTechnology('JUnit'), this.getTechnology('Mockito'), this.getTechnology('AssertJ')
+          this.getTechnology('Java'), this.getTechnology('JavaFX'), this.getTechnology('JUnit'), this.getTechnology('Mockito'), this.getTechnology('AssertJ')
         ]
       },*/
       {
@@ -172,7 +172,7 @@ export class ProjectService {
         imgUrl: 'projects_raistopy.png',
         sourceCodeUrl: 'https://github.com/Sladamos/Raistopy',
         technologies: [
-          this.getTechnology('Express.js'), this.getTechnology('Vue'), this.getTechnology('Docker'), this.getTechnology('CSS'), this.getTechnology('Mongoose'),
+          this.getTechnology('Express.js'), this.getTechnology('Vue'), this.getTechnology('CSS'), this.getTechnology('Mongoose'), this.getTechnology('Docker')
         ]
       },
       {
