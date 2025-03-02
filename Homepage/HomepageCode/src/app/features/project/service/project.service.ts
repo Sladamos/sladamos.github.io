@@ -13,7 +13,7 @@ export class ProjectService {
   private readonly pythonColor = '#008844';
   private readonly dartColor = '#803094';
   private readonly javascriptColor = '#e8f21f';
-  private readonly technologies: ProjectTechnology[] = [
+  readonly technologies: ProjectTechnology[] = [
     {
       name: 'Docker',
       textColor: '#299ef2',

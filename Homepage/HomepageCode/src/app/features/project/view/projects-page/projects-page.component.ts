@@ -33,10 +33,15 @@ export class ProjectsPageComponent {
   }
 
   private anyTechnologyMatchesQuery(project: ProjectModel, query: string) {
-    return project.technologies.map(technology => technology.name.toUpperCase())
-        .some(name => name.includes(query)) ||
-      project.technologies.map(technology => technology.aliases)
-        .flatMap(aliases => aliases?.map(alias => alias.toUpperCase()) ?? [])
-        .some(alias => alias.includes(query));
+    const technologyName = this.projectService.technologies.map(technology => technology.name.toUpperCase()).find(name => name === query)
+    const projectTechnologiesNames = project.technologies.map(technology => technology.name.toUpperCase());
+    return !!technologyName ? projectTechnologiesNames.some(name => name === technologyName) :
+      projectTechnologiesNames.some(name => name.includes(query)) || this.projectAliasIncludesQuery(project, query);
+  }
+
+  private projectAliasIncludesQuery(project: ProjectModel, query: string) {
+    return project.technologies.map(technology => technology.aliases)
+      .flatMap(aliases => aliases?.map(alias => alias.toUpperCase()) ?? [])
+      .some(alias => alias.includes(query));
   }
 }
