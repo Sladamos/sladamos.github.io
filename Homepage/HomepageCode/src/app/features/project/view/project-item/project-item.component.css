@@ -8,15 +8,6 @@
   background-color: var(--color-very-dark-first);
 }
 
-:host.reversed {
-  grid-template-columns: 60% 40%;
-}
-
-:host.reversed .item:nth-child(1) { order: 2; }
-:host.reversed .item:nth-child(2) { order: 1; }
-:host.reversed .item:nth-child(3) { order: 4; }
-:host.reversed .item:nth-child(4) { order: 3; }
-
 .project-item__text-wrapper {
   display: flex;
   align-items: center;
