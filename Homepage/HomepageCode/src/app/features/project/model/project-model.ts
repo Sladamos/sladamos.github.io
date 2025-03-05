@@ -5,5 +5,6 @@ export interface ProjectModel {
   description: string,
   imgUrl: string,
   sourceCodeUrl: string,
+  teamMembers: number,
   technologies: ProjectTechnology[]
 }

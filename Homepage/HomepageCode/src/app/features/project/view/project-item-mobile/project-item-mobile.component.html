@@ -1,0 +1,26 @@
+
+<div class="project-item__info">
+  <h3 class="project-item__name"> {{project().name}} </h3>
+  <app-project-members [numberOfMembers]="project().teamMembers" />
+</div>
+
+<div class="project-item__image-wrapper">
+  <img class="project-item__image" src="assets/images/projects/{{project().imgUrl}}" alt="Application screenshot" />
+</div>
+
+<div class="project-item__description-wrapper">
+  <p class="project-item__description"> {{project().description}}</p>
+</div>
+
+<div class="project-item__chips item">
+  @for (technology of project().technologies; track technology) {
+    <app-project-technology-chip [technology]="technology" />
+  }
+</div>
+
+<div class="project-item__additional-info">
+  <a class="project-item__additional-info-link" [href]="project().sourceCodeUrl" target="_blank">
+    Source code <fa-icon class="fa-xl" [icon]="faGithub" />
+  </a>
+</div>
+

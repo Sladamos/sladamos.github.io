@@ -4,7 +4,7 @@ import {Injectable, signal} from '@angular/core';
   providedIn: 'root'
 })
 export class ScreenTypeService {
-  isMobile = signal(window.innerWidth <= 968);
+  isNotDesktop = signal(window.innerWidth <= 968);
 
   constructor() {
     this.initializeResizeListener();
@@ -12,7 +12,7 @@ export class ScreenTypeService {
 
   private initializeResizeListener() {
     globalThis.window.addEventListener('resize', () => {
-      this.isMobile.set(globalThis.window.innerWidth <= 968);
+      this.isNotDesktop.set(globalThis.window.innerWidth <= 968);
     });
   }
 }

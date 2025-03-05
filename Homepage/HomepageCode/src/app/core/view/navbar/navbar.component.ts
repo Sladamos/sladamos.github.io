@@ -16,7 +16,7 @@ import {RouterLink} from '@angular/router';
 export class NavbarComponent {
   screenTypeService = inject(ScreenTypeService)
   isMobileMenuOpen = signal(false);
-  isMobile = computed(() => this.screenTypeService.isMobile());
+  isMobile = computed(() => this.screenTypeService.isNotDesktop());
 
   toggleMenu() {
     this.isMobileMenuOpen.update((state: boolean) => !state && this.isMobile());

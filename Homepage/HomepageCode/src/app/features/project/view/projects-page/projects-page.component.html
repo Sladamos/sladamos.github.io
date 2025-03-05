@@ -5,6 +5,10 @@
     <p class="projects__wrong-query-message">No projects found for query: {{searchQuery()}}</p>
   }
   @for (project of this.displayedProjects(); track project) {
-   <app-project-item [project]="project" />
+    @if (screenTypeService.isNotDesktop()) {
+      <app-project-item-mobile [project]="project" />
+    } @else {
+      <app-project-item [project]="project" />
+    }
   }
 </div>

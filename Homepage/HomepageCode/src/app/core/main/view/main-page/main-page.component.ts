@@ -19,5 +19,5 @@ import {MainImageTextRowComponent} from '../main-image-text-row/main-image-text-
 })
 export class MainPageComponent {
   screenTypeService = inject(ScreenTypeService)
-  reverseImageTextRow = computed(() => !this.screenTypeService.isMobile())
+  reverseImageTextRow = computed(() => !this.screenTypeService.isNotDesktop())
 }

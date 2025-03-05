@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--color-white-gray);
+}
+
+.project-item__members-icon {
+  width: 40px;
+  filter: invert(0.9);
+}
+
+.project-item__members-count {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 968px) {
+
+  .project-item__members-icon {
+    width: 30px;
+  }
+
+  .project-item__members-count {
+    font-size: 30px;
+  }
+}

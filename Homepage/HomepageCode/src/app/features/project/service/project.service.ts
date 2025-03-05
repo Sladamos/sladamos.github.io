@@ -108,6 +108,10 @@ export class ProjectService {
       name: 'AssertJ',
       textColor: this.javaColor
     },
+    {
+      name: 'JavaFX',
+      textColor: this.javaColor
+    },
   ]
 
   constructor() {
@@ -126,6 +130,7 @@ export class ProjectService {
         description: 'Library API is an application divided into microservices which are deployed on Heroku. It consists of books and publishing houses. It allows simple CRUD operations on both of them. The goal of the project was to create monolith and then divide it into separate microservices with their own persistence. It was required to use synchronous communication via RestTemplates.',
         imgUrl: 'projects_libraryApi.png',
         sourceCodeUrl: 'https://github.com/Sladamos/LibraryAPI/',
+        teamMembers: 1,
         technologies: [
           this.getTechnology('Java'), this.getTechnology('Spring'), this.getTechnology('Angular'), this.getTechnology('CSS'), this.getTechnology('Docker')
         ]
@@ -135,24 +140,27 @@ export class ProjectService {
         description: 'This application reconstructs three-dimensional bifurcation points in coronary vessels using only a series of planar angiography images. It analyzes the shape, size, and direction of shadows to approximate the original 3D locations, offering a fully automated Voxel Hull algorithm and a semi-automatic method that incorporates additional user input. Both techniques were validated with synthetic data to ensure accuracy. The system utilizes three.js for 3D visualization, React on the front-end, and Django for the back-end.',
         imgUrl: 'projects_coronaryApp.png',
         sourceCodeUrl: 'https://github.com/Sladamos/CoronaryApp',
+        teamMembers: 2,
         technologies: [
           this.getTechnology('Python'), this.getTechnology('Django'), this.getTechnology('React'),  this.getTechnology('CSS'), this.getTechnology('Three.js'), this.getTechnology('Docker')
         ]
       },
-     /* {
-        name: 'QualifiedElectronicSignature',
-        description: '',
-        imgUrl: 'projects_kingdomSimulation.png',
-        sourceCodeUrl: 'https://github.com/Sladamos/KingdomSimulation',
+      {
+        name: 'XadesEmulator',
+        description: 'XadesEmulator is an application that simulates XAdES signatures, allowing the encryption and decryption of TXT and PDF files. It uses a private key secured with a password, stored on a USB device. The application attempts to automatically detect the key but also provides the option to manually select it. The app features a styled UI and includes unit tests to ensure both security and stability.',
+        imgUrl: 'projects_xadesEmulator.png',
+        sourceCodeUrl: 'https://github.com/Sladamos/XadesEmulator',
+        teamMembers: 1,
         technologies: [
-          this.getTechnology('Java'), this.getTechnology('JavaFX'), this.getTechnology('JUnit'), this.getTechnology('Mockito'), this.getTechnology('AssertJ')
+          this.getTechnology('Java'), this.getTechnology('JUnit'), this.getTechnology('JavaFX'), this.getTechnology('Mockito'), this.getTechnology('AssertJ'),
         ]
-      },*/
+      },
       {
         name: 'Homepage',
         description: 'This is a zoneless Angular 19 application designed as a personal homepage to show information about myself. It contains features such as standalone components, signal state management, using zoneless approach. The project follows a clean structure and responsive styles. It also contains different themes for seasons.',
         imgUrl: 'projects_homepage.png',
         sourceCodeUrl: 'https://github.com/Sladamos/sladamos.github.io/tree/main/Homepage',
+        teamMembers: 1,
         technologies: [
           this.getTechnology('Angular'), this.getTechnology('CSS')
         ]
@@ -162,6 +170,7 @@ export class ProjectService {
         description: 'The KingdomSimulation project is an advanced simulation that manages resource production, military buildup, and combat operations within a multithreaded environment. It is a console application which uses wait(), notifyAll(), and monitor mechanisms for thread synchronization. Its functionality is verified with unit tests implemented using JUnit, Mockito and AssertJ. The application supports both automatic and manual modes.',
         imgUrl: 'projects_kingdomSimulation.png',
         sourceCodeUrl: 'https://github.com/Sladamos/KingdomSimulation',
+        teamMembers: 1,
         technologies: [
           this.getTechnology('Java'), this.getTechnology('JUnit'), this.getTechnology('Mockito'), this.getTechnology('AssertJ')
         ]
@@ -171,6 +180,7 @@ export class ProjectService {
         description: 'Raistopy is an experimental web application developed as part of the "Realizacja Aplikacji Internetowych" laboratory course. The project displays information about public transportation stops using the ZTM Gdańsk API. The entire application is built on a micro-frontends architecture and containerized using Docker.',
         imgUrl: 'projects_raistopy.png',
         sourceCodeUrl: 'https://github.com/Sladamos/Raistopy',
+        teamMembers: 2,
         technologies: [
           this.getTechnology('Express.js'), this.getTechnology('Vue'), this.getTechnology('CSS'), this.getTechnology('Mongoose'), this.getTechnology('Docker')
         ]
@@ -180,6 +190,7 @@ export class ProjectService {
         description: 'SLEMA is a multi-platform project developed for the Fundacja Toczeń Polska, built using a diverse technology stack that includes Dart, Java, TypeScript, and more. Featuring integrated chat functionality across web and mobile platforms, SLEMA was developed using SCRUM. The project is written in Flutter framework, whereas chat backend is written in Spring framework.',
         imgUrl: 'projects_slema.png',
         sourceCodeUrl: 'https://github.com/Sladamos/SLEMA',
+        teamMembers: 4,
         technologies: [
           this.getTechnology('Java'), this.getTechnology('Spring'), this.getTechnology('Dart'), this.getTechnology('Flutter')
         ]
@@ -189,6 +200,7 @@ export class ProjectService {
         description: 'Python application which uses AI to classify dogs based on their breeds. The detector uses convolutional neural network created from scratch or created with transfer learning. Models were trained on five breeds selected from Stanford Dogs dataset. GUI is created in PyQT5, but there also is console variant.',
         imgUrl: 'projects_dogsDetector.png',
         sourceCodeUrl: 'https://github.com/Sladamos/DogsDetector',
+        teamMembers: 1,
         technologies: [
           this.getTechnology('Python'), this.getTechnology('Tensorflow')
         ]

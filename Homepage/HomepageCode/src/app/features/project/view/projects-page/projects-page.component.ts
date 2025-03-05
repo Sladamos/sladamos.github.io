@@ -3,12 +3,15 @@ import {SearchBarComponent} from '../../../shared/view/search-bar/search-bar.com
 import {ProjectService} from '../../service/project.service';
 import {ProjectItemComponent} from '../project-item/project-item.component';
 import {ProjectModel} from '../../model/project-model';
+import {ScreenTypeService} from '../../../shared/service/screen-type.service';
+import {ProjectItemMobileComponent} from '../project-item-mobile/project-item-mobile.component';
 
 @Component({
   selector: 'app-projects-page',
   imports: [
     SearchBarComponent,
-    ProjectItemComponent
+    ProjectItemComponent,
+    ProjectItemMobileComponent
   ],
   templateUrl: './projects-page.component.html',
   styleUrl: './projects-page.component.css',
@@ -19,6 +22,7 @@ import {ProjectModel} from '../../model/project-model';
 })
 export class ProjectsPageComponent {
   projectService: ProjectService = inject(ProjectService);
+  screenTypeService: ScreenTypeService = inject(ScreenTypeService)
   projects = this.projectService.projects;
   searchQuery = signal("")
   displayedProjects = computed(() => !!this.searchQuery() ? this.projects().filter(project => this.doesProjectMatchQuery(project)) : this.projects())

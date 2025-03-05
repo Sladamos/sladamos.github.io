@@ -1,21 +1,22 @@
-<div class="project-item__text-wrapper item">
+<div class="project-item__text-wrapper">
   <div class="project-item__text">
     <h3 class="project-item__name"> {{project().name}} </h3>
     <p class="project-item__description"> {{project().description}}</p>
   </div>
 </div>
 
-<div class="project-item__image-wrapper item">
+<div class="project-item__image-wrapper">
   <img class="project-item__image" src="assets/images/projects/{{project().imgUrl}}" alt="Application screenshot" />
 </div>
 
-<div class="project-item__source-code item">
-  <a class="project-item__source-code-link" [href]="project().sourceCodeUrl" target="_blank">
-    Check source code <fa-icon class="fa-xl" [icon]="faGithub" />
+<div class="project-item__additional-info">
+  <a class="project-item__additional-info-link" [href]="project().sourceCodeUrl" target="_blank">
+    Source code <fa-icon class="fa-xl" [icon]="faGithub" />
   </a>
+  <app-project-members [numberOfMembers]="project().teamMembers" />
 </div>
 
-<div class="project-item__chips item">
+<div class="project-item__chips">
   @for (technology of project().technologies; track technology) {
     <app-project-technology-chip [technology]="technology" />
   }

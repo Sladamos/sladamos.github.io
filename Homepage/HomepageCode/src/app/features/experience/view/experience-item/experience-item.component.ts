@@ -15,6 +15,6 @@ export class ExperienceItemComponent {
 
   @HostBinding('class')
   get containerClass() {
-    return this.screenTypeService.isMobile() ? 'container__normal' : 'container__tiny';
+    return this.screenTypeService.isNotDesktop() ? 'container__normal' : 'container__tiny';
   }
 }
