@@ -5,6 +5,7 @@ import {ProjectItemComponent} from '../project-item/project-item.component';
 import {ProjectModel} from '../../model/project-model';
 import {ScreenTypeService} from '../../../shared/service/screen-type.service';
 import {ProjectItemMobileComponent} from '../project-item-mobile/project-item-mobile.component';
+import {TechnologyService} from '../../../technology/service/technology.service';
 
 @Component({
   selector: 'app-projects-page',
@@ -13,14 +14,15 @@ import {ProjectItemMobileComponent} from '../project-item-mobile/project-item-mo
     ProjectItemComponent,
     ProjectItemMobileComponent
   ],
-  templateUrl: './projects-page.component.html',
-  styleUrl: './projects-page.component.css',
+  templateUrl: './project-page.component.html',
+  styleUrl: './project-page.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'container__normal'
   }
 })
-export class ProjectsPageComponent {
+export class ProjectPageComponent {
+  technologyService: TechnologyService = inject(TechnologyService);
   projectService: ProjectService = inject(ProjectService);
   screenTypeService: ScreenTypeService = inject(ScreenTypeService)
   projects = this.projectService.projects;
@@ -37,7 +39,7 @@ export class ProjectsPageComponent {
   }
 
   private anyTechnologyMatchesQuery(project: ProjectModel, query: string) {
-    const technologyName = this.projectService.technologies.map(technology => technology.name.toUpperCase()).find(name => name === query)
+    const technologyName = this.technologyService.technologies.map(technology => technology.name.toUpperCase()).find(name => name === query)
     const projectTechnologiesNames = project.technologies.map(technology => technology.name.toUpperCase());
     return !!technologyName ? projectTechnologiesNames.some(name => name === technologyName) :
       projectTechnologiesNames.some(name => name.includes(query)) || this.projectAliasIncludesQuery(project, query);

@@ -1,4 +1,4 @@
-export interface ProjectTechnology {
+export interface TechnologyModel {
   name: string,
   textColor: string,
   aliases?: string[],

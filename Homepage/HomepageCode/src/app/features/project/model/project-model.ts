@@ -1,4 +1,4 @@
-import {ProjectTechnology} from './project-technology';
+import {TechnologyModel} from '../../technology/model/technology-model';
 
 export interface ProjectModel {
   name: string,
@@ -6,5 +6,5 @@ export interface ProjectModel {
   imgUrl: string,
   sourceCodeUrl: string,
   teamMembers: number,
-  technologies: ProjectTechnology[]
+  technologies: TechnologyModel[]
 }
