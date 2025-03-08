@@ -56,7 +56,7 @@ export class ProjectService {
       sourceCodeUrl: 'https://github.com/Sladamos/sladamos.github.io/tree/main/Homepage',
       teamMembers: 1,
       technologies: [
-        this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('CSS')
+        this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('CSS'), this.technologyService.getTechnology('Figma')
       ]
     },
     {
@@ -76,7 +76,7 @@ export class ProjectService {
       sourceCodeUrl: 'https://github.com/Sladamos/Raistopy',
       teamMembers: 2,
       technologies: [
-        this.technologyService.getTechnology('Express.js'), this.technologyService.getTechnology('Vue'), this.technologyService.getTechnology('CSS'), this.technologyService.getTechnology('Mongoose'), this.technologyService.getTechnology('Docker')
+        this.technologyService.getTechnology('Express.js'), this.technologyService.getTechnology('Vue'), this.technologyService.getTechnology('CSS'), this.technologyService.getTechnology('Mongoose'), this.technologyService.getTechnology('Docker'), this.technologyService.getTechnology('Cypress')
       ]
     },
     {

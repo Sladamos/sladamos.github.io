@@ -2,14 +2,14 @@ import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/c
 import {ProjectModel} from '../../model/project-model';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
-import {ProjectTechnologyChipComponent} from '../project-technology-chip/project-technology-chip.component';
+import {TechnologyChipComponent} from '../../../technology/view/technology-chip/technology-chip.component';
 import {ProjectMembersComponent} from '../project-members/project-members.component';
 
 @Component({
   selector: 'app-project-item',
   imports: [
     FaIconComponent,
-    ProjectTechnologyChipComponent,
+    TechnologyChipComponent,
     ProjectMembersComponent
   ],
   templateUrl: './project-item.component.html',
