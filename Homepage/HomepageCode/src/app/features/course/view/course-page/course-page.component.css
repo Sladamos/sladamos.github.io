@@ -1,7 +1,8 @@
 :host {
   display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
   padding-top: 11.5rem;
 }
 

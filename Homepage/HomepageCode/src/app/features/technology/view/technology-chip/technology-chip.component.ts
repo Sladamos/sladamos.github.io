@@ -3,7 +3,7 @@ import {SafeHtmlPipe} from '../../../security/pipe/safe-html.pipe';
 import {TechnologyModel} from '../../model/technology-model';
 
 @Component({
-  selector: 'app-project-technology-chip',
+  selector: 'app-technology-chip',
   imports: [
     SafeHtmlPipe
   ],

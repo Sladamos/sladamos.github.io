@@ -6,7 +6,7 @@
 </div>
 
 <div class="project-item__image-wrapper">
-  <img class="project-item__image" src="assets/images/projects/{{project().imgUrl}}" alt="Application screenshot" />
+  <img class="project-item__image" src="assets/images/project/{{project().imgUrl}}" alt="Application screenshot" />
 </div>
 
 <div class="project-item__additional-info">
@@ -18,6 +18,6 @@
 
 <div class="project-item__chips">
   @for (technology of project().technologies; track technology) {
-    <app-project-technology-chip [technology]="technology" />
+    <app-technology-chip [technology]="technology" />
   }
 </div>

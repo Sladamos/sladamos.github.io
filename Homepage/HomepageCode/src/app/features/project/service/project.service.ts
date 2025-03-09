@@ -86,7 +86,7 @@ export class ProjectService {
       sourceCodeUrl: 'https://github.com/Sladamos/SLEMA',
       teamMembers: 4,
       technologies: [
-        this.technologyService.getTechnology('Java'), this.technologyService.getTechnology('Spring'), this.technologyService.getTechnology('Dart'), this.technologyService.getTechnology('Flutter')
+        this.technologyService.getTechnology('Java'), this.technologyService.getTechnology('Spring'), this.technologyService.getTechnology('Dart'), this.technologyService.getTechnology('Flutter'), this.technologyService.getTechnology('Figma')
       ]
     },
     {
