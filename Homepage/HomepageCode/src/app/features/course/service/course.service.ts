@@ -13,37 +13,14 @@ export class CourseService {
       title: 'Angular - The Complete Guide (2025 Edition) ',
       issuerIconUrl: 'issuer_udemy.jpg',
       issuerName: 'Udemy',
-      technologies: [this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('Angular')],
+      technologies: [this.technologyService.getTechnology('Angular')],
       certificateUrl: 'course_angularComplete.pdf'
     },
     {
-      title: 'Angular - The Complete Guide (2025 Edition) ',
-      issuerIconUrl: 'issuer_udemy.jpg',
-      issuerName: 'Udemy',
-      technologies: [this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('Angular')],
-      certificateUrl: 'course_angularComplete.pdf'
+      title: '',
+      issuerIconUrl: 'issuer_.jpg',
+      issuerName: '',
+      technologies: [this.technologyService.getTechnology('')],
+      certificateUrl: 'course_.pdf'
     },
-    {
-      title: 'Angular - The Complete Guide (2025 Edition) ',
-      issuerIconUrl: 'issuer_udemy.jpg',
-      issuerName: 'Udemy',
-      technologies: [this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('Angular')],
-      certificateUrl: 'course_angularComplete.pdf'
-    },
-    {
-      title: 'Angular - The Complete Guide (2025 Edition) ',
-      issuerIconUrl: 'issuer_udemy.jpg',
-      issuerName: 'Udemy',
-      technologies: [this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('Angular')],
-      certificateUrl: 'course_angularComplete.pdf'
-    },
-    {
-      title: 'Angular - The Complete Guide (2025 Edition) ',
-      issuerIconUrl: 'issuer_udemy.jpg',
-      issuerName: 'Udemy',
-      technologies: [this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('Angular'), this.technologyService.getTechnology('Angular')],
-      certificateUrl: 'course_angularComplete.pdf'
-    }
-  ]);
-
 }
