@@ -1,22 +1,43 @@
 :host {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 300px;
   gap: 1.25rem;
-  flex: 1 1 400px;
-  max-width: 500px;
+  max-width: 400px;
   border-radius: 15px;
-  padding: 1.5rem 1.25rem;
+  padding: 1.5rem 2rem;
   background-color: var(--color-very-dark-first);
   font-family: 'Roboto', sans-serif;
   color: var(--color-white);
   box-shadow: 2px 2px 16px var(--color-normal-first), 4px 4px 24px var(--color-very-dark-first);
 }
 
-.course__info-wrapper {
+.course__title-wrapper {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
   text-align: center;
-  padding: 1rem;
+  min-height: 100px;
+}
+
+.course__title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.course__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.course__info-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .course__issuer-wrapper {
@@ -25,8 +46,8 @@
   font-weight: bold;
   gap: 0.5rem;
   align-items: center;
-  font-size: 1.25rem;
-  flex-basis: 20%;
+  font-size: 1rem;
+  grid-row: 1 / span 2;
 }
 
 .course__issuer-icon {
@@ -34,16 +55,21 @@
   height: 70px;
 }
 
-.course__title {
-  font-weight: bold;
-  font-size: 1.5rem;
+.course__chip-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  app-technology-chip {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-.course__technologies-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+.course__chip-wrapper:last-child:nth-child(even) {
+  &:not(:nth-child(2)) {
+    grid-column: span 2;
+    padding: 0 2rem;
+  }
 }
 
 .course__view-button-wrapper {
@@ -68,9 +94,23 @@
 }
 
 @media screen and (max-width: 968px) {
+  :host {
+    flex-basis: 200px;
+    max-width: 300px;
+    padding: 1.5rem 1rem;
+  }
+
+  .course__content {
+    padding: 0;
+  }
 
   .course__info-wrapper {
-    flex-direction: column-reverse;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course__chip-wrapper {
+    padding: 0 2rem;
   }
 }
 

@@ -1,17 +1,21 @@
-<div class="course__info-wrapper">
-  <div class="course__issuer-wrapper">
-    <img class="course__issuer-icon" alt="Issuer icon" src="assets/images/course/issuer/{{course().issuerIconUrl}}">
-    <p class="course__issuer-name">{{course().issuerName}}</p>
-  </div>
+<div class="course__title-wrapper">
   <p class="course__title">{{course().title}}</p>
 </div>
 
-<div class="course__technologies-wrapper">
-  @for (technology of course().technologies; track technology) {
-    <app-technology-chip [technology]="technology" />
-  }
-</div>
+<div class="course__content">
+  <div class="course__info-wrapper">
+    <div class="course__issuer-wrapper">
+      <img class="course__issuer-icon" alt="Issuer icon" src="assets/images/course/issuer/{{course().issuerIconUrl}}">
+      <p class="course__issuer-name">{{course().issuerName}}</p>
+    </div>
+    @for (technology of course().technologies; track technology) {
+      <div class="course__chip-wrapper">
+        <app-technology-chip [technology]="technology" />
+      </div>
+    }
+  </div>
 
-<div class="course__view-button-wrapper">
-  <button>View certificate</button>
+  <div class="course__view-button-wrapper">
+    <button>View certificate</button>
+  </div>
 </div>
