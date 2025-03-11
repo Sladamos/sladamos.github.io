@@ -15,7 +15,7 @@ export class CourseService {
       title: 'Developing Applications with Google Cloud: Foundations',
       issuer: this.issuerService.getIssuer('Pluralsight'),
       technologies: [this.technologyService.getTechnology('GCP')],
-      certificateUrl: 'course_.pdf'
+      certificateUrl: 'course_gcpDevelopFounda.pdf'
     },
     {
       title: 'Bezpieczeństwo systemu Linux',
@@ -27,13 +27,13 @@ export class CourseService {
       title: 'Foundations of Document Databases with MongoDB',
       issuer: this.issuerService.getIssuer('Pluralsight'),
       technologies: [this.technologyService.getTechnology('MongoDB')],
-      certificateUrl: 'course_.pdf'
+      certificateUrl: 'course_mongoFounda.pdf'
     },
     {
       title: 'Gradle Fundamentals',
       issuer: this.issuerService.getIssuer('Pluralsight'),
       technologies: [this.technologyService.getTechnology('Gradle')],
-      certificateUrl: 'course_.pdf'
+      certificateUrl: 'course_gradleFund.pdf'
     },
     {
       title: 'Bezpieczeństwo Systemu Windows',
@@ -45,7 +45,7 @@ export class CourseService {
       title: 'Google Cloud Fundamentals: Core Infrastructure',
       issuer: this.issuerService.getIssuer('Pluralsight'),
       technologies: [this.technologyService.getTechnology('GCP')],
-      certificateUrl: 'course_.pdf'
+      certificateUrl: 'course_gcpCoreInfraFund.pdf'
     },
     {
       title: 'Akademia Bezpieczeństwa',
@@ -57,19 +57,19 @@ export class CourseService {
       title: 'Essential Google Cloud Infrastructure: Foundation',
       issuer: this.issuerService.getIssuer('Pluralsight'),
       technologies: [this.technologyService.getTechnology('GCP')],
-      certificateUrl: 'course_.pdf'
+      certificateUrl: 'course_gcpInfraFund.pdf'
     },
     {
       title: 'Networking in Google Cloud: Fundamentals',
       issuer: this.issuerService.getIssuer('Pluralsight'),
       technologies: [this.technologyService.getTechnology('GCP')],
-      certificateUrl: 'course_.pdf'
+      certificateUrl: 'course_gcpNetworkFund.pdf'
     },
     {
       title: 'Querying Data from MongoDB',
       issuer: this.issuerService.getIssuer('Pluralsight'),
       technologies: [this.technologyService.getTechnology('MongoDB')],
-      certificateUrl: 'course_.pdf'
+      certificateUrl: 'course_mongoQuery.pdf'
     },
     {
       title: 'Angular - The Complete Guide',
