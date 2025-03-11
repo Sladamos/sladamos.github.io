@@ -40,19 +40,8 @@
   gap: 1rem;
 }
 
-.course__issuer-wrapper {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  gap: 0.5rem;
-  align-items: center;
-  font-size: 1rem;
+app-issuer-vertical-chip {
   grid-row: 1 / span 2;
-}
-
-.course__issuer-icon {
-  width: 70px;
-  height: 70px;
 }
 
 .course__chip-wrapper {

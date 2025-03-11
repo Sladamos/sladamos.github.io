@@ -4,10 +4,7 @@
 
 <div class="course__content">
   <div class="course__info-wrapper">
-    <div class="course__issuer-wrapper">
-      <img class="course__issuer-icon" alt="Issuer icon" src="assets/images/course/issuer/{{course().issuerIconUrl}}">
-      <p class="course__issuer-name">{{course().issuerName}}</p>
-    </div>
+    <app-issuer-vertical-chip [issuer]="course().issuer" />
     @for (technology of course().technologies; track technology) {
       <div class="course__chip-wrapper">
         <app-technology-chip [technology]="technology" />

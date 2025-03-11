@@ -41,7 +41,7 @@
 }
 
 @media screen and (max-width: 968px) {
-  .header__wrapper {
+  .header__info {
     padding: 1rem 0;
   }
 
