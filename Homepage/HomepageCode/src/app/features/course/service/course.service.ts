@@ -11,13 +11,66 @@ export class CourseService {
   private technologyService = inject(TechnologyService);
   private issuerService = inject(IssuerService);
   courses = signal<CourseModel[]>([
-    /*
     {
-      title: '',
-      issuer: this.issuerService.getIssuer(''),
-      technologies: [this.technologyService.getTechnology('')],
+      title: 'Developing Applications with Google Cloud: Foundations',
+      issuer: this.issuerService.getIssuer('Pluralsight'),
+      technologies: [this.technologyService.getTechnology('GCP')],
       certificateUrl: 'course_.pdf'
-    },*/
+    },
+    {
+      title: 'Bezpieczeństwo systemu Linux',
+      issuer: this.issuerService.getIssuer('ECSC'),
+      technologies: [this.technologyService.getTechnology('Linux')],
+      certificateUrl: 'course_securityLinux.pdf'
+    },
+    {
+      title: 'Foundations of Document Databases with MongoDB',
+      issuer: this.issuerService.getIssuer('Pluralsight'),
+      technologies: [this.technologyService.getTechnology('MongoDB')],
+      certificateUrl: 'course_.pdf'
+    },
+    {
+      title: 'Gradle Fundamentals',
+      issuer: this.issuerService.getIssuer('Pluralsight'),
+      technologies: [this.technologyService.getTechnology('Gradle')],
+      certificateUrl: 'course_.pdf'
+    },
+    {
+      title: 'Bezpieczeństwo Systemu Windows',
+      issuer: this.issuerService.getIssuer('ECSC'),
+      technologies: [this.technologyService.getTechnology('Windows')],
+      certificateUrl: 'course_securityWindows.pdf'
+    },
+    {
+      title: 'Google Cloud Fundamentals: Core Infrastructure',
+      issuer: this.issuerService.getIssuer('Pluralsight'),
+      technologies: [this.technologyService.getTechnology('GCP')],
+      certificateUrl: 'course_.pdf'
+    },
+    {
+      title: 'Akademia Bezpieczeństwa',
+      issuer: this.issuerService.getIssuer('ECSC'),
+      technologies: [],
+      certificateUrl: 'course_securityAcademy.pdf'
+    },
+    {
+      title: 'Essential Google Cloud Infrastructure: Foundation',
+      issuer: this.issuerService.getIssuer('Pluralsight'),
+      technologies: [this.technologyService.getTechnology('GCP')],
+      certificateUrl: 'course_.pdf'
+    },
+    {
+      title: 'Networking in Google Cloud: Fundamentals',
+      issuer: this.issuerService.getIssuer('Pluralsight'),
+      technologies: [this.technologyService.getTechnology('GCP')],
+      certificateUrl: 'course_.pdf'
+    },
+    {
+      title: 'Querying Data from MongoDB',
+      issuer: this.issuerService.getIssuer('Pluralsight'),
+      technologies: [this.technologyService.getTechnology('MongoDB')],
+      certificateUrl: 'course_.pdf'
+    },
     {
       title: 'Angular - The Complete Guide',
       issuer: this.issuerService.getIssuer('Udemy'),

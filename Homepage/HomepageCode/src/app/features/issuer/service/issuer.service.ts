@@ -10,6 +10,14 @@ export class IssuerService {
     {
       name: 'Udemy',
       iconUrl: 'issuer_udemy.jpg'
+    },
+    {
+      name: 'Pluralsight',
+      iconUrl: 'issuer_pluralsight.jpg'
+    },
+    {
+      name: 'ECSC',
+      iconUrl: 'issuer_ecsc.jpg'
     }
   ];
 
