@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.course__issuer-icon {
+  width: 70px;
+  height: 70px;
+}
