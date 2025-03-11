@@ -27,6 +27,7 @@
             height="500px"
             [src]="pdfUrl() | safeResourceUrl"
             [hidden]="isPdfLoading"
-            (load)="onPdfLoad()"></iframe>
+            (load)="onPdfLoad()"
+            (error)="openPdfInNewTab()"></iframe>
   </app-popup>
 }

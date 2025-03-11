@@ -33,4 +33,8 @@ export class CourseItemComponent {
   onPdfLoad() {
     this.isPdfLoading = false;
   }
+
+  openPdfInNewTab() {
+    window.open(this.pdfUrl(), '_blank');
+  }
 }
