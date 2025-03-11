@@ -1,0 +1,4 @@
+<div class="popup__content-wrapper" (click)="$event.stopPropagation()">
+  <button class="popup__exit-button" (click)="onPopupLeftClicked()">X</button>
+  <ng-content />
+</div>

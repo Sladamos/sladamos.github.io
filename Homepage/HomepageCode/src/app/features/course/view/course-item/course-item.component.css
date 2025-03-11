@@ -86,6 +86,11 @@ app-issuer-vertical-chip {
   }
 }
 
+.course__pdf {
+  max-height: 80vh;
+  border: none;
+}
+
 @media screen and (max-width: 968px) {
   :host {
     flex-basis: 200px;
@@ -106,5 +111,3 @@ app-issuer-vertical-chip {
     padding: 0 2rem;
   }
 }
-
-
