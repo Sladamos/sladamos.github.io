@@ -8,7 +8,6 @@ export class SafeResourceUrlPipe implements PipeTransform {
   sanitizer: DomSanitizer = inject(DomSanitizer);
 
   transform(value: string): SafeResourceUrl {
-    console.log(value)
     return this.sanitizer.bypassSecurityTrustResourceUrl(value);
   }
 

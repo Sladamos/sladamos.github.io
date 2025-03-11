@@ -18,7 +18,15 @@
 </div>
 
 @if (isPopupVisible) {
-  <app-popup (onPopupLeft)="switchPdfVisibility()" >
-    <iframe [src]="pdfUrl() | safeResourceUrl" width="100%" height="500px" class="course__pdf"></iframe>
+  <app-popup (onPopupLeft)="switchPdfVisibility()">
+    @if (isPdfLoading) {
+      <app-loading-spinner />
+    }
+    <iframe class="course__pdf"
+            width="100%"
+            height="500px"
+            [src]="pdfUrl() | safeResourceUrl"
+            [hidden]="isPdfLoading"
+            (load)="onPdfLoad()"></iframe>
   </app-popup>
 }

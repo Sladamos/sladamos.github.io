@@ -12,12 +12,16 @@
 }
 
 .popup__content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background: linear-gradient(to top, var(--color-dark-second), var(--color-dark-first));
   padding: 2rem;
   border-radius: 15px;
   width: 80%;
   max-width: 800px;
+  min-height: 200px;
 }
 
 .popup__exit-button {

@@ -91,6 +91,8 @@ app-issuer-vertical-chip {
   border: none;
 }
 
+
+
 @media screen and (max-width: 968px) {
   :host {
     flex-basis: 200px;
