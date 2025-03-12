@@ -35,19 +35,6 @@ export class ProjectPageComponent {
 
   doesProjectMatchQuery(project: ProjectModel): boolean {
     const query = this.searchQuery().toUpperCase();
-    return project.name.toUpperCase().includes(query) || this.anyTechnologyMatchesQuery(project, query)
-  }
-
-  private anyTechnologyMatchesQuery(project: ProjectModel, query: string) {
-    const technologyName = this.technologyService.technologies.map(technology => technology.name.toUpperCase()).find(name => name === query)
-    const projectTechnologiesNames = project.technologies.map(technology => technology.name.toUpperCase());
-    return !!technologyName ? projectTechnologiesNames.some(name => name === technologyName) :
-      projectTechnologiesNames.some(name => name.includes(query)) || this.projectAliasIncludesQuery(project, query);
-  }
-
-  private projectAliasIncludesQuery(project: ProjectModel, query: string) {
-    return project.technologies.map(technology => technology.aliases)
-      .flatMap(aliases => aliases?.map(alias => alias.toUpperCase()) ?? [])
-      .some(alias => alias.includes(query));
+    return project.name.toUpperCase().startsWith(query) || this.technologyService.anyTechnologyMatchesQuery(project.technologies, query)
   }
 }

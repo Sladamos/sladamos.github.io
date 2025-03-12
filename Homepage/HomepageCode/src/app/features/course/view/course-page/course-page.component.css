@@ -1,15 +1,37 @@
 :host {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 11.5rem;
+  flex: 1;
+}
+
+.courses__wrapper {
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding-top: 11.5rem;
+}
+
+.courses__wrong-query-message {
+  color: var(--color-white-gray);
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 3rem 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 968px) {
   :host {
     padding-top: 6rem;
     gap: 1rem;
+  }
+
+  .courses__wrong-query-message {
+    font-size: 1.5rem;
+    padding: 3rem 0;
   }
 }
 
