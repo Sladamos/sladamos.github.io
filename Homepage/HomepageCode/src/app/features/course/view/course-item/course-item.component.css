@@ -96,16 +96,16 @@ app-issuer-vertical-chip {
     max-height: 80vh;
     position: static;
   }
+}
 
-  &.hidden {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-  }
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 968px) {
