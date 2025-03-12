@@ -17,7 +17,7 @@
   align-items: center;
   position: relative;
   background: linear-gradient(to top, var(--color-dark-second), var(--color-dark-first));
-  padding: 2rem;
+  padding: 1.25rem;
   border-radius: 15px;
   width: 80%;
   max-width: 800px;
@@ -26,9 +26,9 @@
 
 .popup__exit-button {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  background-color: var(--color-very-dark-first);
+  top: -25px;
+  right: -25px;
+  background-color: var(--color-dark-first);
   color: white;
   border: none;
   width: 25px;
@@ -38,6 +38,12 @@
   font-size: 0.75rem;
 
   &:hover {
-    background-color: var(--color-very-dark-second);
+    background-color: var(--color-dark-second);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .popup__content-wrapper {
+    padding: 0.75rem;
   }
 }

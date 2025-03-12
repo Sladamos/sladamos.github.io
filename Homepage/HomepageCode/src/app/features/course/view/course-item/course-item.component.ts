@@ -6,7 +6,6 @@ import {PdfViewerModule} from 'ng2-pdf-viewer';
 import {PopupComponent} from '../../../../core/shared/view/popup/popup.component';
 import {LoadingSpinnerComponent} from '../../../../core/shared/view/loading-spinner/loading-spinner.component';
 import {RuntimeService} from '../../../../core/shared/service/runtime.service';
-import {PinchZoomComponent} from '@meddv/ngx-pinch-zoom';
 
 @Component({
   selector: 'app-course-item',
@@ -15,8 +14,7 @@ import {PinchZoomComponent} from '@meddv/ngx-pinch-zoom';
     IssuerVerticalChipComponent,
     PopupComponent,
     LoadingSpinnerComponent,
-    PdfViewerModule,
-    PinchZoomComponent
+    PdfViewerModule
   ],
   templateUrl: './course-item.component.html',
   styleUrl: './course-item.component.css',
@@ -36,8 +34,12 @@ export class CourseItemComponent {
   }
 
   onPdfLoad() {
-    setTimeout(() => this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef))
     this.isPdfLoading = false;
+    setTimeout(() => this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef))
+  }
+
+  onPageRendered() {
+    setTimeout(() => this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef))
   }
 
   openPdfInNewTab() {
