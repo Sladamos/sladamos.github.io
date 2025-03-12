@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, computed, inject, input, output,} from '@angular/core';
 import {MathService} from '../../service/math.service';
-import {ExperienceSectionModel} from '../../../experience/model/experience-section-model';
 import {NgClass} from '@angular/common';
+import {SectionModel} from '../../model/section-model';
 
 @Component({
   selector: 'app-section-selector',
@@ -14,7 +14,7 @@ import {NgClass} from '@angular/common';
 })
 export class SectionSelectorComponent {
   mathService: MathService = inject(MathService);
-  sections = input.required<ExperienceSectionModel[]>();
+  sections = input.required<SectionModel[]>();
   currentSectionIndex = input.required<number>();
   nextSectionIndex = computed(() => this.calculateNext(this.currentSectionIndex()))
   previousSectionIndex = computed(() => this.calculatePrevious(this.currentSectionIndex()))

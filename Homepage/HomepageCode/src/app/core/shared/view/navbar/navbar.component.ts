@@ -1,7 +1,7 @@
-import {ChangeDetectionStrategy, Component, computed, inject, signal} from '@angular/core';
-import {ScreenTypeService} from '../../../features/shared/service/screen-type.service';
+import {ChangeDetectionStrategy, Component, computed, HostListener, inject, signal} from '@angular/core';
 import {NgClass} from '@angular/common';
 import {RouterLink} from '@angular/router';
+import {ScreenTypeService} from '../../service/screen-type.service';
 
 @Component({
   selector: 'app-navbar',
@@ -18,10 +18,12 @@ export class NavbarComponent {
   isMobileMenuOpen = signal(false);
   isMobile = computed(() => this.screenTypeService.isNotDesktop());
 
-  toggleMenu() {
+  toggleMenu(event: MouseEvent) {
     this.isMobileMenuOpen.update((state: boolean) => !state && this.isMobile());
+    event.stopPropagation();
   }
 
+  @HostListener('window:click')
   closeMenu() {
     this.isMobileMenuOpen.set(false);
   }

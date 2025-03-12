@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {SpinnerComponent} from '../../../../features/shared/view/spinner/spinner.component';
+import {SpinnerComponent} from '../../../shared/view/spinner/spinner.component';
 
 @Component({
   selector: 'app-main-spinner',

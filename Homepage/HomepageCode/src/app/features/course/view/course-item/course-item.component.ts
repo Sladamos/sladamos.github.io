@@ -2,10 +2,10 @@ import {ChangeDetectionStrategy, Component, computed, inject, input, ViewContain
 import {CourseModel} from '../../model/course-model';
 import {TechnologyChipComponent} from '../../../technology/view/technology-chip/technology-chip.component';
 import {IssuerVerticalChipComponent} from '../../../issuer/view/issuer-vertical-chip/issuer-vertical-chip.component';
-import {PopupComponent} from '../../../shared/view/popup/popup.component';
-import {LoadingSpinnerComponent} from '../../../shared/view/loading-spinner/loading-spinner.component';
 import {PdfViewerModule} from 'ng2-pdf-viewer';
-import {RuntimeService} from '../../../shared/service/runtime.service';
+import {PopupComponent} from '../../../../core/shared/view/popup/popup.component';
+import {LoadingSpinnerComponent} from '../../../../core/shared/view/loading-spinner/loading-spinner.component';
+import {RuntimeService} from '../../../../core/shared/service/runtime.service';
 
 @Component({
   selector: 'app-course-item',
