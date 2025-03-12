@@ -39,7 +39,8 @@ export class ExperienceService {
           from: '2025',
           assetSrc: 'experience_pg.jpg',
           description: '<ul class="experience__description-list"><li>Specialization: Geoinformatic and Mobile Technologies</li>' +
-            '<li>Focused on expand knowledge in Machine Learning</li>'
+            '<li>Focused on expand knowledge in Machine Learning</li>' +
+            '<li>Student Representative for my specialization</li>'
         },
         {
           company: 'Gdańsk University of Technology',

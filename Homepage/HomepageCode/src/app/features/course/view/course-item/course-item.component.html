@@ -22,11 +22,12 @@
     @if (isPdfLoading) {
       <app-loading-spinner />
     }
-    <iframe class="course__pdf"
-            width="100%"
-            height="500px"
-            [src]="pdfUrl() | safeResourceUrl"
-            [hidden]="isPdfLoading"
-            (load)="onPdfLoad()"></iframe>
+    <pdf-viewer
+      class="course__pdf"
+      [class.hidden]="isPdfLoading"
+      [src]="pdfUrl()"
+      [autoresize]="true"
+      [fit-to-page]="true"
+      (after-load-complete)="onPdfLoad()" />
   </app-popup>
 }
