@@ -6,6 +6,7 @@ import {PdfViewerModule} from 'ng2-pdf-viewer';
 import {PopupComponent} from '../../../../core/shared/view/popup/popup.component';
 import {LoadingSpinnerComponent} from '../../../../core/shared/view/loading-spinner/loading-spinner.component';
 import {RuntimeService} from '../../../../core/shared/service/runtime.service';
+import {PinchZoomComponent} from '@meddv/ngx-pinch-zoom';
 
 @Component({
   selector: 'app-course-item',
@@ -14,7 +15,8 @@ import {RuntimeService} from '../../../../core/shared/service/runtime.service';
     IssuerVerticalChipComponent,
     PopupComponent,
     LoadingSpinnerComponent,
-    PdfViewerModule
+    PdfViewerModule,
+    PinchZoomComponent
   ],
   templateUrl: './course-item.component.html',
   styleUrl: './course-item.component.css',

@@ -22,12 +22,15 @@
     @if (isPdfLoading) {
       <app-loading-spinner />
     }
+    <pinch-zoom [class.hidden]="isPdfLoading"
+                disableZoomControl="disable"
+                [wheel]="false">
     <pdf-viewer
       class="course__pdf"
-      [class.hidden]="isPdfLoading"
       [src]="pdfUrl()"
       [autoresize]="true"
       [fit-to-page]="true"
       (after-load-complete)="onPdfLoad()" />
+    </pinch-zoom>
   </app-popup>
 }
