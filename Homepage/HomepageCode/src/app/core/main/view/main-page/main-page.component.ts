@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, computed, inject} from '@angular/core';
-import {ScreenTypeService} from '../../../../features/shared/service/screen-type.service';
 import {MainSpinnerComponent} from '../main-spinner/main-spinner.component';
 import {MainImageTextRowComponent} from '../main-image-text-row/main-image-text-row.component';
+import {ScreenTypeService} from '../../../shared/service/screen-type.service';
 
 @Component({
   selector: 'app-main-page',

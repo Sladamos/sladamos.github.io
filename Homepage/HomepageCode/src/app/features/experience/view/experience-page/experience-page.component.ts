@@ -2,8 +2,8 @@ import {ChangeDetectionStrategy, Component, inject, ViewContainerRef} from '@ang
 import {ExperienceSectionModel} from '../../model/experience-section-model';
 import {ExperienceSectionsComponent} from '../experience-sections/experience-sections.component';
 import {ExperienceItemComponent} from '../experience-item/experience-item.component';
-import {RuntimeService} from '../../../shared/service/runtime.service';
 import {ExperienceService} from '../../service/experience.service';
+import {RuntimeService} from '../../../../core/shared/service/runtime.service';
 
 @Component({
   selector: 'app-experience-page',

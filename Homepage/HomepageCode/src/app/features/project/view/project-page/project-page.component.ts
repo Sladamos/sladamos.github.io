@@ -1,11 +1,11 @@
 import {ChangeDetectionStrategy, Component, computed, inject, signal} from '@angular/core';
-import {SearchBarComponent} from '../../../shared/view/search-bar/search-bar.component';
 import {ProjectService} from '../../service/project.service';
 import {ProjectItemComponent} from '../project-item/project-item.component';
 import {ProjectModel} from '../../model/project-model';
-import {ScreenTypeService} from '../../../shared/service/screen-type.service';
 import {ProjectItemMobileComponent} from '../project-item-mobile/project-item-mobile.component';
 import {TechnologyService} from '../../../technology/service/technology.service';
+import {SearchBarComponent} from '../../../../core/shared/view/search-bar/search-bar.component';
+import {ScreenTypeService} from '../../../../core/shared/service/screen-type.service';
 
 @Component({
   selector: 'app-projects-page',

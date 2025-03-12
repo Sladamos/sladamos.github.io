@@ -87,11 +87,26 @@ app-issuer-vertical-chip {
 }
 
 .course__pdf {
+  width: 100%;
   max-height: 80vh;
-  border: none;
+  height: fit-content;
+
+  .ng2-pdf-viewer-container {
+    height: fit-content;
+    max-height: 80vh;
+    position: static;
+  }
+
+  &.hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
 }
-
-
 
 @media screen and (max-width: 968px) {
   :host {
