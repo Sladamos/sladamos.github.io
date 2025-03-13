@@ -1,8 +1,8 @@
-<app-search-bar placeholder="Find courses by name, issuer, technology.."  (onValueSearched)="onValueSearched($event)" />
+<app-search-bar placeholder="Find courses.."  (onValueSearched)="onValueSearched($event)" />
 
 <div class="courses__wrapper">
   @if (displayedCourses().length === 0) {
-    <p class="courses__wrong-query-message">No courses found with technology: {{searchQuery()}}</p>
+    <p class="courses__wrong-query-message">No courses found for query: {{searchQuery()}}</p>
   }
 
   @for (course of displayedCourses(); track course) {
