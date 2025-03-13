@@ -3,4 +3,11 @@
        [placeholder]="placeholder()"
        [(ngModel)]="searchQuery"
        (ngModelChange)="onSearchChange()">
-<fa-icon class="fa-2x search-bar__icon  " [icon]="faSearch"></fa-icon>
+@if (!!searchQuery) {
+  <fa-icon class="fa-2x search-bar__icon"
+           (click)="onRemoveClicked()"
+           [icon]="faRemove"></fa-icon>
+}
+<fa-icon class="fa-2x search-bar__icon"
+         (click)="onSearchClicked()"
+         [icon]="faSearch"></fa-icon>

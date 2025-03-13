@@ -114,8 +114,9 @@ app-issuer-vertical-chip {
 
 @media screen and (max-width: 968px) {
   :host {
-    flex-basis: 250px;
-    max-width: 300px;
+    min-width: 280px;
+    flex-basis: 280px;
+    max-width: 380px;
     padding: 1.5rem 1rem;
   }
 
