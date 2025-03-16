@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    scale: 1.2;
+  }
+
+  &.visible {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
