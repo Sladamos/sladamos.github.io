@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "startLocal": "ng serve --host=192.168.0.103 --port=4200",
+    "startLocal": "ng serve --host=192.168.0.100 --port=4200",
     "build": "ng build",
     "watch": "ng build --watch --configuration development"
   },
