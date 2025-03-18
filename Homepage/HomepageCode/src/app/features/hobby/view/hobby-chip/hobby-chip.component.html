@@ -1,0 +1,6 @@
+@if (!!hobby().faIcon) {
+  <fa-icon class="hobby-chip__icon" [icon]="hobby().faIcon!"></fa-icon>
+} @else {
+  <img class="hobby-chip__logo" src="assets/images/hobby/{{hobby().customIcon}}" alt="Logo">
+}
+<p class="hobby-chip__name">{{hobby().name}}</p>

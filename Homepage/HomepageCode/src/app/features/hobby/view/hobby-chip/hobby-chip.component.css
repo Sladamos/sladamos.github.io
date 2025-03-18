@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--color-dark-second);
+  box-shadow: 0 2px 4px 2px var(--color-light-first), 0 2px 4px 4px var(--color-very-dark-second);
+
+  &:hover {
+    background-color: var(--color-dark-first);
+    scale: 1.1;
+  }
+
+  &.activated {
+    background-color: var(--color-dark-first);
+  }
+}
+
+.hobby-chip__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.hobby-chip__icon {
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  line-height: 0;
+  color: var(--color-light-first);
+}
+
+.hobby-chip__name {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-white-gray);
+}
