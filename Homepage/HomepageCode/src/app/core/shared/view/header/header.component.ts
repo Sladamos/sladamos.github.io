@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, HostListener, OnDestroy, signal, WritableSignal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, signal, WritableSignal} from '@angular/core';
 import {NavbarComponent} from '../navbar/navbar.component';
 
 @Component({
@@ -10,24 +10,14 @@ import {NavbarComponent} from '../navbar/navbar.component';
   styleUrl: './header.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    '[class.header__scrolled]': 'isScrolled()'
+    '[class.header__scrolled]': 'isScrolled()',
+    '(window:scroll)': 'onWindowScroll()'
   }
 })
-export class HeaderComponent implements OnDestroy {
-  private readonly scrollEventListener: (event: Event) => void;
+export class HeaderComponent {
   isScrolled: WritableSignal<boolean> = signal(false);
 
-  constructor() {
-    this.scrollEventListener = this.onWindowScroll.bind(this);
-    window.addEventListener('scroll', this.scrollEventListener);
-  }
-
-  ngOnDestroy() {
-    window.removeEventListener('scroll', this.scrollEventListener);
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll(event: Event) {
+  onWindowScroll() {
     const scrollPosition = window.scrollY;
     if (scrollPosition > 0) {
       this.isScrolled.update(() => true);

@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, computed, HostListener, inject, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, computed, inject, signal} from '@angular/core';
 import {NgClass} from '@angular/common';
 import {RouterLink} from '@angular/router';
 import {ScreenTypeService} from '../../service/screen-type.service';
@@ -11,7 +11,10 @@ import {ScreenTypeService} from '../../service/screen-type.service';
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '(window:click)': 'closeMenu()'
+  }
 })
 export class NavbarComponent {
   screenTypeService = inject(ScreenTypeService)
@@ -23,7 +26,6 @@ export class NavbarComponent {
     event.stopPropagation();
   }
 
-  @HostListener('window:click')
   closeMenu() {
     this.isMobileMenuOpen.set(false);
   }
