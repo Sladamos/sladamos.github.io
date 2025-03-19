@@ -40,7 +40,7 @@ jobs:
       - name: Prepare deployment folder
         run: |
           mkdir pages
-          cp -r . pages
+          find . -mindepth 1 -maxdepth 1 ! -name 'pages' ! -name '.github' -exec cp -r {} pages/ \;
           mv Homepage/HomepageCode/dist/Homepage/* pages
           rm -rf pages/Homepage
 
