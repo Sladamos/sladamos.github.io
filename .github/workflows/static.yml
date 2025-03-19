@@ -43,7 +43,7 @@ jobs:
 
       - name: Create _redirects for Netlify
         run: |
-          echo '/*    /index.html   200' > Homepage/HomepageCode/dist/Homepage/browser/
+          echo '/*    /index.html   200' > Homepage/HomepageCode/dist/Homepage/browser/_redirecs
 
       - name: Prepare deployment folder
         run: |
@@ -64,7 +64,7 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
         with:
-          publish-dir: Homepage/HomepageCode/dist/Homepage/browser/_redirects
+          publish-dir: Homepage/HomepageCode/dist/Homepage/browser
           production-branch: main
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           site-id: ${{ secrets.NETLIFY_SITE_ID }}
