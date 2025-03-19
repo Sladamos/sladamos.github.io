@@ -43,6 +43,14 @@ jobs:
           find . -mindepth 1 -maxdepth 1 ! -name 'pages' ! -name '.github' -exec cp -r {} pages/ \;
           mv Homepage/HomepageCode/dist/Homepage/* pages
           rm -rf pages/Homepage
+      
+      - name: Check contents of pages directory
+        run: |
+          ls -al pages
+      
+      - name: Create _redirects for Netlify
+        run: |
+          echo '/*    /index.html   200' > pages/_redirects
 
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
