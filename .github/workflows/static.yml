@@ -43,7 +43,7 @@ jobs:
 
       - name: Create _redirects for Netlify
         run: |
-          echo '/*    /index.html   200' > Homepage/HomepageCode/dist/Homepage/browser/_redirecs
+          echo '/*    /index.html   200' > Homepage/HomepageCode/dist/Homepage/browser/_redirects
 
       - name: Prepare deployment folder
         run: |
@@ -60,6 +60,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: List files in dist folder
+        run: |
+          ls -R Homepage/HomepageCode/dist/Homepage/browser
       
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
