@@ -34,8 +34,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/Homepage/",
-            "outputPath": "dist",
+            "baseHref": "/",
+            "outputPath": "dist/Homepage",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
