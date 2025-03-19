@@ -36,6 +36,14 @@ jobs:
         run: |
           cd Homepage/HomepageCode
           npm run build -- --configuration production
+      
+      - name: Install netlify-cli
+        run: |
+          npm install -g netlify-cli
+
+      - name: Create _redirects for Netlify
+        run: |
+          echo '/*    /index.html   200' > Homepage/HomepageCode/dist/Homepage/browser/
 
       - name: Prepare deployment folder
         run: |
@@ -43,10 +51,6 @@ jobs:
           find . -mindepth 1 -maxdepth 1 ! -name 'pages' ! -name '.github' -exec cp -r {} pages/ \;
           mv Homepage/HomepageCode/dist/Homepage/browser/* pages
           rm -rf pages/Homepage
-      
-      - name: Create _redirects for Netlify
-        run: |
-          echo '/*    /index.html   200' > pages/_redirects
 
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
@@ -56,3 +60,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: Homepage/HomepageCode/dist/Homepage/browser/
+          production-branch: main
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          site-id: ${{ secrets.NETLIFY_SITE_ID }}
