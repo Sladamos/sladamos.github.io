@@ -41,12 +41,8 @@ jobs:
         run: |
           mkdir pages
           find . -mindepth 1 -maxdepth 1 ! -name 'pages' ! -name '.github' -exec cp -r {} pages/ \;
-          mv Homepage/HomepageCode/dist/Homepage/* pages
+          mv Homepage/HomepageCode/dist/Homepage/browser/* pages
           rm -rf pages/Homepage
-      
-      - name: Check contents of pages directory
-        run: |
-          ls -al pages
       
       - name: Create _redirects for Netlify
         run: |
