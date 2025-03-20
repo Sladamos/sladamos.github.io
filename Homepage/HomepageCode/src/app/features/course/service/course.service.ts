@@ -12,6 +12,12 @@ export class CourseService {
   private issuerService = inject(IssuerService);
   courses = signal<CourseModel[]>([
     {
+      title: 'Docker Deep Dive',
+      issuer: this.issuerService.getIssuer('Pluralsight'),
+      technologies: [this.technologyService.getTechnology('Docker')],
+      certificateUrl: 'course_dockerDeepDive.pdf'
+    },
+    {
       title: 'Developing Applications with Google Cloud: Foundations',
       issuer: this.issuerService.getIssuer('Pluralsight'),
       technologies: [this.technologyService.getTechnology('GCP')],
