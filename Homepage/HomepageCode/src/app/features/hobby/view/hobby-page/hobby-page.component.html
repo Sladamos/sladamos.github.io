@@ -6,5 +6,7 @@
   }
 </div>
 <div class="hobby__item-wrapper">
-  <p>hobby-page works!</p>
+  @if (!!selectedHobby) {
+    <app-hobby-gallery [hobby]="selectedHobby"/>
+  }
 </div>

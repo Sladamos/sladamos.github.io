@@ -10,8 +10,14 @@ export class HobbyService {
   hobbies = signal<HobbyModel[]>([
     {
       name: 'Lego',
-      customIcon: 'logo_lego.png'
-    },
+      customIcon: 'logo_lego.png',
+      items: [
+        {
+          name: 'Imperial Probe Droid',
+          imageUrl: 'lego_probeDroid.png',
+        }
+      ]
+    }/*,
     {
       name: 'Games',
       faIcon: faHatWizard
@@ -31,7 +37,7 @@ export class HobbyService {
     {
       name: 'Universes',
       faIcon: faJedi
-    }
+    }*/
   ]);
 
   constructor() { }
