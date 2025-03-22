@@ -29,7 +29,7 @@ export class HobbyGalleryComponent implements OnInit {
   runtimeService: RuntimeService = inject(RuntimeService);
   hobby = input.required<HobbyModel>();
   selectedItemIndex: WritableSignal<number | undefined> = signal(undefined);
-  currentItemIndex = computed(() => this.selectedItemIndex() ?? parseInt(localStorage.getItem(`hobby_${this.hobby().name}_currentSectionIndex`) ?? '0', 10));
+  currentItemIndex = computed(() => this.selectedItemIndex() ?? this.getDefaultIndex());
   selectedItem = computed(() => this.hobby().items[this.currentItemIndex()]);
   sections: Signal<SectionModel[]> = computed(() =>
     this.hobby().items.map(e => ({
@@ -47,5 +47,15 @@ export class HobbyGalleryComponent implements OnInit {
     this.selectedItemIndex.set(number);
     localStorage.setItem(`hobby_${this.hobby().name}_currentSectionIndex`, number.toString());
     setTimeout(() => this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef))
+  }
+
+  private getDefaultIndex() {
+    const localStorageIndex = localStorage.getItem(`hobby_${this.hobby().name}_currentSectionIndex`);
+    const localStorageItems = localStorage.getItem(`hobby_${this.hobby().name}_items`);
+    if (!!localStorageIndex && !!localStorageItems && parseInt(localStorageItems, 10) === this.hobby().items.length) {
+      return parseInt(localStorageIndex, 10)
+    }
+    localStorage.setItem(`hobby_${this.hobby().name}_items`, this.hobby().items.length.toString());
+    return 0;
   }
 }

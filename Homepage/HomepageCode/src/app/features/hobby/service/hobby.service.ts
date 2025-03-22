@@ -12,12 +12,28 @@ export class HobbyService {
       customIcon: 'logo_lego.png',
       items: [
         {
+          name: 'The Insect Collection',
+          image: 'lego_insectCollection.png',
+        },
+        {
           name: 'Imperial Probe Droid',
           image: 'lego_probeDroid.png',
         },
         {
+          name: 'Orchid',
+          image: 'lego_orchid.png',
+        },
+        {
           name: 'Tantive IV',
           image: 'lego_tantiveIV.png',
+        },
+        {
+          name: 'Stich',
+          image: 'lego_stich.png',
+        },
+        {
+          name: 'Tiny Plants',
+          image: 'lego_tinyPlants.png',
         },
         {
           name: 'Capitan Rex Helmet',
