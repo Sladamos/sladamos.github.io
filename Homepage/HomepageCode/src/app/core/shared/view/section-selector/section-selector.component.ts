@@ -2,11 +2,13 @@ import {ChangeDetectionStrategy, Component, computed, inject, input, output,} fr
 import {MathService} from '../../service/math.service';
 import {NgClass} from '@angular/common';
 import {SectionModel} from '../../model/section-model';
+import {SafeHtmlPipe} from '../../../security/pipe/safe-html.pipe';
 
 @Component({
   selector: 'app-section-selector',
   imports: [
-    NgClass
+    NgClass,
+    SafeHtmlPipe
   ],
   templateUrl: './section-selector.component.html',
   styleUrl: './section-selector.component.css',

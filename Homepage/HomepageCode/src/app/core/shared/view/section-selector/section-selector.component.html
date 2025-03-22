@@ -1,16 +1,16 @@
 <button (click)="onPreviousSectionClicked()"
         class="sections__button"
         [ngClass]="{'disappear': animationState === 'disappear'}">
-  {{sections()[previousSectionIndex()].title}}
+  <div [innerHTML]="sections()[previousSectionIndex()].title | safeHtml"></div>
 </button>
 
 <button class="sections__button sections__button--current"
         [ngClass]="{'disappear': animationState === 'disappear'}">
-  {{sections()[currentSectionIndex()].title}}
+  <div [innerHTML]="sections()[currentSectionIndex()].title | safeHtml"></div>
 </button>
 
 <button (click)="onNextSectionClicked()"
         class="sections__button"
         [ngClass]="{'disappear': animationState === 'disappear'}">
-  {{sections()[nextSectionIndex()].title}}
+  <div [innerHTML]="sections()[nextSectionIndex()].title | safeHtml"></div>
 </button>

@@ -1,6 +1,5 @@
 import {Injectable, signal} from '@angular/core';
 import {HobbyModel} from '../model/hobby-model';
-import {faBook, faFilm, faHatWizard, faJedi, faMusic} from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +13,23 @@ export class HobbyService {
       items: [
         {
           name: 'Imperial Probe Droid',
-          imageUrl: 'lego_probeDroid.png',
+          image: 'lego_probeDroid.png',
+        },
+        {
+          name: 'Tantive IV',
+          image: 'lego_tantiveIV.png',
+        },
+        {
+          name: 'Capitan Rex Helmet',
+          image: 'lego_rex.png',
+        },
+        {
+          name: 'Darth Vader Helmet',
+          image: 'lego_vader.png',
+        },
+        {
+          name: 'Commander Cody Helmet',
+          image: 'lego_cody.png',
         }
       ]
     }/*,

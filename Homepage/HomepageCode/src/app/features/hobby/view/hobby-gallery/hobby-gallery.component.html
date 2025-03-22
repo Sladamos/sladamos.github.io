@@ -1,11 +1,12 @@
-@if (selectedItem) {
-  <div class="hobby-gallery__item-wrapper">
-    <div class="hobby-gallery__item-image-wrapper">
-      <img alt="Hobby item image" src="assets/images/hobby/{{selectedItem.imageUrl}}">
-    </div>
-    <p>{{selectedItem.name}}</p>
+<div class="hobby__item-wrapper">
+  <div class="hobby__item-image-wrapper">
+    <img alt="Hobby item" src="assets/images/hobby/{{selectedItem().image}}">
   </div>
-}
-<div>
-
+  <p>{{selectedItem().name}}</p>
+</div>
+<div class
+       ="hobby__items-miniatures">
+  <app-section-selector [sections]="sections()"
+                        [currentSectionIndex]="currentItemIndex()"
+                        (onSectionNumberSelected)="onSectionIndexSelected($event)"/>
 </div>
