@@ -1,12 +1,12 @@
 <div class="hobby__chips-wrapper">
   @for (hobby of hobbies(); track hobby) {
-    <app-hobby-chip [ngClass]="{'activated': selectedHobby === hobby}"
+    <app-hobby-chip [ngClass]="{'activated': selectedHobby() === hobby}"
                     [hobby]="hobby"
                     (onChipClicked)="onHobbyChipClicked($event)" />
   }
 </div>
 <div class="hobby__item-wrapper">
   @if (!!selectedHobby) {
-    <app-hobby-gallery [hobby]="selectedHobby" />
+    <app-hobby-gallery [hobby]="selectedHobby()" />
   }
 </div>

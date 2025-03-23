@@ -1,5 +1,6 @@
 import {Injectable, signal} from '@angular/core';
 import {HobbyModel} from '../model/hobby-model';
+import {faBook} from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
   providedIn: 'root'
@@ -48,14 +49,48 @@ export class HobbyService {
           image: 'lego_cody.png',
         }
       ]
-    }/*,
-    {
-      name: 'Games',
-      faIcon: faHatWizard
     },
     {
       name: 'Books',
-      faIcon: faBook
+      faIcon: faBook,
+      items: [
+        {
+          name: 'The Witcher',
+          image: 'books_witcher.png',
+        },
+        {
+          name: 'The Lord of the Rings',
+          image: 'books_lotr.png',
+        },
+        {
+          name: 'The Chronicles of Narnia',
+          image: 'books_narnia.png',
+        },
+        {
+          name: 'Dune',
+          image: 'books_dune.png',
+        },
+        {
+          name: 'Sylvanas',
+          image: 'books_sylvanas.png',
+        },
+        {
+          name: 'Runaway Max',
+          image: 'books_runawayMax.png',
+        },
+        {
+          name: 'With Fire and Sword',
+          image: 'books_fireAndSword.png',
+        },
+        {
+          name: 'Hound\'s Hill',
+          image: 'books_houndsHill.png',
+        },
+      ]
+    },/*,
+    {
+      name: 'Games',
+      faIcon: faHatWizard
     },
     {
       name: 'Movies',

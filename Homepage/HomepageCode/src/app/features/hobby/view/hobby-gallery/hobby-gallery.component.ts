@@ -3,10 +3,11 @@ import {
   Component,
   computed,
   inject,
-  input,
+  input, OnChanges,
   OnInit,
   Signal,
   signal,
+  SimpleChanges,
   ViewContainerRef,
   WritableSignal
 } from '@angular/core';
@@ -24,7 +25,7 @@ import {RuntimeService} from '../../../../core/shared/service/runtime.service';
   styleUrl: './hobby-gallery.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HobbyGalleryComponent implements OnInit {
+export class HobbyGalleryComponent implements OnChanges {
   viewContainerRef: ViewContainerRef = inject(ViewContainerRef);
   runtimeService: RuntimeService = inject(RuntimeService);
   hobby = input.required<HobbyModel>();
@@ -39,8 +40,11 @@ export class HobbyGalleryComponent implements OnInit {
     }))
   );
 
-  ngOnInit(): void {
-    setTimeout(() => this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef))
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['hobby']) {
+      this.selectedItemIndex.set(undefined);
+      setTimeout(() => this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef))
+    }
   }
 
   onSectionIndexSelected(number: number) {
