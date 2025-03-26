@@ -21,7 +21,7 @@ export class ProjectService {
     },
     {
       name: 'Library API',
-      description: 'Library API is an application divided into microservices which are deployed on Heroku. It consists of books and publishing houses. It allows simple CRUD operations on both of them. The goal of the project was to create monolith and then divide it into separate microservices with their own persistence. It was required to use synchronous communication via RestTemplates.',
+      description: 'Library API is an application divided into microservices which are deployed via Eureka. It consists of books and publishing houses. It allows simple CRUD operations on both of them. The goal of the project was to create monolith and then divide it into separate microservices with their own persistence. It was required to use synchronous communication via RestTemplates.',
       imgUrl: 'projects_libraryApi.png',
       sourceCodeUrl: 'https://github.com/Sladamos/LibraryAPI/',
       teamMembers: 1,
