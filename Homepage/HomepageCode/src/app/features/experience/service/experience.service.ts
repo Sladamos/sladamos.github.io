@@ -11,6 +11,7 @@ export class ExperienceService {
           company: 'Consdata',
           title: 'Junior fullstack developer',
           from: '01-10-2024',
+          to: '26-04-2025',
           assetSrc: 'experience_consdata.png',
           description: '<ul class="experience__description-list"><li>Resolving backend tasks using Java</li>' +
             '<li>Developing frontend solutions with Angular and SASS</li>' +
