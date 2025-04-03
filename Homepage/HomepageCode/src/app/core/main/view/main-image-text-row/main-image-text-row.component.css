@@ -18,6 +18,7 @@
   padding: 16px;
   background-color: var(--color-dark-second);
   box-shadow: 0 4px 12px var(--color-normal-second), 0 2px 15px var(--color-dark-first);
+  text-align: justify;
 }
 
 @media screen and (max-width: 968px) {

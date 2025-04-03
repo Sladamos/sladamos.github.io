@@ -31,7 +31,7 @@ export class ProjectService {
     },
     {
       name: 'CoronaryApp',
-      description: 'This application reconstructs three-dimensional bifurcation points in coronary vessels using only a series of planar angiography images. It analyzes the shape, size, and direction of shadows to approximate the original 3D locations, offering a fully automated Voxel Hull algorithm and a semi-automatic method that incorporates additional user input. Both techniques were validated with synthetic data to ensure accuracy. The system utilizes three.js for 3D visualization, React on the front-end, and Django for the back-end.',
+      description: 'This application reconstructs three-dimensional bifurcation points in coronary vessels using only a series of planar angiography images. It analyzes the shape, size, and direction of shadows to approximate the original 3D locations, offering a fully automated Voxel Hull algorithm and a semi-automatic method that incorporates additional user input. Both techniques were validated with synthetic data to ensure accuracy. The system utilizes three.js for 3D visualization of vessels and bifurcation points.',
       imgUrl: 'projects_coronaryApp.png',
       sourceCodeUrl: 'https://github.com/Sladamos/CoronaryApp',
       teamMembers: 2,
@@ -81,7 +81,7 @@ export class ProjectService {
     },
     {
       name: 'SLEMA',
-      description: 'SLEMA is a multi-platform project developed for the Fundacja Toczeń Polska, built using a diverse technology stack that includes Dart, Java, TypeScript, and more. Featuring integrated chat functionality across web and mobile platforms, SLEMA was developed using SCRUM. The project is written in Flutter framework, whereas chat backend is written in Spring framework.',
+      description: 'SLEMA is a multi-platform project developed for the Fundacja Toczeń Polska, built using a diverse technology stack that includes Dart and Java. Featuring integrated chat functionality across web and mobile platforms, SLEMA was developed using SCRUM. The project is written in Flutter framework, whereas chat backend is written in Spring framework.',
       imgUrl: 'projects_slema.png',
       sourceCodeUrl: 'https://github.com/Sladamos/SLEMA',
       teamMembers: 4,
