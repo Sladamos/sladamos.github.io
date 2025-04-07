@@ -10,7 +10,8 @@
 .courses__wrapper {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
   gap: 2rem;
 }
 

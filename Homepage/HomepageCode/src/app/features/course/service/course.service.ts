@@ -113,6 +113,6 @@ export class CourseService {
       technologies: [this.technologyService.getTechnology('Docker'), this.technologyService.getTechnology('Kubernetes')],
       certificateUrl: 'course_dockerKubernetesComplete.pdf'
     }
-  ]);
+  ].reverse());
 }
 
