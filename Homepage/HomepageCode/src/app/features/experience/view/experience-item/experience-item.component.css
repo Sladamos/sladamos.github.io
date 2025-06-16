@@ -9,7 +9,7 @@
 }
 
 .item__company {
-  width: 250px;
+  flex: 1 0 150px;
   text-align: center;
 }
 

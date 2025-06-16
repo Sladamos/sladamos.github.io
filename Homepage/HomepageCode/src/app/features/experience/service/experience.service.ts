@@ -8,22 +8,31 @@ export class ExperienceService {
     {
       title: 'Job', items: [
         {
+          company: 'Software Mind',
+          title: 'Junior backend developer',
+          from: '05-2025',
+          assetSrc: 'experience_softwaremind.jpg'
+        },
+        {
           company: 'Consdata',
           title: 'Junior fullstack developer',
-          from: '01-10-2024',
-          to: '26-04-2025',
+          from: '10-2024',
+          to: '04-2025',
           assetSrc: 'experience_consdata.png',
-          description: '<ul class="experience__description-list"><li>Resolving backend tasks using Java</li>' +
-            '<li>Developing frontend solutions with Angular and SASS</li>' +
-            '<li>Taking parts in SCRUM meetings</li>' +
-            '<li>Contributing as a member of the Cloud Chapter</li>' +
-            '<li>Managing simple environment tasks using Jenkins, Docker and Kubernetes</li></ul>'
+          description:
+            '<ul class="experience__description-list">' +
+            '<li><span class="experience__description-item-name">Backend:</span> Developing modular monolith with microservices in Java with Spring and JUnit. Implementing SOAP and REST services. Migrating from Spring 2 to Spring 3. Sync and async integration with external API.</li>' +
+            '<li><span class="experience__description-item-name">Frontend:</span> Developing in Angular and styling with SCSS ensuring WCAG compliance. Developing external components in Lit.js.</li>' +
+            '<li><span class="experience__description-item-name">CI/CD:</span> Creating Jenkins Pipelines, containerizing with Docker, using Kubernetes, Argo CD and Git.</li>' +
+            '<li><span class="experience__description-item-name">Administration:</span> Maintaining Tomcat and Apache. Migrating Tomcat and Camunda. Managing certs.</li>' +
+            '<li><span class="experience__description-item-name">Cloud:</span> Integration with GCP and Firebase in a cloud-based project for cloud guild.</li>' +
+            '<li><span class="experience__description-item-name">Other:</span> Working in Scrum. Using Jira and Confluence. Communicating with clients, presenting application demos, assembling and delivering deployment packages.</li></ul>'
         },
         {
           company: 'Consdata',
           title: 'Fullstack developer internship',
-          from: '01-07-2024',
-          to: '30-09-2024',
+          from: '07-2024',
+          to: '09-2024',
           assetSrc: 'experience_consdata.png',
           description: '<ul class="experience__description-list"><li>Resolving backend tasks using Java</li>' +
             '<li>Developing frontend solutions with Angular and SASS</li>' +
@@ -37,7 +46,7 @@ export class ExperienceService {
         {
           company: 'Gdańsk University of Technology',
           title: 'Master of Computer science',
-          from: '2025',
+          from: '02-2025',
           assetSrc: 'experience_pg.jpg',
           description: '<ul class="experience__description-list"><li>Specialization: Geoinformatic and Mobile Technologies</li>' +
             '<li>Focused on expand knowledge in Machine Learning</li>' +
@@ -46,8 +55,8 @@ export class ExperienceService {
         {
           company: 'Gdańsk University of Technology',
           title: 'Bachelor of Computer science',
-          from: '2021',
-          to: '2025',
+          from: '10-2021',
+          to: '02-2025',
           assetSrc: 'experience_pg.jpg',
           description: '<ul class="experience__description-list"><li>First specialization: Applications</li>' +
             '<li>Second specialization: Algorithms and Systems Modeling</li>'
@@ -55,8 +64,8 @@ export class ExperienceService {
         {
           company: 'II High School in Elbląg',
           title: 'Mathematics and physics',
-          from: '2018',
-          to: '2021',
+          from: '09-2018',
+          to: '05-2021',
           assetSrc: 'experience_lo.png',
           description: '<ul class="experience__description-list"><li>High exam scores</li>' +
             '<li>Taking part in physics olympiad and chemistry olympiad</li>' +
@@ -69,12 +78,13 @@ export class ExperienceService {
         {
           company: 'Ping science club',
           title: 'Member',
-          from: '01-07-2021',
+          from: '07-2021',
+          to: '06-2025',
           assetSrc: 'experience_ping.png',
           description: '<ul class="experience__description-list"><li>Contains Capture The Flag section</li>' +
             '<li>Mainly focused on cybersecurity and networks</li>' +
             '<li>Interesting lectures every week</li></ul>' +
-            '<img class="experience__image" src="assets/images/experience/experience_lecture.jpg" />'
+            '<img class="experience__image" alt="Science club lecture" src="assets/images/experience/experience_lecture.jpg" />'
         }
       ]
     }
