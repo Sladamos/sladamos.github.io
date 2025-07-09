@@ -20,6 +20,16 @@ export class ProjectService {
       ]
     },
     {
+      name: 'Contourer',
+      description: 'Contourer is a multi-module desktop application that allows users to load Digital Elevation Models (DEMs) in the ASC format and overlay them with map images. It features an implementation of the Marching Squares algorithm to generate contour lines, with the ability to specify the number of contour levels for precise terrain analysis. The application supports intuitive map interaction through zooming and panning. Developed using a strict TDD approach.',
+      imgUrl: 'projects_contourer.png',
+      sourceCodeUrl: 'https://github.com/Sladamos/contourer/',
+      teamMembers: 1,
+      technologies: [
+        this.technologyService.getTechnology('Java'), this.technologyService.getTechnology('JUnit'), this.technologyService.getTechnology('JavaFX'), this.technologyService.getTechnology('Mockito'), this.technologyService.getTechnology('AssertJ'),
+      ]
+    },
+    {
       name: 'Library API',
       description: 'Library API is an application divided into microservices which are deployed via Eureka. It consists of books and publishing houses. It allows simple CRUD operations on both of them. The goal of the project was to create monolith and then divide it into separate microservices with their own persistence. It was required to use synchronous communication via RestTemplates.',
       imgUrl: 'projects_libraryApi.png',
