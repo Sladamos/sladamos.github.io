@@ -11,7 +11,14 @@ export class ExperienceService {
           company: 'Software Mind',
           title: 'Junior backend developer',
           from: '05-2025',
-          assetSrc: 'experience_softwaremind.jpg'
+          assetSrc: 'experience_softwaremind.jpg',
+          description:
+            '<ul class="experience__description-list">' +
+            '<li>Eliminating vulnerabilities in both Gradle and Maven builds with Veracode</li>' +
+            '<li>Designing and implementing UI components in Thymeleaf integrated with Chart.js and Bootstrap</li>' +
+            '<li>Developing Java applications with Spring Boot and JUnit</li>' +
+            '<li>Working with JPQL and Oracle database for data persistence</li>' +
+            '<li>Practicing pair programming for collaborative development</li></ul>'
         },
         {
           company: 'Consdata',
