@@ -15,7 +15,7 @@ export class ExperienceService {
           description:
             '<ul class="experience__description-list">' +
             '<li>Eliminating vulnerabilities in both Gradle and Maven builds with Veracode</li>' +
-            '<li>Designing and implementing UI components in Thymeleaf integrated with Chart.js and Bootstrap</li>' +
+            '<li>Designing and implementing UI components in Thymeleaf and Angular, integrated with Chart.js and Bootstrap</li>' +
             '<li>Developing Java applications with Spring Boot and JUnit</li>' +
             '<li>Working with JPQL and Oracle database for data persistence</li>' +
             '<li>Practicing pair programming for collaborative development</li></ul>'
@@ -56,7 +56,7 @@ export class ExperienceService {
           from: '02-2025',
           assetSrc: 'experience_pg.jpg',
           description: '<ul class="experience__description-list"><li>Specialization: Geoinformatic and Mobile Technologies</li>' +
-            '<li>Focused on expand knowledge in Machine Learning</li>' +
+            '<li>Thesis: Efficiency and performance analysis of Object Relational Mapping tools in Java using a custom-made test environment</li>' +
             '<li>Student Representative for my specialization</li>'
         },
         {
@@ -66,7 +66,8 @@ export class ExperienceService {
           to: '02-2025',
           assetSrc: 'experience_pg.jpg',
           description: '<ul class="experience__description-list"><li>First specialization: Applications</li>' +
-            '<li>Second specialization: Algorithms and Systems Modeling</li>'
+            '<li>Second specialization: Algorithms and Systems Modeling</li>' +
+            '<li>Thesis: Application for 3D reconstruction of bifurcation points from a series of coronal planar images</li>'
         },
         {
           company: 'II High School in Elbląg',
