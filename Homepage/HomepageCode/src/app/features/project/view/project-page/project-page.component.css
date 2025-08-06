@@ -15,11 +15,13 @@
 }
 
 .projects__wrong-query-message {
-  color: var(--color-white-gray);
+  background: linear-gradient(135deg,var(--color-very-dark-second),var(--color-dark-second));
+  border-radius: 50px;
+  color: var(--color-light-first);
   font-family: 'Roboto', sans-serif;
   font-size: 3rem;
   font-weight: bold;
-  padding: 3rem 0;
+  padding: 1rem;
   text-align: center;
 }
 
