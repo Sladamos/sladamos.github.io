@@ -14,10 +14,11 @@ export class ExperienceService {
           assetSrc: 'experience_softwaremind.jpg',
           description:
             '<ul class="experience__description-list">' +
-            '<li>Eliminating vulnerabilities in both Gradle and Maven builds with Veracode</li>' +
+            '<li>Eliminating security vulnerabilities in both Gradle and Maven builds using Veracode</li>' +
             '<li>Designing and implementing UI components in Thymeleaf and Angular, integrated with Chart.js and Bootstrap</li>' +
-            '<li>Developing Java applications with Spring Boot and JUnit</li>' +
-            '<li>Working with JPQL and Oracle database for data persistence</li>' +
+            '<li>Developing Java applications using Spring Boot, JUnit, and TestNG</li>' +
+            '<li>Writing acceptance tests with Gherkin and Cucumber</li>' +
+            '<li>Using JPQL and Oracle for data persistence</li>' +
             '<li>Practicing pair programming for collaborative development</li></ul>'
         },
         {
