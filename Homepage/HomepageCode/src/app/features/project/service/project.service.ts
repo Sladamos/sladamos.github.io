@@ -10,6 +10,16 @@ export class ProjectService {
   private technologyService: TechnologyService = inject(TechnologyService);
   readonly projects = signal<ProjectModel[]>([
     {
+      name: 'HomeApp',
+      description: 'HomeApp is a Windows desktop application for managing useful things. Currently, its main module allows users to manage personal book collections: tracking reading status, loans, and dates. The app features multilingual support (Polish and English), logging, and both cloud and local H2 databases. Developed with TDD in the core module, it is still in active development.',
+      imgUrl: 'projects_homeapp.png',
+      sourceCodeUrl: 'https://github.com/Sladamos/home-app',
+      teamMembers: 1,
+      technologies: [
+        this.technologyService.getTechnology('Java'), this.technologyService.getTechnology('Spring'), this.technologyService.getTechnology('JUnit'), this.technologyService.getTechnology('JavaFX'), this.technologyService.getTechnology('Mockito'), this.technologyService.getTechnology('AssertJ'),
+      ]
+    },
+    {
       name: 'Manusteril',
       description: 'Manusteril is an advanced distributed system that uses pub/sub architecture, fail-fast mechanisms, circuit breakers, and ensures resilience through eventual consistency. It features a console-based GUI and allows the declaration of departments of various types and quantities, as shown in the example image - such as two general and one cardiology ward. The system also utilizes Ninject for dependency injection, providing a flexible and scalable architecture.',
       imgUrl: 'projects_manusteril.png',

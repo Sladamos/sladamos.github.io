@@ -9,7 +9,7 @@ export class ExperienceService {
       title: 'Job', items: [
         {
           company: 'Software Mind',
-          title: 'Junior backend developer',
+          title: 'Junior software engineer',
           from: '05-2025',
           assetSrc: 'experience_softwaremind.jpg',
           description:
