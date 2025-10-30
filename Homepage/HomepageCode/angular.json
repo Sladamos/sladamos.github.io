@@ -48,7 +48,7 @@
             ],
             "styles": [
               "src/global.css",
-              "src/themes/summer-theme.css",
+              "src/themes/fall-theme.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
