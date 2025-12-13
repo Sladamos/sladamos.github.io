@@ -18,7 +18,7 @@ export class ExperienceService {
             '<li>Designing and implementing UI components in Thymeleaf and Angular, integrated with Chart.js and Bootstrap</li>' +
             '<li>Developing Java applications using Spring Boot, JUnit, and TestNG</li>' +
             '<li>Writing acceptance tests with Gherkin and Cucumber</li>' +
-            '<li>Using JPQL and Oracle for data persistence</li>' +
+            '<li>Using JPQL, Oracle and MSSQL for data persistence</li>' +
             '<li>Practicing pair programming for collaborative development</li></ul>'
         },
         {
