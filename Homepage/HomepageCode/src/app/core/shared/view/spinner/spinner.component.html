@@ -1,6 +1,9 @@
 <div class="spinner__wrapper">
-    <div #spinnerFront class="spinner__front">
-    </div>
-    <div #spinnerBack class="spinner__back">
-    </div>
+  <div class="spinner__front">
+    <ng-content select="[front]"></ng-content>
+  </div>
+
+  <div class="spinner__back">
+    <ng-content select="[back]"></ng-content>
+  </div>
 </div>
