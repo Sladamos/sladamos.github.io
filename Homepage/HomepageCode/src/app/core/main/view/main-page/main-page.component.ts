@@ -9,7 +9,6 @@ import {ScreenTypeService} from '../../../shared/service/screen-type.service';
     MainSpinnerComponent,
     MainImageTextRowComponent
   ],
-  standalone: true,
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

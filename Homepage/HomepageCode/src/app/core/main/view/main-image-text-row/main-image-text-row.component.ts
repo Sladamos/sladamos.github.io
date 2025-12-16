@@ -3,7 +3,6 @@ import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/c
 @Component({
   selector: 'app-main-image-text-row',
   imports: [],
-  standalone: true,
   templateUrl: './main-image-text-row.component.html',
   styleUrl: './main-image-text-row.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
