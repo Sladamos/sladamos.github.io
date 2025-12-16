@@ -12,7 +12,7 @@
 </div>
 
 <div class="project-item__chips item">
-  @for (technology of project().technologies; track technology) {
+  @for (technology of project().technologies; track technology.name) {
     <app-technology-chip [technology]="technology" />
   }
 </div>

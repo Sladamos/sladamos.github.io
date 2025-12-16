@@ -27,14 +27,20 @@ export class ProjectPageComponent {
   screenTypeService: ScreenTypeService = inject(ScreenTypeService)
   projects = this.projectService.projects;
   searchQuery = signal("")
-  displayedProjects = computed(() => !!this.searchQuery() ? this.projects().filter(project => this.doesProjectMatchQuery(project)) : this.projects())
+  displayedProjects = computed(() => {
+    const query = this.searchQuery().trim().toUpperCase();
+    if (!query) return this.projects();
+
+    return this.projects().filter(this.doesProjectMatchQuery(query));
+  });
 
   onValueSearched($value: string) {
     this.searchQuery.set($value);
   }
 
-  doesProjectMatchQuery(project: ProjectModel): boolean {
-    const query = this.searchQuery().toUpperCase();
-    return project.name.toUpperCase().startsWith(query) || this.technologyService.anyTechnologyMatchesQuery(project.technologies, query)
+  doesProjectMatchQuery(query: string): (project: ProjectModel) => boolean {
+    return project => {
+      return project.name.toUpperCase().startsWith(query) || this.technologyService.anyTechnologyMatchesQuery(project.technologies, query)
+    }
   }
 }

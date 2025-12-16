@@ -15,13 +15,13 @@ import {FormsModule} from '@angular/forms';
 })
 export class SearchBarComponent {
   placeholder = input<string>("");
-  onValueSearched = output<string>();
+  search = output<string>();
   searchQuery = "";
   protected readonly faSearch = faSearch;
   protected readonly faRemove = faRemove;
 
   onSearchChange() {
-    this.onValueSearched.emit(this.searchQuery)
+    this.search.emit(this.searchQuery)
   }
 
   onRemoveClicked() {

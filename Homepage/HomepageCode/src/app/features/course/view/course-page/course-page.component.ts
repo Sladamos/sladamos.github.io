@@ -26,7 +26,7 @@ export class CoursePageComponent {
   displayedCourses = computed(() => !!this.searchQuery() ? this.courses().filter(course => this.doesCourseMatchQuery(course)) : this.courses())
 
 
-  onValueSearched($value: string) {
+  onSearch($value: string) {
     this.searchQuery.set($value);
   }
 

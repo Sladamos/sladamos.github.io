@@ -1,10 +1,10 @@
-<app-search-bar placeholder="Find projects.."  (onValueSearched)="onValueSearched($event)" />
+<app-search-bar placeholder="Find projects.."  (search)="onValueSearched($event)" />
 
 <div class="projects__wrapper">
   @if (displayedProjects().length === 0) {
     <p class="projects__wrong-query-message">No projects found for query: {{searchQuery()}}</p>
   }
-  @for (project of displayedProjects(); track project) {
+  @for (project of displayedProjects(); track project.name) {
     @if (screenTypeService.isNotDesktop()) {
       <app-project-item-mobile [project]="project" />
     } @else {

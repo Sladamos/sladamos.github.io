@@ -3,7 +3,7 @@
   (onSectionSelected)="onSectionSelected($event)"></app-experience-sections>
 
 @if (selectedSection) {
-  @for (item of selectedSection.items; track item) {
+  @for (item of selectedSection.items; track item.title) {
     <app-experience-item [item]="item"></app-experience-item>
   }
 }

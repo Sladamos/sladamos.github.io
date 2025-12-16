@@ -3,6 +3,7 @@
   grid-template-columns: 40% 60%;
   grid-auto-rows: auto;
   width: 100%;
+  max-width: 1600px;
   border-radius: 30px;
   padding: 1.5rem 1rem;
   background-color: var(--color-very-dark-first);

@@ -1,11 +1,11 @@
-<app-search-bar placeholder="Find courses.."  (onValueSearched)="onValueSearched($event)" />
+<app-search-bar placeholder="Find courses.."  (search)="onSearch($event)" />
 
 <div class="courses__wrapper">
   @if (displayedCourses().length === 0) {
     <p class="courses__wrong-query-message">No courses found for query: {{searchQuery()}}</p>
   }
 
-  @for (course of displayedCourses(); track course) {
+  @for (course of displayedCourses(); track course.title) {
     <app-course-item [course]="course" />
   }
 </div>

@@ -5,7 +5,7 @@
 <div class="course__content">
   <div class="course__info-wrapper">
     <app-issuer-vertical-chip [issuer]="course().issuer" />
-    @for (technology of course().technologies; track technology) {
+    @for (technology of course().technologies; track technology.name) {
       <div class="course__chip-wrapper">
         <app-technology-chip [technology]="technology" />
       </div>
