@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, computed, inject, input, ViewContainerRef} from '@angular/core';
+import {ChangeDetectionStrategy, Component, computed, inject, input, signal, ViewContainerRef} from '@angular/core';
 import {CourseModel} from '../../model/course-model';
 import {TechnologyChipComponent} from '../../../technology/view/technology-chip/technology-chip.component';
 import {IssuerVerticalChipComponent} from '../../../issuer/view/issuer-vertical-chip/issuer-vertical-chip.component';
@@ -24,25 +24,21 @@ export class CourseItemComponent {
   viewContainerRef: ViewContainerRef = inject(ViewContainerRef);
   runtimeService: RuntimeService = inject(RuntimeService);
   course = input.required<CourseModel>();
-  isPopupVisible: any = false;
-  isPdfLoading: any = true;
+  isPopupVisible = signal(false);
+  isPdfLoading = signal(true);
   pdfUrl = computed(() => `assets/resources/course/${this.course().certificateUrl}`);
 
-  switchPdfVisibility() {
-    this.isPdfLoading = true;
-    this.isPopupVisible = !this.isPopupVisible;
+  togglePopup() {
+    this.isPopupVisible.update(v => !v);
+    this.isPdfLoading.set(true);
   }
 
   onPdfLoad() {
-    this.isPdfLoading = false;
-    setTimeout(() => this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef))
+    this.isPdfLoading.set(false);
+    this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef);
   }
 
   onPageRendered() {
-    setTimeout(() => this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef))
-  }
-
-  openPdfInNewTab() {
-    window.open(this.pdfUrl(), '_blank');
+    this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef);
   }
 }

@@ -13,18 +13,18 @@
   </div>
 
   <div class="course__view-button-wrapper">
-    <button (click)="switchPdfVisibility()">View certificate</button>
+    <button (click)="togglePopup()">View certificate</button>
   </div>
 </div>
 
-@if (isPopupVisible) {
-  <app-popup (onPopupLeft)="switchPdfVisibility()">
-    @if (isPdfLoading) {
+@if (isPopupVisible()) {
+  <app-popup (onPopupLeft)="togglePopup()">
+    @if (isPdfLoading()) {
       <app-loading-spinner />
     }
     <pdf-viewer
       class="course__pdf"
-      [class.hidden]="isPdfLoading"
+      [class.hidden]="isPdfLoading()"
       [src]="pdfUrl()"
       [autoresize]="true"
       [fit-to-page]="true"

@@ -26,6 +26,6 @@ export class ExperiencePageComponent {
 
   onSectionSelected(section: ExperienceSectionModel) {
     this.selectedSection = section;
-    setTimeout(() => this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef))
+    this.runtimeService.fixEmulatedEncapsulation(this.viewContainerRef);
   }
 }

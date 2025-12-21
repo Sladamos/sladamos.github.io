@@ -5,6 +5,10 @@ import {Injectable, ViewContainerRef} from '@angular/core';
 })
 export class RuntimeService {
   fixEmulatedEncapsulation(viewContainerRef: ViewContainerRef) {
+    return setTimeout(() =>this.emulateStyles(viewContainerRef));
+  }
+
+  private emulateStyles(viewContainerRef: ViewContainerRef) {
     if (!viewContainerRef.element?.nativeElement) {
       return;
     }
