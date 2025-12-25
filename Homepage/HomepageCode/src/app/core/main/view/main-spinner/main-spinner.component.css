@@ -35,6 +35,14 @@
   border-radius: 50%;
 }
 
+.main-spinner__santa-hat {
+  position: absolute;
+  top: 0;
+  translate: 50% -30%;
+  z-index: 10;
+  width: 50%;
+}
+
 @media screen and (max-width: 600px) {
   :host {
     flex-direction: column-reverse;

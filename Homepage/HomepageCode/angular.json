@@ -44,11 +44,15 @@
                 "glob": "**/*",
                 "input": "assets",
                 "output": "/assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "themes",
+                "output": "/themes"
               }
             ],
             "styles": [
               "src/global.css",
-              "src/themes/winter-theme.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []

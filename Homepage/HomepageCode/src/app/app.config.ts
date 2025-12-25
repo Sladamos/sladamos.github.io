@@ -1,4 +1,9 @@
-import {ApplicationConfig, provideExperimentalZonelessChangeDetection, provideZoneChangeDetection} from '@angular/core';
+import {
+  ApplicationConfig,
+  inject,
+  provideAppInitializer,
+  provideExperimentalZonelessChangeDetection
+} from '@angular/core';
 import {
   InMemoryScrollingFeature,
   InMemoryScrollingOptions,
@@ -6,7 +11,8 @@ import {
   withInMemoryScrolling
 } from '@angular/router';
 
-import { routes } from './app.routes';
+import {routes} from './app.routes';
+import {ThemeService} from './core/shared/service/theme.service';
 
 const scrollConfig: InMemoryScrollingOptions = {
   scrollPositionRestoration: 'top',
@@ -18,5 +24,10 @@ const inMemoryScrollingFeature: InMemoryScrollingFeature =
 
 export const appConfig: ApplicationConfig = {
   providers: [provideExperimentalZonelessChangeDetection(),
-    provideRouter(routes, inMemoryScrollingFeature)]
+    provideRouter(routes, inMemoryScrollingFeature),
+    provideAppInitializer(() => {
+      const themeService = inject(ThemeService);
+      themeService.applyTheme();
+    })
+  ]
 };
