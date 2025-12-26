@@ -38,12 +38,15 @@
 .main-spinner__santa-hat {
   position: absolute;
   top: 0;
-  translate: 50% -30%;
   z-index: 10;
-  width: 50%;
+  width: 100%;
+  img {
+    width: 50%;
+    max-height: 200px;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 968px) {
   :host {
     flex-direction: column-reverse;
     justify-content: end;
@@ -58,20 +61,11 @@
   .main-spinner__text {
     font-size: 1.5rem;
   }
-}
 
-@media screen and (min-width: 600px) and (max-width: 768px) {
-  :host {
-    flex-direction: column-reverse;
-  }
-
-  .main-spinner__item {
-    width: 360px;
-    height: 300px;
-  }
-
-  .main-spinner__text {
-    font-size: 1.75rem;
+  .main-spinner__santa-hat {
+    top: -20px;
+    img {
+      width: 50%;
+    }
   }
 }
-
