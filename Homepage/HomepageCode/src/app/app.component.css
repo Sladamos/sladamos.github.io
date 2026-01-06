@@ -3,3 +3,14 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
+.app-loader {
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  transform: translateY(0);
+}
+
+.app-loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-30px);
+}

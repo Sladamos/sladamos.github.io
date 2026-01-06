@@ -1,4 +1,8 @@
-<app-header />
-<router-outlet />
-<app-footer />
-<app-return-top-button />
+<app-loader class="app-loader" [class.hidden]="loaderService.loadingFinished()"/>
+
+@if (loaderService.loadingFinished()) {
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+  <app-return-top-button></app-return-top-button>
+}

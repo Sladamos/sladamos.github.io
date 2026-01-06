@@ -1,0 +1,13 @@
+<div class="loader-card">
+    <div class="loader-label">
+      {{ loaderService.state().label }}
+    </div>
+
+    <div class="progress-track">
+      <div class="progress-bar" [style.width.%]="loaderService.state().progress"></div>
+    </div>
+
+    <div class="progress-value">
+      {{ loaderService.state().progress }}%
+    </div>
+</div>
