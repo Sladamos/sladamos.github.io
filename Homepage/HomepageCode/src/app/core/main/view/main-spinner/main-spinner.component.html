@@ -9,9 +9,11 @@
       <img front src="assets/images/main/main_garfield.webp" alt="Garfield" class="main-spinner__image">
       <img back src="assets/images/main/main_me.webp" alt="Sławomir Adamowicz" class="main-spinner__image">
     </app-spinner>
-    <app-spinner class="main-spinner__santa-hat">
-      <img front src="assets/images/main/main_santa-hat.webp" alt="Santa hat">
-      <img back src="assets/images/main/main_santa-hat-flipped.webp" alt="Santa hat">
-    </app-spinner>
+    @if (isWinter()) {
+      <app-spinner class="main-spinner__santa-hat">
+        <img front src="assets/images/main/main_santa-hat.webp" alt="Santa hat">
+        <img back src="assets/images/main/main_santa-hat-flipped.webp" alt="Santa hat">
+      </app-spinner>
+    }
   </div>
 </div>

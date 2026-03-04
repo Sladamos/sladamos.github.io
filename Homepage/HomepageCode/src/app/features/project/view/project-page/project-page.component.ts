@@ -54,7 +54,7 @@ export class ProjectPageComponent {
     return filtered.slice(0, limit);
   });
 
-  determineSpinnerSize = computed(() => this.screenTypeService.isNotDesktop() ? 120 : 240)
+  determineSpinnerSize = computed(() => this.screenTypeService.isNotDesktop() ? 60 : 120)
 
   private loadMore$ = new Subject<void>();
   private loadMoreSub = this.loadMore$

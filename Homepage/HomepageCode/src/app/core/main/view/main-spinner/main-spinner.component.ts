@@ -1,5 +1,6 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, computed, inject} from '@angular/core';
 import {SpinnerComponent} from '../../../shared/view/spinner/spinner.component';
+import {ThemeService} from '../../../shared/service/theme.service';
 
 @Component({
   selector: 'app-main-spinner',
@@ -11,4 +12,6 @@ import {SpinnerComponent} from '../../../shared/view/spinner/spinner.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainSpinnerComponent {
+  themeService = inject(ThemeService);
+  isWinter = computed(() => this.themeService.theme() === 'winter');
 }

@@ -10,7 +10,7 @@
   transition: background-color .3s ease-in-out;
 }
 
-:host.header__scrolled {
+:host(.header__scrolled) {
   background-color: rgba(var(--color-very-dark-second-rgb), 0.6);
 }
 

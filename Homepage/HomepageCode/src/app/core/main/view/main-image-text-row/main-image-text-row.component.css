@@ -6,6 +6,10 @@
   gap: 3rem;
 }
 
+:host(.reverse) {
+  flex-direction: row-reverse;
+}
+
 .image-text-row__image {
   display: block;
   min-width: 400px;
@@ -22,7 +26,8 @@
 }
 
 @media screen and (max-width: 968px) {
-  :host {
+  :host,
+  :host(.reverse) {
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -31,6 +36,10 @@
   .image-text-row__image {
     display: block;
     min-width: auto;
+  }
+
+  .image-text-row__title {
+    text-align: center;
   }
 }
 

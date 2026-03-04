@@ -5,7 +5,10 @@ import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/c
   imports: [],
   templateUrl: './main-image-text-row.component.html',
   styleUrl: './main-image-text-row.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.reverse]': 'reverse()'
+  }
 })
 export class MainImageTextRowComponent {
   imageSrc: InputSignal<string> = input.required<string>();
