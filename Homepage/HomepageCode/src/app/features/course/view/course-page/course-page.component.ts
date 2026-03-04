@@ -1,9 +1,9 @@
 import {ChangeDetectionStrategy, Component, computed, inject, signal} from '@angular/core';
-import {CourseItemComponent} from '../course-item/course-item.component';
-import {CourseService} from '../../service/course.service';
 import {SearchBarComponent} from "../../../../core/shared/view/search-bar/search-bar.component";
-import {CourseModel} from '../../model/course-model';
 import {TechnologyService} from '../../../technology/service/technology.service';
+import {CourseModel} from '../../model/course-model';
+import {CourseService} from '../../service/course.service';
+import {CourseItemComponent} from '../course-item/course-item.component';
 
 @Component({
   selector: 'app-course-page',

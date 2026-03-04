@@ -8,10 +8,10 @@ import {ChangeDetectionStrategy, Component, HostListener, output} from '@angular
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PopupComponent {
-  onPopupLeft = output<void>()
+  popupLeft = output<void>()
 
   @HostListener('click')
   onPopupLeftClicked() {
-    this.onPopupLeft.emit();
+    this.popupLeft.emit();
   }
 }

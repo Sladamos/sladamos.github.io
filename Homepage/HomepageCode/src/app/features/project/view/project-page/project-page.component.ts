@@ -1,15 +1,15 @@
 import {ChangeDetectionStrategy, Component, computed, inject, signal} from '@angular/core';
-import {ProjectService} from '../../service/project.service';
-import {ProjectItemComponent} from '../project-item/project-item.component';
-import {ProjectModel} from '../../model/project-model';
-import {ProjectItemMobileComponent} from '../project-item-mobile/project-item-mobile.component';
-import {TechnologyService} from '../../../technology/service/technology.service';
-import {SearchBarComponent} from '../../../../core/shared/view/search-bar/search-bar.component';
-import {ScreenTypeService} from '../../../../core/shared/service/screen-type.service';
-import {delay, filter, Subject, tap} from 'rxjs';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import {delay, filter, Subject, tap} from 'rxjs';
+import {ScreenTypeService} from '../../../../core/shared/service/screen-type.service';
 import {LoadingSpinnerComponent} from '../../../../core/shared/view/loading/loading-spinner/loading-spinner.component';
 import {LoadingTriggerComponent} from '../../../../core/shared/view/loading/loading-trigger/loading-trigger.component';
+import {SearchBarComponent} from '../../../../core/shared/view/search-bar/search-bar.component';
+import {TechnologyService} from '../../../technology/service/technology.service';
+import {ProjectModel} from '../../model/project-model';
+import {ProjectService} from '../../service/project.service';
+import {ProjectItemComponent} from '../project-item/project-item.component';
+import {ProjectItemMobileComponent} from '../project-item-mobile/project-item-mobile.component';
 
 const BATCH_SIZE = 5;
 const FETCH_DELAY = 1000;

@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, output} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, OnDestroy, output} from '@angular/core';
 
 @Component({
   selector: 'app-loading-trigger',
@@ -6,7 +6,7 @@ import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, o
   template: '',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoadingTriggerComponent implements AfterViewInit {
+export class LoadingTriggerComponent implements AfterViewInit, OnDestroy {
 
   visible = output();
   host = inject(ElementRef<HTMLElement>)

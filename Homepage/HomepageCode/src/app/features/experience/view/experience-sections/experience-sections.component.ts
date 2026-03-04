@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, input, InputSignal, OnInit, output, signal} from '@angular/core';
-import {ExperienceSectionModel} from '../../model/experience-section-model';
 import {SectionSelectorComponent} from '../../../../core/shared/view/section-selector/section-selector.component';
+import {ExperienceSectionModel} from '../../model/experience-section-model';
 
 @Component({
   selector: 'app-experience-sections',
@@ -14,7 +14,7 @@ import {SectionSelectorComponent} from '../../../../core/shared/view/section-sel
 export class ExperienceSectionsComponent implements OnInit {
   sections: InputSignal<ExperienceSectionModel[]> = input.required<ExperienceSectionModel[]>();
   currentSectionIndex = signal(parseInt(localStorage.getItem('currentSectionIndex') || '0', 10));
-  onSectionSelected = output<ExperienceSectionModel>();
+  sectionSelected = output<ExperienceSectionModel>();
 
   ngOnInit(): void {
     this.emitEventAboutSectionSelected(this.currentSectionIndex());
@@ -27,6 +27,6 @@ export class ExperienceSectionsComponent implements OnInit {
   }
 
   private emitEventAboutSectionSelected(number: number) {
-    this.onSectionSelected.emit(this.sections()[number])
+    this.sectionSelected.emit(this.sections()[number])
   }
 }

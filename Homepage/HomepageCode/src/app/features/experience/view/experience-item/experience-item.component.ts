@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, HostBinding, inject, input} from '@angular/core';
-import {ExperienceSectionItem} from '../../model/experience-section-item';
 import {ScreenTypeService} from '../../../../core/shared/service/screen-type.service';
+import {ExperienceSectionItem} from '../../model/experience-section-item';
 
 @Component({
   selector: 'app-experience-item',

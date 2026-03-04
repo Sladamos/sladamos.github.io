@@ -1,7 +1,7 @@
 import {inject, Injectable, signal} from '@angular/core';
-import {CourseModel} from '../model/course-model';
-import {TechnologyService} from '../../technology/service/technology.service';
 import {IssuerService} from '../../issuer/service/issuer.service';
+import {TechnologyService} from '../../technology/service/technology.service';
+import {CourseModel} from '../model/course-model';
 
 @Injectable({
   providedIn: 'root'

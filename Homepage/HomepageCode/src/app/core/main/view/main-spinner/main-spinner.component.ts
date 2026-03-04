@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, computed, inject} from '@angular/core';
-import {SpinnerComponent} from '../../../shared/view/spinner/spinner.component';
 import {ThemeService} from '../../../shared/service/theme.service';
+import {SpinnerComponent} from '../../../shared/view/spinner/spinner.component';
 
 @Component({
   selector: 'app-main-spinner',

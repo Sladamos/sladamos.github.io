@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, computed, HostListener, inject, signal} from '@angular/core';
 import {NgClass} from '@angular/common';
+import {ChangeDetectionStrategy, Component, computed, HostListener, inject, signal} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {ScreenTypeService} from '../../service/screen-type.service';
 

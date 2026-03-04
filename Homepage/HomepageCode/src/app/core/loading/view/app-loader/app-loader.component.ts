@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, computed, effect, inject} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {AppLoaderService} from '../../service/app-loader.service';
 
 @Component({

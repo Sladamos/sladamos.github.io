@@ -1,7 +1,7 @@
-import {ChangeDetectionStrategy, Component, computed, inject, input, output,} from '@angular/core';
-import {MathService} from '../../service/math.service';
 import {NgClass} from '@angular/common';
+import {ChangeDetectionStrategy, Component, computed, inject, input, output,} from '@angular/core';
 import {SectionModel} from '../../model/section-model';
+import {MathService} from '../../service/math.service';
 
 @Component({
   selector: 'app-section-selector',
@@ -20,12 +20,12 @@ export class SectionSelectorComponent {
   previousSectionIndex = computed(() => this.calculatePrevious(this.currentSectionIndex()))
   isAnimating = false;
   animationState: 'disappear' | '' = '';
-  onSectionNumberSelected = output<number>();
+  sectionNumberSelected = output<number>();
 
   onNextSectionClicked() {
     if (!this.isAnimating) {
       this.triggerAnimation(() => {
-        this.onSectionNumberSelected.emit(this.calculateNext(this.currentSectionIndex()));
+        this.sectionNumberSelected.emit(this.calculateNext(this.currentSectionIndex()));
       });
     }
   }
@@ -33,7 +33,7 @@ export class SectionSelectorComponent {
   onPreviousSectionClicked() {
     if (!this.isAnimating) {
       this.triggerAnimation(() => {
-        this.onSectionNumberSelected.emit(this.calculatePrevious(this.currentSectionIndex()));
+        this.sectionNumberSelected.emit(this.calculatePrevious(this.currentSectionIndex()));
       });
     }
   }

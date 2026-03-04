@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, input, output} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 import {faRemove, faSearch} from '@fortawesome/free-solid-svg-icons';
-import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-search-bar',
@@ -15,13 +15,13 @@ import {FormsModule} from '@angular/forms';
 })
 export class SearchBarComponent {
   placeholder = input<string>("");
-  search = output<string>();
+  searchChange = output<string>();
   searchQuery = "";
   protected readonly faSearch = faSearch;
   protected readonly faRemove = faRemove;
 
   onSearchChange() {
-    this.search.emit(this.searchQuery)
+    this.searchChange.emit(this.searchQuery)
   }
 
   onRemoveClicked() {

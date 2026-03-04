@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/core';
-import {TechnologyModel} from '../../model/technology-model';
 import {SafeHtmlPipe} from '../../../../core/security/pipe/safe-html.pipe';
+import {TechnologyModel} from '../../model/technology-model';
 
 @Component({
   selector: 'app-technology-chip',
