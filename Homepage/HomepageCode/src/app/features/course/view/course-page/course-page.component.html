@@ -1,4 +1,4 @@
-<app-search-bar placeholder="Find courses.." (search)="onSearch($event)" />
+<app-search-bar placeholder="Find courses.." (searchChange)="onSearch($event)" />
 
 <div class="courses__wrapper">
   @if (displayedCourses().length === 0) {

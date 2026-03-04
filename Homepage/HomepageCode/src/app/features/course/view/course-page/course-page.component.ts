@@ -20,7 +20,7 @@ export class CoursePageComponent {
   technologyService = inject(TechnologyService);
   searchQuery = signal('');
   displayedCourses = computed(() =>
-    !!this.searchQuery()
+    this.searchQuery()
       ? this.courses().filter(course => this.doesCourseMatchQuery(course))
       : this.courses(),
   );

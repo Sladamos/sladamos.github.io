@@ -1,7 +1,7 @@
-import {NgClass} from '@angular/common';
-import {ChangeDetectionStrategy, Component, computed, inject, input, output} from '@angular/core';
-import {SectionModel} from '../../model/section-model';
-import {MathService} from '../../service/math.service';
+import { NgClass } from '@angular/common';
+import { ChangeDetectionStrategy, Component, computed, inject, input, output } from '@angular/core';
+import { SectionModel } from '../../model/section-model';
+import { MathService } from '../../service/math.service';
 
 @Component({
   selector: 'app-section-selector',

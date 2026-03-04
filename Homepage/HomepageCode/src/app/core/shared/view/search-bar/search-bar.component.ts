@@ -1,7 +1,7 @@
-import {ChangeDetectionStrategy, Component, input, output} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {FaIconComponent} from '@fortawesome/angular-fontawesome';
-import {faRemove, faSearch} from '@fortawesome/free-solid-svg-icons';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { faRemove, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-search-bar',

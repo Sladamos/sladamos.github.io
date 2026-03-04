@@ -1,4 +1,4 @@
-<app-search-bar placeholder="Find projects.." (search)="onValueSearched($event)" />
+<app-search-bar placeholder="Find projects.." (searchChange)="onValueSearched($event)" />
 
 <div class="projects__wrapper">
   @if (visibleProjects().length === 0) {

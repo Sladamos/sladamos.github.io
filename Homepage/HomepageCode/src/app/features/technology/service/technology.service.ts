@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {TechnologyModel} from '../model/technology-model';
+import { Injectable } from '@angular/core';
+import { TechnologyModel } from '../model/technology-model';
 
 @Injectable({
   providedIn: 'root',
@@ -181,7 +181,7 @@ export class TechnologyService {
       .map(technology => technology.name.toUpperCase())
       .find(name => name === query);
     const projectTechnologiesNames = technologies.map(technology => technology.name.toUpperCase());
-    return !!technologyName
+    return technologyName
       ? projectTechnologiesNames.some(name => name === technologyName)
       : projectTechnologiesNames.some(name => name.startsWith(query)) ||
           this.projectAliasIncludesQuery(technologies, query);

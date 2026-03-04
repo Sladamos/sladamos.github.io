@@ -17,3 +17,9 @@
   font-size: 1rem;
   font-weight: bold;
 }
+
+@media screen and (max-width: 968px) {
+  .footer__text {
+    font-size: 0.75rem;
+  }
+}

@@ -1,5 +1,5 @@
-import {Injectable, signal} from '@angular/core';
-import {AppTheme} from '../model/app-theme';
+import { Injectable, signal } from '@angular/core';
+import { AppTheme } from '../model/app-theme';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
