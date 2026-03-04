@@ -1,8 +1,8 @@
-import {Routes} from '@angular/router';
-import {MainPageComponent} from './core/main/view/main-page/main-page.component';
-import {CoursePageComponent} from './features/course/view/course-page/course-page.component';
-import {ExperiencePageComponent} from './features/experience/view/experience-page/experience-page.component';
-import {ProjectPageComponent} from './features/project/view/project-page/project-page.component';
+import { Routes } from '@angular/router';
+import { MainPageComponent } from './core/main/view/main-page/main-page.component';
+import { CoursePageComponent } from './features/course/view/course-page/course-page.component';
+import { ExperiencePageComponent } from './features/experience/view/experience-page/experience-page.component';
+import { ProjectPageComponent } from './features/project/view/project-page/project-page.component';
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },

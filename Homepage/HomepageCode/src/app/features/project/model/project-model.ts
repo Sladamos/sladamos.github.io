@@ -1,4 +1,4 @@
-import {TechnologyModel} from '../../technology/model/technology-model';
+import { TechnologyModel } from '../../technology/model/technology-model';
 
 export interface ProjectModel {
   name: string;

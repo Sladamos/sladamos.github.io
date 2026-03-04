@@ -1,6 +1,14 @@
-import {ChangeDetectionStrategy, Component, input, InputSignal, OnInit, output, signal,} from '@angular/core';
-import {SectionSelectorComponent} from '../../../../core/shared/view/section-selector/section-selector.component';
-import {ExperienceSectionModel} from '../../model/experience-section-model';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  input,
+  InputSignal,
+  OnInit,
+  output,
+  signal,
+} from '@angular/core';
+import { SectionSelectorComponent } from '../../../../core/shared/view/section-selector/section-selector.component';
+import { ExperienceSectionModel } from '../../model/experience-section-model';
 
 @Component({
   selector: 'app-experience-sections',

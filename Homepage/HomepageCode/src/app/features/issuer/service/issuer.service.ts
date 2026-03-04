@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {IssuerModel} from '../model/issuer-model';
+import { Injectable } from '@angular/core';
+import { IssuerModel } from '../model/issuer-model';
 
 @Injectable({
   providedIn: 'root',

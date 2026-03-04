@@ -1,6 +1,6 @@
-import {inject, Injectable, signal} from '@angular/core';
-import {TechnologyService} from '../../technology/service/technology.service';
-import {ProjectModel} from '../model/project-model';
+import { inject, Injectable, signal } from '@angular/core';
+import { TechnologyService } from '../../technology/service/technology.service';
+import { ProjectModel } from '../model/project-model';
 
 @Injectable({
   providedIn: 'root',

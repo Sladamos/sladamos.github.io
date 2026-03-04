@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, input} from '@angular/core';
-import {IssuerModel} from '../../model/issuer-model';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { IssuerModel } from '../../model/issuer-model';
 
 @Component({
   selector: 'app-issuer-vertical-chip',

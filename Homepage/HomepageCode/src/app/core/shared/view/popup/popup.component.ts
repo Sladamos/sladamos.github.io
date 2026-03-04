@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, HostListener, output} from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, output } from '@angular/core';
 
 @Component({
   selector: 'app-popup',

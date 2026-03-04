@@ -1,5 +1,12 @@
-import {ChangeDetectionStrategy, Component, HostListener, OnDestroy, signal, WritableSignal,} from '@angular/core';
-import {NavbarComponent} from '../navbar/navbar.component';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  OnDestroy,
+  signal,
+  WritableSignal,
+} from '@angular/core';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-header',

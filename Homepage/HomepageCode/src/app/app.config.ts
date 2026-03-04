@@ -1,4 +1,4 @@
-import {ApplicationConfig, provideZonelessChangeDetection} from '@angular/core';
+import { ApplicationConfig, provideZonelessChangeDetection } from '@angular/core';
 import {
   InMemoryScrollingFeature,
   InMemoryScrollingOptions,
@@ -6,7 +6,7 @@ import {
   withInMemoryScrolling,
 } from '@angular/router';
 
-import {routes} from './app.routes';
+import { routes } from './app.routes';
 
 const scrollConfig: InMemoryScrollingOptions = {
   scrollPositionRestoration: 'top',

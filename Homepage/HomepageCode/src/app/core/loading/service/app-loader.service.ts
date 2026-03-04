@@ -1,8 +1,8 @@
-import {inject, Injectable, signal} from '@angular/core';
-import {concatMap, from} from 'rxjs';
-import {delay, tap} from 'rxjs/operators';
-import {ThemeService} from '../../shared/service/theme.service';
-import {LoaderState} from '../model/app-loader-state';
+import { inject, Injectable, signal } from '@angular/core';
+import { concatMap, from } from 'rxjs';
+import { delay, tap } from 'rxjs/operators';
+import { ThemeService } from '../../shared/service/theme.service';
+import { LoaderState } from '../model/app-loader-state';
 
 interface LoaderStep {
   label: string;

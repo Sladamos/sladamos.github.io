@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular/core';
 
 @Component({
   selector: 'app-main-image-text-row',

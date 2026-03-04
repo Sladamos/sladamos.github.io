@@ -1,11 +1,19 @@
-import {ChangeDetectionStrategy, Component, computed, inject, input, signal, ViewContainerRef,} from '@angular/core';
-import {PdfViewerModule} from 'ng2-pdf-viewer';
-import {RuntimeService} from '../../../../core/shared/service/runtime.service';
-import {LoadingSpinnerComponent} from '../../../../core/shared/view/loading/loading-spinner/loading-spinner.component';
-import {PopupComponent} from '../../../../core/shared/view/popup/popup.component';
-import {IssuerVerticalChipComponent} from '../../../issuer/view/issuer-vertical-chip/issuer-vertical-chip.component';
-import {TechnologyChipComponent} from '../../../technology/view/technology-chip/technology-chip.component';
-import {CourseModel} from '../../model/course-model';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  inject,
+  input,
+  signal,
+  ViewContainerRef,
+} from '@angular/core';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { RuntimeService } from '../../../../core/shared/service/runtime.service';
+import { LoadingSpinnerComponent } from '../../../../core/shared/view/loading/loading-spinner/loading-spinner.component';
+import { PopupComponent } from '../../../../core/shared/view/popup/popup.component';
+import { IssuerVerticalChipComponent } from '../../../issuer/view/issuer-vertical-chip/issuer-vertical-chip.component';
+import { TechnologyChipComponent } from '../../../technology/view/technology-chip/technology-chip.component';
+import { CourseModel } from '../../model/course-model';
 
 @Component({
   selector: 'app-course-item',
