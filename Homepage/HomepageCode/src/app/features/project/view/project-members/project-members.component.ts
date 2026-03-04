@@ -5,7 +5,7 @@ import {ChangeDetectionStrategy, Component, input} from '@angular/core';
   imports: [],
   templateUrl: './project-members.component.html',
   styleUrl: './project-members.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectMembersComponent {
   numberOfMembers = input.required<number>();

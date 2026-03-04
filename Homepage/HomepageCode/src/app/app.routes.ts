@@ -6,7 +6,7 @@ import {ProjectPageComponent} from './features/project/view/project-page/project
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },
-  { path: 'experience', component: ExperiencePageComponent},
-  { path: 'projects', component: ProjectPageComponent},
-  { path: 'courses', component: CoursePageComponent}
+  { path: 'experience', component: ExperiencePageComponent },
+  { path: 'projects', component: ProjectPageComponent },
+  { path: 'courses', component: CoursePageComponent },
 ];

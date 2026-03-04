@@ -7,12 +7,12 @@ import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/co
   styleUrl: './return-top-button.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    '[class.visible]': 'isWindowScrolled'
-  }
+    '[class.visible]': 'isWindowScrolled',
+  },
 })
 export class ReturnTopButtonComponent implements OnInit, OnDestroy {
   isWindowScrolled = false;
-  private scrollListener = () => this.isWindowScrolled = window.scrollY !== 0;
+  private scrollListener = () => (this.isWindowScrolled = window.scrollY !== 0);
 
   ngOnInit() {
     window.addEventListener('scroll', this.scrollListener);

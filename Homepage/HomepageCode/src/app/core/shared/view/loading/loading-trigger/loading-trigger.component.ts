@@ -1,15 +1,14 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, OnDestroy, output} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, OnDestroy, output,} from '@angular/core';
 
 @Component({
   selector: 'app-loading-trigger',
   imports: [],
   template: '',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoadingTriggerComponent implements AfterViewInit, OnDestroy {
-
   visible = output();
-  host = inject(ElementRef<HTMLElement>)
+  host = inject(ElementRef<HTMLElement>);
   private observer?: IntersectionObserver;
 
   ngAfterViewInit() {
@@ -22,7 +21,7 @@ export class LoadingTriggerComponent implements AfterViewInit, OnDestroy {
           this.visible.emit();
         }
       },
-      {rootMargin: '200px'}
+      { rootMargin: '200px' },
     );
 
     this.observer.observe(this.host.nativeElement);
@@ -31,5 +30,4 @@ export class LoadingTriggerComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy() {
     this.observer?.disconnect();
   }
-
 }

@@ -4,12 +4,10 @@ import {SpinnerComponent} from '../../../shared/view/spinner/spinner.component';
 
 @Component({
   selector: 'app-main-spinner',
-  imports: [
-    SpinnerComponent
-  ],
+  imports: [SpinnerComponent],
   templateUrl: './main-spinner.component.html',
   styleUrl: './main-spinner.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainSpinnerComponent {
   themeService = inject(ThemeService);

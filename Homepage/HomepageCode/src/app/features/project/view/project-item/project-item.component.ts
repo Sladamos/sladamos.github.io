@@ -7,11 +7,7 @@ import {ProjectMembersComponent} from '../project-members/project-members.compon
 
 @Component({
   selector: 'app-project-item',
-  imports: [
-    FaIconComponent,
-    TechnologyChipComponent,
-    ProjectMembersComponent
-  ],
+  imports: [FaIconComponent, TechnologyChipComponent, ProjectMembersComponent],
   templateUrl: './project-item.component.html',
   styleUrls: ['./project-item.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

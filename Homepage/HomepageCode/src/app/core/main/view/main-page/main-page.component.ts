@@ -5,18 +5,15 @@ import {MainSpinnerComponent} from '../main-spinner/main-spinner.component';
 
 @Component({
   selector: 'app-main-page',
-  imports: [
-    MainSpinnerComponent,
-    MainImageTextRowComponent
-  ],
+  imports: [MainSpinnerComponent, MainImageTextRowComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'container__normal'
-  }
+    class: 'container__normal',
+  },
 })
 export class MainPageComponent {
-  screenTypeService = inject(ScreenTypeService)
-  reverseImageTextRow = computed(() => !this.screenTypeService.isNotDesktop())
+  screenTypeService = inject(ScreenTypeService);
+  reverseImageTextRow = computed(() => !this.screenTypeService.isNotDesktop());
 }

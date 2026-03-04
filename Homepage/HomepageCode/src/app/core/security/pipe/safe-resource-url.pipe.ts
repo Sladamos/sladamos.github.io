@@ -2,7 +2,7 @@ import {inject, Pipe, PipeTransform} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
 @Pipe({
-  name: 'safeResourceUrl'
+  name: 'safeResourceUrl',
 })
 export class SafeResourceUrlPipe implements PipeTransform {
   sanitizer: DomSanitizer = inject(DomSanitizer);
@@ -10,5 +10,4 @@ export class SafeResourceUrlPipe implements PipeTransform {
   transform(value: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(value);
   }
-
 }

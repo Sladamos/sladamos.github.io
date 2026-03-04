@@ -1,14 +1,14 @@
 <div class="course__title-wrapper">
-  <p class="course__title">{{course().title}}</p>
+  <p class="course__title">{{ course().title }}</p>
 </div>
 
 <div class="course__content">
   <div class="course__info-wrapper">
     <app-issuer-vertical-chip [issuer]="course().issuer" />
     @for (technology of course().technologies; track technology.name) {
-      <div class="course__chip-wrapper">
-        <app-technology-chip [technology]="technology" />
-      </div>
+    <div class="course__chip-wrapper">
+      <app-technology-chip [technology]="technology" />
+    </div>
     }
   </div>
 
@@ -18,17 +18,18 @@
 </div>
 
 @if (isPopupVisible()) {
-  <app-popup (onPopupLeft)="togglePopup()">
-    @if (isPdfLoading()) {
-      <app-loading-spinner />
-    }
-    <pdf-viewer
-      class="course__pdf"
-      [class.hidden]="isPdfLoading()"
-      [src]="pdfUrl()"
-      [autoresize]="true"
-      [fit-to-page]="true"
-      (pages-initialized)="onPageRendered()"
-      (after-load-complete)="onPdfLoad()" />
-  </app-popup>
+<app-popup (popupLeft)="togglePopup()">
+  @if (isPdfLoading()) {
+  <app-loading-spinner />
+  }
+  <pdf-viewer
+    class="course__pdf"
+    [class.hidden]="isPdfLoading()"
+    [src]="pdfUrl()"
+    [autoresize]="true"
+    [fit-to-page]="true"
+    (pages-initialized)="onPageRendered()"
+    (after-load-complete)="onPdfLoad()"
+  />
+</app-popup>
 }

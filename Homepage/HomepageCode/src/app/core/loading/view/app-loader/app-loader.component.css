@@ -10,11 +10,7 @@
 
   display: grid;
   place-items: center;
-  background: linear-gradient(
-    135deg,
-    var(--color-very-dark-first),
-    var(--color-very-dark-second)
-  );
+  background: linear-gradient(135deg, var(--color-very-dark-first), var(--color-very-dark-second));
 }
 
 .loader-card {
@@ -45,11 +41,7 @@
 .progress-bar {
   height: 100%;
   width: 0;
-  background: linear-gradient(
-    90deg,
-    var(--color-light-first),
-    var(--color-normal-second)
-  );
+  background: linear-gradient(90deg, var(--color-light-first), var(--color-normal-second));
   transition: width 400ms ease;
 }
 

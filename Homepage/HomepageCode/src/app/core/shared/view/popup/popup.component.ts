@@ -5,10 +5,10 @@ import {ChangeDetectionStrategy, Component, HostListener, output} from '@angular
   imports: [],
   templateUrl: './popup.component.html',
   styleUrl: './popup.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PopupComponent {
-  popupLeft = output<void>()
+  popupLeft = output<void>();
 
   @HostListener('click')
   onPopupLeftClicked() {

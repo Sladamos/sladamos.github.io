@@ -7,16 +7,13 @@ import {ExperienceSectionsComponent} from '../experience-sections/experience-sec
 
 @Component({
   selector: 'app-experience-page',
-  imports: [
-    ExperienceSectionsComponent,
-    ExperienceItemComponent
-  ],
+  imports: [ExperienceSectionsComponent, ExperienceItemComponent],
   templateUrl: './experience-page.component.html',
   styleUrl: './experience-page.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'container__normal'
-  }
+    class: 'container__normal',
+  },
 })
 export class ExperiencePageComponent {
   selectedSection?: ExperienceSectionModel;

@@ -1,3 +1,5 @@
-<app-section-selector (onSectionNumberSelected)="onSectionIndexSelected($event)"
-                      [currentSectionIndex]="currentSectionIndex()"
-                      [sections]="sections()"></app-section-selector>
+<app-section-selector
+  (sectionNumberSelected)="onSectionIndexSelected($event)"
+  [currentSectionIndex]="currentSectionIndex()"
+  [sections]="sections()"
+></app-section-selector>

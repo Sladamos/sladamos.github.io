@@ -4,14 +4,11 @@ import {TechnologyModel} from '../../model/technology-model';
 
 @Component({
   selector: 'app-technology-chip',
-  imports: [
-    SafeHtmlPipe
-  ],
+  imports: [SafeHtmlPipe],
   templateUrl: './technology-chip.component.html',
   styleUrls: ['./technology-chip.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TechnologyChipComponent {
   technology: InputSignal<TechnologyModel> = input.required<TechnologyModel>();
-
 }

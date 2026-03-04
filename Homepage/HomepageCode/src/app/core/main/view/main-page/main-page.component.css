@@ -18,8 +18,7 @@
   color: var(--color-white-gray);
   padding: 2rem 4rem;
   gap: 3rem;
-  box-shadow: 0 -8px 16px var(--color-dark-second),
-  0 8px 24px var(--color-normal-second);
+  box-shadow: 0 -8px 16px var(--color-dark-second), 0 8px 24px var(--color-normal-second);
 }
 
 .main__text {

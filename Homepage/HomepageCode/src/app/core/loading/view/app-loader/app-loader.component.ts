@@ -6,7 +6,7 @@ import {AppLoaderService} from '../../service/app-loader.service';
   imports: [],
   templateUrl: './app-loader.component.html',
   styleUrl: './app-loader.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppLoaderComponent {
   loaderService = inject(AppLoaderService);

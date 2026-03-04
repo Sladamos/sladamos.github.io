@@ -10,7 +10,8 @@
   animation: spinner__animation 4s infinite;
 }
 
-.spinner__front, .spinner__back {
+.spinner__front,
+.spinner__back {
   position: absolute;
   display: flex;
   justify-content: center;

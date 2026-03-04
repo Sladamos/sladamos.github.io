@@ -7,7 +7,7 @@ import {ExperienceSectionItem} from '../../model/experience-section-item';
   imports: [],
   templateUrl: './experience-item.component.html',
   styleUrl: './experience-item.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ExperienceItemComponent {
   screenTypeService = inject(ScreenTypeService);

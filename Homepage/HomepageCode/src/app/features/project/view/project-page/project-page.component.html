@@ -1,20 +1,16 @@
-<app-search-bar placeholder="Find projects.." (search)="onValueSearched($event)"/>
+<app-search-bar placeholder="Find projects.." (search)="onValueSearched($event)" />
 
 <div class="projects__wrapper">
   @if (visibleProjects().length === 0) {
-    <p class="projects__wrong-query-message">No projects found for query: {{ searchQuery() }}</p>
+  <p class="projects__wrong-query-message">No projects found for query: {{ searchQuery() }}</p>
+  } @else { } @for (project of visibleProjects(); track project.name) { @if
+  (screenTypeService.isNotDesktop()) {
+  <app-project-item-mobile [project]="project" />
   } @else {
-
-  }
-  @for (project of visibleProjects(); track project.name) {
-    @if (screenTypeService.isNotDesktop()) {
-      <app-project-item-mobile [project]="project"/>
-    } @else {
-      <app-project-item [project]="project"/>
-    }
-  }
+  <app-project-item [project]="project" />
+  } }
   <app-loading-trigger (visible)="loadMore()"></app-loading-trigger>
   @if (isLoadingMore()) {
-    <app-loading-spinner [size]="determineSpinnerSize()"/>
+  <app-loading-spinner [size]="determineSpinnerSize()" />
   }
 </div>

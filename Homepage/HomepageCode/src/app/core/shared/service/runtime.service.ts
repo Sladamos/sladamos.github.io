@@ -1,11 +1,11 @@
 import {Injectable, ViewContainerRef} from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RuntimeService {
   fixEmulatedEncapsulation(viewContainerRef: ViewContainerRef) {
-    return setTimeout(() =>this.emulateStyles(viewContainerRef));
+    return setTimeout(() => this.emulateStyles(viewContainerRef));
   }
 
   private emulateStyles(viewContainerRef: ViewContainerRef) {
@@ -16,7 +16,7 @@ export class RuntimeService {
     const elementRef: HTMLElement = viewContainerRef.element.nativeElement;
     const ngHostAttribute = elementRef
       .getAttributeNames()
-      .find((attr) => attr.startsWith('_nghost-'));
+      .find(attr => attr.startsWith('_nghost-'));
 
     if (!ngHostAttribute) {
       return;
@@ -24,10 +24,8 @@ export class RuntimeService {
 
     const ngContentAttribute = ngHostAttribute.replace('_nghost-', '_ngcontent-');
 
-    elementRef
-      .querySelectorAll(`:not([${ngContentAttribute}])`)
-      .forEach((elem) => {
-        elem.setAttribute(ngContentAttribute, '')
-      });
+    elementRef.querySelectorAll(`:not([${ngContentAttribute}])`).forEach(elem => {
+      elem.setAttribute(ngContentAttribute, '');
+    });
   }
 }

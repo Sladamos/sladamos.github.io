@@ -4,7 +4,7 @@
   gap: 4rem;
   padding-top: 11.5rem;
   align-items: center;
-  flex: 1
+  flex: 1;
 }
 
 .projects__wrapper {
@@ -15,7 +15,7 @@
 }
 
 .projects__wrong-query-message {
-  background: linear-gradient(135deg,var(--color-very-dark-second),var(--color-dark-second));
+  background: linear-gradient(135deg, var(--color-very-dark-second), var(--color-dark-second));
   border-radius: 50px;
   color: var(--color-light-first);
   font-family: 'Roboto', sans-serif;

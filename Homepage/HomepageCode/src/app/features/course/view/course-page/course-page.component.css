@@ -16,7 +16,7 @@
 }
 
 .courses__wrong-query-message {
-  background: linear-gradient(135deg,var(--color-very-dark-second),var(--color-dark-second));
+  background: linear-gradient(135deg, var(--color-very-dark-second), var(--color-dark-second));
   border-radius: 50px;
   color: var(--color-light-first);
   font-family: 'Roboto', sans-serif;
@@ -37,4 +37,3 @@
     padding: 3rem 0;
   }
 }
-

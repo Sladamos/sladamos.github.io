@@ -21,22 +21,21 @@ const FETCH_DELAY = 1000;
     ProjectItemComponent,
     ProjectItemMobileComponent,
     LoadingSpinnerComponent,
-    LoadingTriggerComponent
+    LoadingTriggerComponent,
   ],
   templateUrl: './project-page.component.html',
   styleUrls: ['./project-page.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'container__normal'
-  }
+    class: 'container__normal',
+  },
 })
 export class ProjectPageComponent {
-
   technologyService: TechnologyService = inject(TechnologyService);
   projectService: ProjectService = inject(ProjectService);
-  screenTypeService: ScreenTypeService = inject(ScreenTypeService)
+  screenTypeService: ScreenTypeService = inject(ScreenTypeService);
 
-  searchQuery = signal("")
+  searchQuery = signal('');
   visibleCount = signal<number>(Number(sessionStorage.getItem('visibleCount')) || BATCH_SIZE);
   isLoadingMore = signal(false);
 
@@ -54,7 +53,7 @@ export class ProjectPageComponent {
     return filtered.slice(0, limit);
   });
 
-  determineSpinnerSize = computed(() => this.screenTypeService.isNotDesktop() ? 60 : 120)
+  determineSpinnerSize = computed(() => (this.screenTypeService.isNotDesktop() ? 60 : 120));
 
   private loadMore$ = new Subject<void>();
 
@@ -66,10 +65,10 @@ export class ProjectPageComponent {
         delay(FETCH_DELAY),
         tap(() => {
           this.visibleCount.update(v => v + BATCH_SIZE);
-          sessionStorage.setItem('visibleCount', this.visibleCount().toString())
+          sessionStorage.setItem('visibleCount', this.visibleCount().toString());
           this.isLoadingMore.set(false);
         }),
-        takeUntilDestroyed()
+        takeUntilDestroyed(),
       )
       .subscribe();
   }
@@ -80,8 +79,11 @@ export class ProjectPageComponent {
 
   doesProjectMatchQuery(query: string): (project: ProjectModel) => boolean {
     return project => {
-      return project.name.toUpperCase().startsWith(query) || this.technologyService.anyTechnologyMatchesQuery(project.technologies, query)
-    }
+      return (
+        project.name.toUpperCase().startsWith(query) ||
+        this.technologyService.anyTechnologyMatchesQuery(project.technologies, query)
+      );
+    };
   }
 
   loadMore() {

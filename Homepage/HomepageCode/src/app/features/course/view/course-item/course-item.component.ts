@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, computed, inject, input, signal, ViewContainerRef} from '@angular/core';
+import {ChangeDetectionStrategy, Component, computed, inject, input, signal, ViewContainerRef,} from '@angular/core';
 import {PdfViewerModule} from 'ng2-pdf-viewer';
 import {RuntimeService} from '../../../../core/shared/service/runtime.service';
 import {LoadingSpinnerComponent} from '../../../../core/shared/view/loading/loading-spinner/loading-spinner.component';
@@ -14,11 +14,11 @@ import {CourseModel} from '../../model/course-model';
     IssuerVerticalChipComponent,
     PopupComponent,
     LoadingSpinnerComponent,
-    PdfViewerModule
+    PdfViewerModule,
   ],
   templateUrl: './course-item.component.html',
   styleUrl: './course-item.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CourseItemComponent {
   viewContainerRef: ViewContainerRef = inject(ViewContainerRef);

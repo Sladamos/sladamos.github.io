@@ -73,6 +73,7 @@
   transition: scale 0.2s ease-in-out;
 }
 
-.project-item__additional-info-link:hover, .project-item__additional-info-link:active {
+.project-item__additional-info-link:hover,
+.project-item__additional-info-link:active {
   scale: 1.1;
 }

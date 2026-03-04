@@ -1,12 +1,15 @@
 <div class="item__company">
-  <img class="item__company-image" src="assets/images/experience/{{item().assetSrc}}" alt="Company image">
-  <p class="item__company-name">{{item().company}}</p>
+  <img
+    class="item__company-image"
+    src="assets/images/experience/{{ item().assetSrc }}"
+    alt="Company image"
+  />
+  <p class="item__company-name">{{ item().company }}</p>
 </div>
 <div class="item__data">
-  <p class="item__data-title">{{item().title}}</p>
-  <p class="item__data-date">{{item().from}} - {{item().to || 'Present'}}</p>
+  <p class="item__data-title">{{ item().title }}</p>
+  <p class="item__data-date">{{ item().from }} - {{ item().to || 'Present' }}</p>
   @if (item().description) {
-    <div [innerHTML]="item().description">
-    </div>
+  <div [innerHTML]="item().description"></div>
   }
 </div>

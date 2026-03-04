@@ -6,9 +6,8 @@ import {IssuerModel} from '../../model/issuer-model';
   imports: [],
   templateUrl: './issuer-vertical-chip.component.html',
   styleUrl: './issuer-vertical-chip.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IssuerVerticalChipComponent {
-  issuer = input.required<IssuerModel>()
-
+  issuer = input.required<IssuerModel>();
 }

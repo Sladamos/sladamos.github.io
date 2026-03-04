@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, input, InputSignal, OnInit, output, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, input, InputSignal, OnInit, output, signal,} from '@angular/core';
 import {SectionSelectorComponent} from '../../../../core/shared/view/section-selector/section-selector.component';
 import {ExperienceSectionModel} from '../../model/experience-section-model';
 
@@ -6,10 +6,8 @@ import {ExperienceSectionModel} from '../../model/experience-section-model';
   selector: 'app-experience-sections',
   templateUrl: './experience-sections.component.html',
   styleUrl: './experience-sections.component.css',
-  imports: [
-    SectionSelectorComponent
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  imports: [SectionSelectorComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ExperienceSectionsComponent implements OnInit {
   sections: InputSignal<ExperienceSectionModel[]> = input.required<ExperienceSectionModel[]>();
@@ -27,6 +25,6 @@ export class ExperienceSectionsComponent implements OnInit {
   }
 
   private emitEventAboutSectionSelected(number: number) {
-    this.sectionSelected.emit(this.sections()[number])
+    this.sectionSelected.emit(this.sections()[number]);
   }
 }

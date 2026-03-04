@@ -3,21 +3,21 @@ import {
   InMemoryScrollingFeature,
   InMemoryScrollingOptions,
   provideRouter,
-  withInMemoryScrolling
+  withInMemoryScrolling,
 } from '@angular/router';
 
 import {routes} from './app.routes';
 
 const scrollConfig: InMemoryScrollingOptions = {
   scrollPositionRestoration: 'top',
-  anchorScrolling: 'enabled'
-}
+  anchorScrolling: 'enabled',
+};
 
-const inMemoryScrollingFeature: InMemoryScrollingFeature =
-  withInMemoryScrolling(scrollConfig);
+const inMemoryScrollingFeature: InMemoryScrollingFeature = withInMemoryScrolling(scrollConfig);
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideExperimentalZonelessChangeDetection(),
-    provideRouter(routes, inMemoryScrollingFeature)
-  ]
+  providers: [
+    provideExperimentalZonelessChangeDetection(),
+    provideRouter(routes, inMemoryScrollingFeature),
+  ],
 };

@@ -8,9 +8,15 @@ import {ReturnTopButtonComponent} from './core/shared/view/return-top-button/ret
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FooterComponent, HeaderComponent, ReturnTopButtonComponent, AppLoaderComponent],
+  imports: [
+    RouterOutlet,
+    FooterComponent,
+    HeaderComponent,
+    ReturnTopButtonComponent,
+    AppLoaderComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   loaderService = inject(AppLoaderService);

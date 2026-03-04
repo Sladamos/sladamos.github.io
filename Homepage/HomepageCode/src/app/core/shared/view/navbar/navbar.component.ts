@@ -1,20 +1,17 @@
 import {NgClass} from '@angular/common';
-import {ChangeDetectionStrategy, Component, computed, HostListener, inject, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, computed, HostListener, inject, signal,} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {ScreenTypeService} from '../../service/screen-type.service';
 
 @Component({
   selector: 'app-navbar',
-  imports: [
-    NgClass,
-    RouterLink
-  ],
+  imports: [NgClass, RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-  screenTypeService = inject(ScreenTypeService)
+  screenTypeService = inject(ScreenTypeService);
   isMobileMenuOpen = signal(false);
   isMobile = computed(() => this.screenTypeService.isNotDesktop());
 

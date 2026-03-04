@@ -7,12 +7,12 @@ import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/c
   styleUrl: './main-image-text-row.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    '[class.reverse]': 'reverse()'
-  }
+    '[class.reverse]': 'reverse()',
+  },
 })
 export class MainImageTextRowComponent {
   imageSrc: InputSignal<string> = input.required<string>();
   imageAlt: InputSignal<string> = input.required<string>();
-  title: InputSignal<string> = input<string>("");
+  title: InputSignal<string> = input<string>('');
   reverse: InputSignal<boolean> = input(false);
 }

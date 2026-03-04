@@ -1,4 +1,3 @@
-
 :root {
   --container-tiny: 50vw;
   --container-normal: 80vw;
@@ -19,9 +18,14 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  background: linear-gradient(to bottom, var(--color-dark-first), var(--color-light-second), var(--color-very-dark-first));
+  background: linear-gradient(
+    to bottom,
+    var(--color-dark-first),
+    var(--color-light-second),
+    var(--color-very-dark-first)
+  );
 }
 
 ul {
@@ -41,7 +45,7 @@ button {
   background-color: transparent;
   border: none;
   line-height: inherit;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
@@ -59,4 +63,3 @@ button {
   width: var(--container-large);
   margin: 0 auto;
 }
-

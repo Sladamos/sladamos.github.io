@@ -1,13 +1,15 @@
 @if (isMobile()) {
-  <button class="navbar__menu-toggle" (click)="toggleMenu($event)">
-    <i class="fas fa-bars fa-xl"></i>
-  </button>
+<button class="navbar__menu-toggle" (click)="toggleMenu($event)">
+  <i class="fas fa-bars fa-xl"></i>
+</button>
 }
-<nav [ngClass]="{
-      'navbar__mobile-menu-active': isMobileMenuOpen(),
-      'navbar__mobile-menu': isMobile()
-     }"
-     class="navbar__menu">
+<nav
+  [ngClass]="{
+    'navbar__mobile-menu-active': isMobileMenuOpen(),
+    'navbar__mobile-menu': isMobile()
+  }"
+  class="navbar__menu"
+>
   <a class="navbar__link" routerLink="/" (click)="closeMenu()">Home</a>
   <a class="navbar__link" routerLink="/experience" (click)="closeMenu()">Experience</a>
   <a class="navbar__link" routerLink="/projects" (click)="closeMenu()">Projects</a>

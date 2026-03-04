@@ -1,13 +1,11 @@
-<input class="search-bar__input"
-       type="text"
-       [placeholder]="placeholder()"
-       [(ngModel)]="searchQuery"
-       (ngModelChange)="onSearchChange()">
+<input
+  class="search-bar__input"
+  type="text"
+  [placeholder]="placeholder()"
+  [(ngModel)]="searchQuery"
+  (ngModelChange)="onSearchChange()"
+/>
 @if (!!searchQuery) {
-  <fa-icon class="fa-2x search-bar__icon"
-           (click)="onRemoveClicked()"
-           [icon]="faRemove"></fa-icon>
+<fa-icon class="fa-2x search-bar__icon" (click)="onRemoveClicked()" [icon]="faRemove"></fa-icon>
 }
-<fa-icon class="fa-2x search-bar__icon"
-         (click)="onSearchClicked()"
-         [icon]="faSearch"></fa-icon>
+<fa-icon class="fa-2x search-bar__icon" (click)="onSearchClicked()" [icon]="faSearch"></fa-icon>

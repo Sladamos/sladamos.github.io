@@ -10,16 +10,15 @@ interface LoaderStep {
   action?: () => void;
 }
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class AppLoaderService {
-
   private themeService: ThemeService = inject(ThemeService);
 
   loadingFinished = signal(false);
 
   state = signal<LoaderState>({
     label: 'Initializing…',
-    progress: 0
+    progress: 0,
   });
 
   private STEP_TIME = 500;
@@ -30,20 +29,20 @@ export class AppLoaderService {
     {
       label: 'Applying theme',
       progress: 0,
-      action: () => this.themeService.applyTheme()
+      action: () => this.themeService.applyTheme(),
     },
     {
       label: 'Loading user preferences',
-      progress: 25
+      progress: 25,
     },
     {
       label: 'Preparing application shell',
-      progress: 50
+      progress: 50,
     },
     {
       label: 'Finalizing startup',
-      progress: 100
-    }
+      progress: 100,
+    },
   ];
 
   private runStarted = false;
@@ -56,16 +55,14 @@ export class AppLoaderService {
       this.STEP_TIME = 0;
     }
 
-    from(this.steps).pipe(
-      concatMap(step =>
-        this.runStep(step).pipe(delay(this.STEP_TIME))
-      )
-    ).subscribe({
-      complete: () => {
-        this.loadingFinished.set(true);
-        sessionStorage.setItem(this.STORAGE_KEY, 'true');
-      }
-    });
+    from(this.steps)
+      .pipe(concatMap(step => this.runStep(step).pipe(delay(this.STEP_TIME))))
+      .subscribe({
+        complete: () => {
+          this.loadingFinished.set(true);
+          sessionStorage.setItem(this.STORAGE_KEY, 'true');
+        },
+      });
   }
 
   private runStep(step: LoaderStep) {
@@ -73,10 +70,10 @@ export class AppLoaderService {
       tap(() => {
         this.state.set({
           label: step.label,
-          progress: step.progress
+          progress: step.progress,
         });
         step.action?.();
-      })
+      }),
     );
   }
 }
