@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/core';
 import {TechnologyModel} from '../../model/technology-model';
-import { SafeHtmlPipe } from '../../../../core/security/pipe/safe-html.pipe';
+import {SafeHtmlPipe} from '../../../../core/security/pipe/safe-html.pipe';
 
 @Component({
   selector: 'app-technology-chip',
@@ -8,7 +8,7 @@ import { SafeHtmlPipe } from '../../../../core/security/pipe/safe-html.pipe';
     SafeHtmlPipe
   ],
   templateUrl: './technology-chip.component.html',
-  styleUrl: './technology-chip.component.css',
+  styleUrls: ['./technology-chip.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TechnologyChipComponent {

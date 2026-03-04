@@ -24,7 +24,7 @@ const FETCH_DELAY = 1000;
     LoadingTriggerComponent
   ],
   templateUrl: './project-page.component.html',
-  styleUrl: './project-page.component.css',
+  styleUrls: ['./project-page.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     'class': 'container__normal'
@@ -57,7 +57,9 @@ export class ProjectPageComponent {
   determineSpinnerSize = computed(() => this.screenTypeService.isNotDesktop() ? 60 : 120)
 
   private loadMore$ = new Subject<void>();
-  private loadMoreSub = this.loadMore$
+
+  constructor() {
+    this.loadMore$
       .pipe(
         filter(() => !this.isLoadingMore()),
         tap(() => this.isLoadingMore.set(true)),
@@ -70,6 +72,7 @@ export class ProjectPageComponent {
         takeUntilDestroyed()
       )
       .subscribe();
+  }
 
   onValueSearched($value: string) {
     this.searchQuery.set($value);

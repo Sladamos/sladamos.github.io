@@ -7,7 +7,7 @@ import {NavbarComponent} from '../navbar/navbar.component';
     NavbarComponent
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  styleUrls: ['./header.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[class.header__scrolled]': 'isScrolled()'
@@ -26,8 +26,8 @@ export class HeaderComponent implements OnDestroy {
     window.removeEventListener('scroll', this.scrollEventListener);
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll(event: Event) {
+  @HostListener('window:scroll')
+  onWindowScroll() {
     const scrollPosition = window.scrollY;
     if (scrollPosition > 0) {
       this.isScrolled.update(() => true);

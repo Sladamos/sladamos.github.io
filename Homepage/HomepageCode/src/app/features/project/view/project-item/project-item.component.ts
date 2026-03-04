@@ -13,7 +13,7 @@ import {ProjectMembersComponent} from '../project-members/project-members.compon
     ProjectMembersComponent
   ],
   templateUrl: './project-item.component.html',
-  styleUrl: './project-item.component.css',
+  styleUrls: ['./project-item.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectItemComponent {
