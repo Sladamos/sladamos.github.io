@@ -1,7 +1,10 @@
 name: Deploy static content to Pages
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Lint and Format Code"]
+    types:
+      - completed
     branches: ["main"]
   workflow_dispatch:
 

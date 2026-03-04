@@ -1,0 +1,43 @@
+name: Lint and Format Code
+
+on:
+  push:
+    branches: ["main"]
+  pull_request: 
+  workflow_dispatch:
+
+permissions:
+  contents: write 
+
+jobs:
+  lint-and-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: Homepage/HomepageCode/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd Homepage/HomepageCode
+          npm ci
+
+      - name: Run Prettier and ESLint (Fix mode)
+        run: |
+          cd Homepage/HomepageCode
+          npm run format
+          npm run lint:fix
+
+      - name: Auto-commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-format and lint fix"
+          branch: ${{ github.head_ref || github.ref_name }}
